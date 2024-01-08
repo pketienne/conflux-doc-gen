@@ -1,0 +1,7 @@
+table#materials th { background-color: #66d9ff; }
+table#labors th { background-color: #33aacc; }
+table#totals th { background-color: #3388cc; }
+th.quantity { width: 100px; }
+th.cost { width: 100px; }
+th.total { width: 100px; }
+td.grand-total { background-color: #e0e0e0 }

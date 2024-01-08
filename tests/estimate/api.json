@@ -1,0 +1,30 @@
+{
+  "document": "estimate",
+  "client": {
+    "address": "448 West 31st Street",
+    "email": "oliver@mcgrawdesignbuild.com",
+    "name": "McGraw Design & Build",
+    "phone": "CLIENT_PHONE"
+  },
+  "contractor": {
+    "address": "448 W 31st St, Indianapolis, IN 46208",
+    "email": "oliver@mcgrawdesignbuild.com",
+    "name": "McGraw Design & Build",
+    "phone": "(317) 782-5271",
+    "website": "https://mcgrawdesignbuild.com"
+  },
+  "project": {
+		"id": "95",
+    "name": "Sample Home",
+    "description": "Sample Project"
+  },
+  "tasks": [
+		{
+			"name": "Preliminary Work",
+			"description": "Preliminary work to begin the project including: \n-> Exploratory Demolition (if necessary)\n-> Site Survey\n-> Blueprints, Construction Documents, and Engineering\n-> Permitting \n\n",
+			"cost_code": "100",
+			"total_cost": 1500,
+			"tasks": []
+		}
+  ]
+}

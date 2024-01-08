@@ -1,0 +1,1895 @@
+{
+  "document": "estimate",
+  "client": {
+    "address": "448 West 31st Street",
+    "email": "oliver@mcgrawdesignbuild.com",
+    "name": "McGraw Design & Build",
+    "phone": "CLIENT_PHONE"
+  },
+  "contractor": {
+    "address": "448 W 31st St, Indianapolis, IN 46208",
+    "email": "oliver@mcgrawdesignbuild.com",
+    "name": "McGraw Design & Build",
+    "phone": "(317) 782-5271",
+    "website": "https://mcgrawdesignbuild.com"
+  },
+  "project": {
+    "name": "Sample Home",
+    "description": "Sample Project"
+  },
+  "tasks": [
+    {
+      "task_name": "Preliminary Work",
+      "task_description": "Preliminary work to begin the project including: \n-> Exploratory Demolition (if necessary)\n-> Site Survey\n-> Blueprints, Construction Documents, and Engineering\n-> Permitting \n\n",
+      "aggregated_cost_code": [
+        "100",
+        "95"
+      ],
+      "task_total_cost": 6000,
+      "children": {
+        "children": [
+          {
+            "task_name": "Exploratory Demolition",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "100",
+              "95"
+            ],
+            "task_total_cost": 1500,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Exploratory Demolition",
+                  "task_description": "Subcontractor to drill test holes and remove extra parts in basement. ",
+                  "aggregated_cost_code": [
+                    "101",
+                    "100",
+                    "95"
+                  ],
+                  "task_total_cost": 1000,
+                  "item_quantity": 1,
+                  "item_cost": 1000,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Exploratory Demo Dumpster",
+                  "task_description": "Dumpster for Exploratory Demolition",
+                  "aggregated_cost_code": [
+                    "102",
+                    "100",
+                    "95"
+                  ],
+                  "task_total_cost": 500,
+                  "item_quantity": 1,
+                  "item_cost": 500,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 1500
+            }
+          },
+          {
+            "task_name": "Survey",
+            "task_description": "Jobsite survey",
+            "aggregated_cost_code": [
+              "101",
+              "100",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Blueprints",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "200",
+              "100",
+              "95"
+            ],
+            "task_total_cost": 4500,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Matterport scan",
+                  "task_description": "Matterport scan of jobsite",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "100",
+                    "95"
+                  ],
+                  "task_total_cost": 500,
+                  "item_quantity": 1,
+                  "item_cost": 500,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Drafting",
+                  "task_description": "Jobsite survey",
+                  "aggregated_cost_code": [
+                    "102",
+                    "200",
+                    "100",
+                    "95"
+                  ],
+                  "task_total_cost": 2000,
+                  "item_quantity": 1,
+                  "item_cost": 2000,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Engineering ",
+                  "task_description": "Jobsite survey",
+                  "aggregated_cost_code": [
+                    "103",
+                    "200",
+                    "100",
+                    "95"
+                  ],
+                  "task_total_cost": 2000,
+                  "item_quantity": 1,
+                  "item_cost": 2000,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 4500
+            }
+          },
+          {
+            "task_name": "Permits",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "300",
+              "100",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Project Continuing Design",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "102",
+              "100",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          }
+        ],
+        "sum_total": 6000
+      }
+    },
+    {
+      "task_name": "Site and Foundation",
+      "task_description": "Preparing the jobsite for construction including: \n-> Major demolition (if necessary) \n-> Site clearing and tree removal\n-> Rough grading \n-> Utilities\n-> Foundation\n\n",
+      "aggregated_cost_code": [
+        "200",
+        "95"
+      ],
+      "task_total_cost": 25600,
+      "children": {
+        "children": [
+          {
+            "task_name": "Clearing & Demolition",
+            "task_description": "Site demolition, tree removal, rough grade",
+            "aggregated_cost_code": [
+              "100",
+              "200",
+              "95"
+            ],
+            "task_total_cost": 6500,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Demolition",
+                  "task_description": "Demolition of existing structures and debris",
+                  "aggregated_cost_code": [
+                    "100",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "Demolition of existing structures",
+                        "task_description": "",
+                        "aggregated_cost_code": [
+                          "101",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "Demolition Dumpstesr",
+                        "task_description": "",
+                        "aggregated_cost_code": [
+                          "102",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                },
+                {
+                  "task_name": "Tree Removal",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "100",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Equipment for site clean up and rough grade",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "102",
+                    "100",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 2750,
+                  "item_quantity": 50,
+                  "item_cost": 55,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Labor for site clean up and rough grade",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "103",
+                    "100",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 3750,
+                  "item_quantity": 50,
+                  "item_cost": 75,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 6500
+            }
+          },
+          {
+            "task_name": "Utilities Installation",
+            "task_description": "Temp Power, Sewer/Water, Other utilities where applicable",
+            "aggregated_cost_code": [
+              "200",
+              "95"
+            ],
+            "task_total_cost": 19100,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Water and Sewer",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 10000,
+                  "item_quantity": 1,
+                  "item_cost": 10000,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Temp Power",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "102",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 1500,
+                  "item_quantity": 1,
+                  "item_cost": 1500,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Underground Electric Service",
+                  "task_description": "New Underground Power Install",
+                  "aggregated_cost_code": [
+                    "100",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 7600,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "Underground power labor",
+                        "task_description": "Dig trench, install conduit, backfill ",
+                        "aggregated_cost_code": [
+                          "101",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 1500,
+                        "item_quantity": 20,
+                        "item_cost": 75,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "Underground power equipment",
+                        "task_description": "machine to dig power trench and backfill including mobalize and demobalize ",
+                        "aggregated_cost_code": [
+                          "102",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 1100,
+                        "item_quantity": 20,
+                        "item_cost": 55,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "conduit",
+                        "task_description": "4\" conduit. meter base supplied by AES",
+                        "aggregated_cost_code": [
+                          "103",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 2000,
+                        "item_quantity": 1,
+                        "item_cost": 2000,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "power connection by electrician",
+                        "task_description": "power connection including meter base (if not provided by AES), disconnect (if required) and breaker panel. Tag and permit included",
+                        "aggregated_cost_code": [
+                          "104",
+                          "100",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 3000,
+                        "item_quantity": 1,
+                        "item_cost": 3000,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 7600
+                  }
+                },
+                {
+                  "task_name": "misc utilities",
+                  "task_description": "gas service by citizens, no charge, internet by others, no charge. ",
+                  "aggregated_cost_code": [
+                    "103",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 19100
+            }
+          },
+          {
+            "task_name": "Foundation",
+            "task_description": "Foundation: Footing, stem walls, slab, and rough grade",
+            "aggregated_cost_code": [
+              "300",
+              "200",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Excavation and Backfill",
+                  "task_description": "Excavate for Foundation and Backfill",
+                  "aggregated_cost_code": [
+                    "100",
+                    "300",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "Layout and excavation Labor",
+                        "task_description": "Layout and Excavation for footings and foundation",
+                        "aggregated_cost_code": [
+                          "101",
+                          "100",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "Excavation equipment",
+                        "task_description": "Machine time for excavation, backfill, and hauling related to foundation",
+                        "aggregated_cost_code": [
+                          "102",
+                          "100",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 55,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "Stone for foundation backfill ",
+                        "task_description": "#53 stone for fill where needed ",
+                        "aggregated_cost_code": [
+                          "103",
+                          "100",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 55,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "Spoil disposal from excavation",
+                        "task_description": "Dispose of spoil from excvation",
+                        "aggregated_cost_code": [
+                          "104",
+                          "100",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 55,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                },
+                {
+                  "task_name": "Footings",
+                  "task_description": "Place footings as per prints",
+                  "aggregated_cost_code": [
+                    "200",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "concrete labor for footings",
+                        "task_description": "concrete workers to form, install rebar, and finish footing concrete as per prints",
+                        "aggregated_cost_code": [
+                          "101",
+                          "200",
+                          "300",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "concrete for footings",
+                        "task_description": "concrete for footings",
+                        "aggregated_cost_code": [
+                          "102",
+                          "200",
+                          "300",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "rebar, ties, and misc for footings",
+                        "task_description": "rebar, formworm, and misc for footings",
+                        "aggregated_cost_code": [
+                          "103",
+                          "200",
+                          "300",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                },
+                {
+                  "task_name": "Block stemwall",
+                  "task_description": "Place block as per prints",
+                  "aggregated_cost_code": [
+                    "300",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "concrete block, reinformcement, and bolts",
+                        "task_description": "concrete block for stemwalls",
+                        "aggregated_cost_code": [
+                          "101",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "mason for stemwalls",
+                        "task_description": "masonry for foundation",
+                        "aggregated_cost_code": [
+                          "102",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                },
+                {
+                  "task_name": "Underslab Insulation",
+                  "task_description": "Place underslab insulation",
+                  "aggregated_cost_code": [
+                    "400",
+                    "300",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "slab insulation installation",
+                        "task_description": "slab insulation install",
+                        "aggregated_cost_code": [
+                          "101",
+                          "400",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      },
+                      {
+                        "task_name": "slab insulation materials",
+                        "task_description": "slab insulation install",
+                        "aggregated_cost_code": [
+                          "102",
+                          "400",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                },
+                {
+                  "task_name": "Concrete Slab",
+                  "task_description": "Concrete Slab",
+                  "aggregated_cost_code": [
+                    "500",
+                    "300",
+                    "200",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "children": {
+                    "children": [
+                      {
+                        "task_name": "Concrete slab subcontract",
+                        "task_description": "Concrete slab subcontract includes concrete materials",
+                        "aggregated_cost_code": [
+                          "101",
+                          "500",
+                          "300",
+                          "200",
+                          "95"
+                        ],
+                        "task_total_cost": 0,
+                        "item_quantity": 0,
+                        "item_cost": 0,
+                        "item_tax": 0,
+                        "item_markup": 0
+                      }
+                    ],
+                    "sum_total": 0
+                  }
+                }
+              ],
+              "sum_total": 0
+            }
+          }
+        ],
+        "sum_total": 25600
+      }
+    },
+    {
+      "task_name": "Rough Structure",
+      "task_description": "Rough Structural work including:\n-> Framing\n-> Exterior windows and doors\n-> Siding\n-> Roofing\n-> Exterior Painting\n\n",
+      "aggregated_cost_code": [
+        "300",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "Steel Structure",
+            "task_description": "Steel structural components ",
+            "aggregated_cost_code": [
+              "100",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "structural steel?",
+                  "task_description": "????",
+                  "aggregated_cost_code": [
+                    "101",
+                    "100",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Structural Masonry (non-foundation)",
+            "task_description": "Masonry (non-foundation) structural",
+            "aggregated_cost_code": [
+              "200",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "above grade masonry?",
+                  "task_description": "????",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Wood Framing",
+            "task_description": "Wood structure and framing",
+            "aggregated_cost_code": [
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "First floor framing materials",
+                  "task_description": "Provide all caulking and paint to complete paint job. ",
+                  "aggregated_cost_code": [
+                    "101",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Framing labor",
+                  "task_description": "Complete project framing including: ",
+                  "aggregated_cost_code": [
+                    "102",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Roof framing materials",
+                  "task_description": "Complete project framing including: ",
+                  "aggregated_cost_code": [
+                    "103",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Fenestrations",
+            "task_description": "Fenestrations. Exterior windows, doors, garage doors, and foundation / egress windows. ",
+            "aggregated_cost_code": [
+              "400",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Siding",
+            "task_description": "All types of cladding including: \n-Exterior trim\n-Wood / vinyl / fibercement cladding\n-Masonry non-structural veneer. ",
+            "aggregated_cost_code": [
+              "500",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Exterior metal",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "500",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Exterior trim",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "102",
+                    "500",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Exterior Siding Labor",
+                  "task_description": "Install: \nFascia metal wrap\nSoffit wood\nFibercement siding and trim. ",
+                  "aggregated_cost_code": [
+                    "103",
+                    "500",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Roofing",
+            "task_description": "Roofing",
+            "aggregated_cost_code": [
+              "600",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Roofing labor",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "600",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Roofing materials",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "102",
+                    "600",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Gutters",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "103",
+                    "600",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Exterior Paint",
+            "task_description": "Exterior paint",
+            "aggregated_cost_code": [
+              "700",
+              "300",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Exterior paint subcontract",
+                  "task_description": "Provide all caulking and paint to complete paint job. ",
+                  "aggregated_cost_code": [
+                    "101",
+                    "700",
+                    "300",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "Rough Mechanicals",
+      "task_description": "Rough mechanical work including HVAC, Electrical, Plumbing, and Fire blocking\n",
+      "aggregated_cost_code": [
+        "400",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "Rough HVAC",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "100",
+              "400",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Complete HVAC",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "100",
+                    "400",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Rough Plumbing",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "200",
+              "400",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Complete Plumbing",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "400",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Rough Electrical",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "300",
+              "400",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Complete Electrical",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "300",
+                    "400",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Low voltage electrical?",
+                  "task_description": "garage door openers?\nphone? \nnetwork?\nsecurity? ",
+                  "aggregated_cost_code": [
+                    "102",
+                    "300",
+                    "400",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Firecaulking, nailblocks, fireblocking",
+            "task_description": "MISC fireblocking, nailguards, fireblocking, etc.\nSubs should provide their own fireblocking, nail guards\nas much as possible. \nbudget for a case of fireblock caulk and a case of nail guards\nand one bag of mineral wooll just in case. ",
+            "aggregated_cost_code": [
+              "101",
+              "400",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "Interior Finishes",
+      "task_description": "Finishes including insulation, drywall, trim, cabinets, flooring, tile, and speciality finishes",
+      "aggregated_cost_code": [
+        "500",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "Insulation",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "101",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Interior Trim",
+            "task_description": "Interior doors\nCase\nBase\nCustom work?\nCrown? \nStairs?\n",
+            "aggregated_cost_code": [
+              "200",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Interior Doors",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "500",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Case + Base",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "102",
+                    "200",
+                    "500",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Trim labor",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "103",
+                    "200",
+                    "500",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Stair parts?",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "104",
+                    "200",
+                    "500",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Closet Finishes? Does this go here?",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "105",
+                    "200",
+                    "500",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Drywall",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "100",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Interior Painting",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "300",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Cabinetry + Counters",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "400",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Flooring",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Specialty Tile",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "600",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Specialty Finishes",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "700",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Hardware",
+            "task_description": "Door hardware, bathroom mirrors, shower doors, mailbox, towel bars, drapes and blinds ",
+            "aggregated_cost_code": [
+              "800",
+              "500",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "Mechanical Finishes",
+      "task_description": "All mechanical, electrical, plumbing, HVAC, technology, and speciality finishes. ",
+      "aggregated_cost_code": [
+        "600",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "Appliances",
+            "task_description": "Fridge, stove, dishwasher, washer dryer, microwave/ hood? ??? ",
+            "aggregated_cost_code": [
+              "100",
+              "600",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Electrical Finishes",
+            "task_description": "Lighting, dimmers, ??, outlet plates and covers? if not included by sub? ",
+            "aggregated_cost_code": [
+              "200",
+              "600",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Technology ",
+            "task_description": "Tech finishes. Network? Security? Speakers? Doorbell? ",
+            "aggregated_cost_code": [
+              "900",
+              "600",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Plumbing Finishes",
+            "task_description": "Finishing plumbing parts, Faucets, drains, water heater, traps, etc? ",
+            "aggregated_cost_code": [
+              "300",
+              "600",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "HVAC Finishes",
+            "task_description": "HVAC registers. Other finishes? WHere do exterior vents go? ",
+            "aggregated_cost_code": [
+              "400",
+              "600",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Minisplit? ",
+                  "task_description": "",
+                  "aggregated_cost_code": [
+                    "101",
+                    "400",
+                    "600",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Outdoor unit and registers",
+                  "task_description": "?#?Z?Z",
+                  "aggregated_cost_code": [
+                    "102",
+                    "400",
+                    "600",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "Landscaping and Exterior Finishes",
+      "task_description": "Landscaping and Exterior Finishes including concrete flatwork, fencing, decks, softscaping, draininge, and speciality exterior finishes. ",
+      "aggregated_cost_code": [
+        "700",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "Driveway",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "100",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "Layout and excavation",
+                  "task_description": "Operator and labor to layout and dig driveway",
+                  "aggregated_cost_code": [
+                    "101",
+                    "100",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Machine time for driveway ",
+                  "task_description": "driveway machine time",
+                  "aggregated_cost_code": [
+                    "102",
+                    "100",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "fill stone for driveway",
+                  "task_description": "fill stone for driveway",
+                  "aggregated_cost_code": [
+                    "103",
+                    "100",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "concrete for driveway",
+                  "task_description": "fill stone for driveway",
+                  "aggregated_cost_code": [
+                    "104",
+                    "100",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "Form and finish driveway",
+                  "task_description": "fill stone for driveway",
+                  "aggregated_cost_code": [
+                    "105",
+                    "100",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Fence",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "200",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "fence subcontract install",
+                  "task_description": "fence install subcontract",
+                  "aggregated_cost_code": [
+                    "101",
+                    "200",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                },
+                {
+                  "task_name": "fence materials",
+                  "task_description": "-posts\n-concrete\n-pickets / cross braces\n-latches\n-other components? ",
+                  "aggregated_cost_code": [
+                    "102",
+                    "200",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Sidewalks / Patios",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "300",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [
+                {
+                  "task_name": "sidewalk subcontract",
+                  "task_description": "layout, prep, and all concrete for sidewalks. \n-ensure that rough grade is prepped and fall is established prior to sidwalk subcontractor getting on site. ",
+                  "aggregated_cost_code": [
+                    "101",
+                    "300",
+                    "700",
+                    "95"
+                  ],
+                  "task_total_cost": 0,
+                  "item_quantity": 0,
+                  "item_cost": 0,
+                  "item_tax": 0,
+                  "item_markup": 0
+                }
+              ],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Decks / Exterior Woodwork",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "400",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Final Grade & Softscaping",
+            "task_description": "Final grade, grass, plants, trees",
+            "aggregated_cost_code": [
+              "500",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Exterior drainage finishes",
+            "task_description": "Downspout extensions or burried drainage (not foundation drains)",
+            "aggregated_cost_code": [
+              "600",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "Misc exterior finishes",
+            "task_description": "??? ",
+            "aggregated_cost_code": [
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "children": {
+              "children": [],
+              "sum_total": 0
+            }
+          },
+          {
+            "task_name": "exterior cleaning & rough final grade",
+            "task_description": "depending on site and extent of landscaping the site may need to be re-graded after major construction and cleaned prior to driveway / sidewalk contractors coming on site. ",
+            "aggregated_cost_code": [
+              "101",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "exterior and rough/final grade equpiment",
+            "task_description": "dump truck and skidsteer time to clean site",
+            "aggregated_cost_code": [
+              "102",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "exterior clean disposal",
+            "task_description": "general exterior clean prior to starting landscaping",
+            "aggregated_cost_code": [
+              "103",
+              "700",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "General and Holding Costs",
+      "task_description": "General additional construction costs: \n-> Continuing Design Work\n-> Jobsite cleanup\n-> Delivery driving\n-> Utilities\n-> Temp heat\n-> Port-a-let\n-> General Dumpsters and Disposal \nTest\n",
+      "aggregated_cost_code": [
+        "900",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "children": {
+        "children": [
+          {
+            "task_name": "General jobsite cleaning and final clean",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "101",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Dumpsters and disposal for construction",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "102",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Hauling and clean up equipment",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "103",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Delivery driver",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "104",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Port-a-let",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "105",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Utility Payments",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "106",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Security System",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "107",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          },
+          {
+            "task_name": "Builder's Risk Policy",
+            "task_description": "",
+            "aggregated_cost_code": [
+              "108",
+              "900",
+              "95"
+            ],
+            "task_total_cost": 0,
+            "item_quantity": 0,
+            "item_cost": 0,
+            "item_tax": 0,
+            "item_markup": 0
+          }
+        ],
+        "sum_total": 0
+      }
+    },
+    {
+      "task_name": "ADMIN - DO NOT BILL",
+      "task_description": "",
+      "aggregated_cost_code": [
+        "999",
+        "95"
+      ],
+      "task_total_cost": 2750,
+      "item_quantity": 50,
+      "item_cost": 55,
+      "item_tax": 0,
+      "item_markup": 0
+    },
+    {
+      "task_name": "ADMIN - WRITE OFFS",
+      "task_description": "Written off materials",
+      "aggregated_cost_code": [
+        "998",
+        "95"
+      ],
+      "task_total_cost": 0,
+      "item_quantity": 0,
+      "item_cost": 0,
+      "item_tax": 0,
+      "item_markup": 0
+    }
+  ]
+}
