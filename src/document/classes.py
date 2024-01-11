@@ -1,58 +1,67 @@
+import copy
 from lxml import etree
 
 
 class Document:
 
-	@staticmethod
-	def read(uri):
-		with open(uri, 'r') as f:
-			return f.read()
+	#TODO: https://levelup.gitconnected.com/design-patterns-in-python-factory-pattern-beea1da31c17
+
+	#TODO: https://python-patterns.guide/gang-of-four/factory-method/
+
+	def foo(self):
+		self.klass = self.calculate_klass()
+		self.xpath = self.calculate_xpath()
+		self.css = self.calculate_css()
+		self.html = self.calculate_html()
+		self.body = self.calculate_body()
+		self.response = self.calculate_response()
+		
+		pass
 
 	def __init__(self):
-		try:
-			getattr(self, 'klass')
-		except AttributeError:
-			self.klass = 'document'
-			self.calculate_klass()
-			self.__init__()
-		else:
-			self.klass = self.__class__.__name__.lower()
-			self.calculate_klass()
+		self.klass = None
+		self.xpath = None
+		self.css = None
+		self.html = None
+		self.body = None
+		self.response = None
+		self.foo()
 
-	def calculate_klass(self):
-			self.calculate_uri()
-			self.calculate_xpath()
-			self.calculate_html()
-			self.calculate_css()
+	# def calculate_klass(self, klass = 'document'):
+	# 	return klass
+
+	# def calculate_xpath(self):
+	# 	return f'//div[@id="{self.klass}"]'
+
+	# def calculate_css(self):
+	# 	return Document.read(f'src/{self.klass}/template.css')
+
+	# def calculate_html(self):
+	# 	return etree.parse(f"src/{self.klass}/template.html", None)
 	
-	def calculate_uri(self):
-		self.uri = f"src/{self.klass}/template"
+	# def calculate_body(self):
+	# 	body = copy.deepcopy(self.html)
+	# 	body.find('./head/style').text = self.css
+	# 	return body
 
-	def calculate_xpath(self):
-		self.xpath = f'//div[@id="{self.klass}"]'
+	# def calculate_response(self):
+	# 	return {
+	# 		'statusCode': 200,
+	# 		'body': self.body,
+	# 		'headers': { 'Content-Type': 'text/html' },
+	# 	}
 
-	def calculate_css(self):
-		css = Document.read(f"{self.uri}.css")
-		try:
-			getattr(self, 'css')
-		except AttributeError:
-			self.css = css
-		else:
-			self.css = f"{self.css}\n{css}"
+	# @staticmethod
+	# def read(uri):
+	# 	with open(uri, 'r') as f:
+	# 		return f.read()
 
-	def calculate_html(self):
-		html = etree.parse(f"{self.uri}.html", None)
-		try:
-			getattr(self, 'html')
-		except AttributeError:
-			self.html = html
-		else:
-			self.html.xpath(self.xpath).append(html)
+	# @staticmethod
+	# def write(uri, content):
+	# 	pass
 
-	def calculate_response(self):
-		# body = None # combine html & css
-		self.response = {
-			'statusCode': 200,
-			'body': self,
-			'headers': { 'Content-Type': 'text/html' },
-		}
+	# def to_string(self):
+	# 	print(self.response)
+
+	# def to_file(self):
+	# 	Document.write(f"src/{self.klass}/output.html", self.body)
