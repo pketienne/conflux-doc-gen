@@ -1,3 +1,4 @@
 pytest
 pytest_fixture_classes
 json
+lxml
