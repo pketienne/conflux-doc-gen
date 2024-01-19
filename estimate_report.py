@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from lxml import etree
 from lxml.builder import E
 
-class InvoiceReport:
+class EstimateReport:
 	CSS = '''
 * { 
     margin: 0;
@@ -83,9 +83,7 @@ div#materials table, div#labors table, div#totals table {
 		sections = {
 			'client': Client('client', self.event['client']),
 			'contractor': Contractor('contractor', self.event['contractor']),
-			'materials': Materials('materials', self.event['costs']['materials']),
-			'labors': Labors('labors', self.event['costs']['labor']),
-			'totals': Totals('totals', self.event['totals']),
+			'tasks': Tasks('tasks', self.event['tasks']),
 		}
 
 		for _, value in sections.items():
@@ -100,6 +98,9 @@ div#materials table, div#labors table, div#totals table {
 
 		return self.response
 	
+	def append(self, loc, content):
+		self.etree.find(loc).append(content)
+
 	def to_response(self):
 		etree_bytes = etree.tostring(
 			self.etree,
@@ -115,9 +116,6 @@ div#materials table, div#labors table, div#totals table {
 				'Content-Type': 'text/html',
 			},
 		}
-
-	def append(self, loc, content):
-		self.etree.find(loc).append(content)
 
 	def to_file(self, uri):
 		etree_string = etree.tostring(
@@ -136,7 +134,7 @@ class Report():
 		self.etree = E.html(
 			E.head(
 				E.title('McGraw Design & Build'),
-				E.style(InvoiceReport.CSS),
+				E.style(EstimateReport.CSS),
 			),
 			E.body(
 				E.div('', {'id': 'logo'}),
@@ -282,3 +280,37 @@ class Totals(Section):
 				),
 			)
 		)
+
+
+class Tasks(Section):
+	def generate(self):
+		self.etree.find('.').append(E.h2(f'{self.__class__.__name__}'))
+		self.etree.find('.').append(
+			E.table(
+				E.thead(
+					E.tr(
+						E.th('Description', {'class': 'description'}),
+						E.th('Quantity', {'class': 'quantity'}),
+						E.th('Cost', {'class': 'cost'}),
+						E.th('Total', {'class': 'total'}),
+					)
+				),
+				E.tbody()
+			)
+		)
+
+		for content in self.content:
+			name = self.content['name']
+			description = self.content['description']
+			code = '-'.join([str(x) for x in self.content['code']])
+			# tasks = Tasks(self.content['children']['children'])
+
+			etree = E.tr(
+				E.td(description, {'class': 'description'}),
+				E.td(f'{quantity:.2f}', {'class': 'quantity'}),
+				E.td(f'{price:.2f}', {'class': 'price'}),
+				E.td(f'{total:.2f}', {'class': 'total'}),
+			)
+
+			self.etree.find('./table/tbody').append(etree)
+
