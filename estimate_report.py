@@ -47,8 +47,28 @@ div#materials h2 {
 div#labors h2 {
 	background-color: #33aacc;
 }
+div#tasks h2 {
+	background-color: #33aacc;
+}
 div#totals h2 {
 	background-color: #3388cc;
+}
+td.cost-code, td.task-name, td.description, td.quantity, td.cost, td.tax, td.markup {
+	padding: 0px 20px;
+}
+td.task-name {
+	width: 60%;
+}
+/*
+tr:nth-child(odd) {
+	background-color: #eee
+}
+tr.leaf {
+	background-color: fcf;
+}
+*/
+tr.non-leaf {
+	background-color: #caeac6;
 }
 th, td {
 	width: 10%;
@@ -65,7 +85,10 @@ td.grand-total {
 	font-family: 'Arial';
 	padding-left: 50px;
 }
-div#materials table, div#labors table, div#totals table {
+#tasks th.task-name, #tasks td.task-name {
+	text-align: left;
+}
+div#materials table, div#labors table, div#totals table, div#tasks table {
 	text-align: right;
 	font-family: 'Courier';
 	width: 100%;
@@ -289,28 +312,53 @@ class Tasks(Section):
 			E.table(
 				E.thead(
 					E.tr(
+						E.th('Cost Code', {'class': 'cost-code'}),
+						E.th('Task Name', {'class': 'task-name'}),
 						E.th('Description', {'class': 'description'}),
 						E.th('Quantity', {'class': 'quantity'}),
 						E.th('Cost', {'class': 'cost'}),
-						E.th('Total', {'class': 'total'}),
+						E.th('Tax', {'class': 'tax'}),
+						E.th('Markup', {'class': 'markup'}),
 					)
 				),
 				E.tbody()
 			)
 		)
 
-		for content in self.content:
-			name = self.content['name']
-			description = self.content['description']
-			code = '-'.join([str(x) for x in self.content['code']])
-			# tasks = Tasks(self.content['children']['children'])
+		length = len(self.content['url'])
+		tasks = []
+		for i in range(length):
+			task = {
+				'cost_code': f'{self.content['combinedCostCode'][i]}',
+				'name': f'{self.content['task_name'][i]}',
+				'description': f'{self.content['task_description'][i]}',
+			}
+			if self.content['idtasks_leaves'][i]:
+				task['quantity'] = f'{self.content['item_quantity'][i]}'
+				task['cost'] = f'{self.content['item_cost'][i]}'
+				task['tax'] = f'{self.content['item_tax'][i]}'
+				task['markup'] = f'{self.content['item_markup'][i]}'
+				task['leaf'] = True
+			else:
+				task['quantity'], task['cost'], task['tax'], task['markup'] = '','','',''
+				task['leaf'] = False
+			tasks.append(task)
+		tasks.sort(key=lambda x: x['cost_code'])
 
-			etree = E.tr(
-				E.td(description, {'class': 'description'}),
-				E.td(f'{quantity:.2f}', {'class': 'quantity'}),
-				E.td(f'{price:.2f}', {'class': 'price'}),
-				E.td(f'{total:.2f}', {'class': 'total'}),
+		for task in tasks:
+			if task['leaf']:
+				tr_class = 'leaf'
+			else:
+				tr_class = 'non-leaf'
+
+			etree = E.tr({'class': tr_class},
+				E.td(task['cost_code'], {'class': 'cost-code'}),
+				E.td(task['name'], {'class': 'task-name'}),
+				E.td(task['description'], {'class': 'description'}),
+				E.td(task['quantity'], {'class': 'quantity'}),
+				E.td(task['cost'], {'class': 'cost'}),
+				E.td(task['tax'], {'class': 'tax'}),
+				E.td(task['markup'], {'class': 'markup'}),
 			)
 
 			self.etree.find('./table/tbody').append(etree)
-
