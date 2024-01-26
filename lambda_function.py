@@ -372,8 +372,8 @@ def lambda_handler(event, context=None):
     # report_class_instance.to_file(f'dest/{report_type}.html')
     return response
 
-if __name__ == "__main__":
-    with open('api/estimate.json', 'r', encoding='utf-8') as f:
-        request = f.read()
-        request = json.loads(request)
-    lambda_handler(request)
+# if __name__ == "__main__":
+#     with open('api/estimate.json', 'r', encoding='utf-8') as f:
+#         request = f.read()
+#         request = json.loads(request)
+#     lambda_handler(request)
