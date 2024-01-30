@@ -1,5 +1,6 @@
 .pylint
 **/__pycache__/
 *.zip
+*.pdf
 node_modules
 node_modules
