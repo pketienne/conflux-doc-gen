@@ -18,7 +18,7 @@ export const handler = async (event) => {
 		await page.emulateMediaType("screen");
 		var PDFOptions = { printBackground: true, format: 'A4' }
 		if (!region) {
-			PDFOptions.path = 'result.pdf'
+			PDFOptions.path = '../result.pdf'
 		}
 		await page.evaluate(() => {
 			const location = 'div.table-responsive table tbody tr'
