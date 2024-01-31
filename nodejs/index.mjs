@@ -5,6 +5,7 @@ const region = process.env.AWS_REGION
 
 export const handler = async (event) => {
 	const url = 'https://conflux-document-generator.s3.us-east-2.amazonaws.com/templates/invoice-1.html'
+
 	try {
 		const browser = await puppeteer.launch({
 			args: chromium.args,
@@ -26,16 +27,24 @@ export const handler = async (event) => {
 			dom.forEach(e => e.remove())
 		})
 		const pdf = await page.pdf(PDFOptions);
+		console.log(pdf)
 		await page.close();
 		await browser.close();
-		const response = { statusCode: 200, body: pdf };
-		// return response;
-		return event;
+		return {
+			statusCode: 200,
+			headers: { 'Content-Type': 'application/pdf' },
+			body: pdf.toString('base64'),
+			isBase64Encoded: true,
+			// https://medium.com/@keshavkumaresan/generating-pdf-documents-within-aws-lambda-with-nodejs-and-puppeteer-46ac7ca299bf
+		}
 	} catch (error) {
-		throw new Error(error.message)
+		return {
+			statusCode: 500,
+			body: error,
+		}
 	}
 };
 
 if(!region) {
 	handler({})
-}
+};
