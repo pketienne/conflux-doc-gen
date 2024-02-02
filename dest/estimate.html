@@ -1,0 +1,1388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+  <head>
+    <title>McGraw Design &amp; Build</title>
+    <style>
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+	margin: 20px;
+}
+#logo {
+	width: 500px;
+	height: 125px;
+	background-image: url('mdb-logo.png');
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+h1 {
+	background-color: #abc;
+	border: 1px solid #999;
+	margin: 20px 0px;
+	padding: 5px 15px;
+}
+h2 {
+	padding-left: 35px;
+	margin: 10px 0px;
+	border: 1px solid #999;
+}
+ul {
+	list-style-type: none;
+	margin-left: 45px;
+}
+span.key {
+	font-weight: bold;
+}
+div#contractor h2, div#client h2 {
+	background-color: #bbc;
+}
+div#materials h2 {
+	background-color: #66d9ff;
+}
+div#labors h2 {
+	background-color: #33aacc;
+}
+div#tasks h2 {
+	background-color: #33aacc;
+}
+div#totals h2 {
+	background-color: #3388cc;
+}
+td.cost-code, td.task-name, td.description, td.quantity, td.cost, td.tax, td.markup {
+	padding: 0px 20px;
+}
+td.task-name {
+	width: 60%;
+}
+/*
+tr:nth-child(odd) {
+	background-color: #eee
+}
+tr.leaf {
+	background-color: fcf;
+}
+*/
+tr.non-leaf {
+	background-color: #caeac6;
+}
+th, td {
+	width: 10%;
+}
+th.description,
+th.costs,
+td.description,
+td.materials,
+td.labors,
+td.grand-total {
+	text-align: left;
+	padding: 5px 0px;
+	width: 70%;
+	font-family: 'Arial';
+	padding-left: 50px;
+}
+#tasks th.task-name, #tasks td.task-name {
+	text-align: left;
+}
+div#materials table, div#labors table, div#totals table, div#tasks table {
+	text-align: right;
+	font-family: 'Courier';
+	width: 100%;
+}
+		</style>
+  </head>
+  <body>
+    <h1>Project Details</h1>
+    <div id="client">
+      <h2>Client</h2>
+      <ul>
+        <li>
+          <span class="key">Address:</span>
+          <span class="value">448 West 31st Street</span>
+        </li>
+        <li>
+          <span class="key">Email:</span>
+          <span class="value">oliver@mcgrawdesignbuild.com</span>
+        </li>
+        <li>
+          <span class="key">Name:</span>
+          <span class="value">McGraw Design &amp; Build</span>
+        </li>
+        <li>
+          <span class="key">Phone:</span>
+          <span class="value">CLIENT_PHONE</span>
+        </li>
+      </ul>
+    </div>
+    <div id="contractor">
+      <h2>Contractor</h2>
+      <ul>
+        <li>
+          <span class="key">Address:</span>
+          <span class="value">448 W 31st St, Indianapolis, IN 46208</span>
+        </li>
+        <li>
+          <span class="key">Email:</span>
+          <span class="value">oliver@mcgrawdesignbuild.com</span>
+        </li>
+        <li>
+          <span class="key">Name:</span>
+          <span class="value">McGraw Design &amp; Build</span>
+        </li>
+        <li>
+          <span class="key">Phone:</span>
+          <span class="value">(317) 782-5271</span>
+        </li>
+        <li>
+          <span class="key">Website:</span>
+          <span class="value">https://mcgrawdesignbuild.com</span>
+        </li>
+      </ul>
+    </div>
+    <div id="tasks">
+      <h2>Tasks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="cost-code">Cost Code</th>
+            <th class="task-name">Task Name</th>
+            <th class="description">Description</th>
+            <th class="quantity">Quantity</th>
+            <th class="cost">Cost</th>
+            <th class="tax">Tax</th>
+            <th class="markup">Markup</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="non-leaf">
+            <td class="cost-code">100</td>
+            <td class="task-name">Preliminary Work</td>
+            <td class="description">Preliminary work to begin the project including: 
+-&gt; Exploratory Demolition (if necessary)
+-&gt; Site Survey
+-&gt; Blueprints, Construction Documents, and Engineering
+-&gt; Permitting 
+
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">100.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Exploratory Demolition</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exploratory Demolition</td>
+            <td class="description">Subcontractor to drill test holes and remove extra parts in basement. </td>
+            <td class="quantity">1</td>
+            <td class="cost">1000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exploratory Demo Dumpster</td>
+            <td class="description">Dumpster for Exploratory Demolition</td>
+            <td class="quantity">1</td>
+            <td class="cost">500</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.101</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Survey</td>
+            <td class="description">Jobsite survey</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.102</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Project Continuing Design</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">100.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Blueprints</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Matterport scan</td>
+            <td class="description">Matterport scan of jobsite</td>
+            <td class="quantity">1</td>
+            <td class="cost">500</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.200.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Drafting</td>
+            <td class="description">Jobsite survey</td>
+            <td class="quantity">1</td>
+            <td class="cost">2000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">100.200.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Engineering </td>
+            <td class="description">Jobsite survey</td>
+            <td class="quantity">1</td>
+            <td class="cost">2000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">100.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Permits</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200</td>
+            <td class="task-name">Site and Foundation</td>
+            <td class="description">Preparing the jobsite for construction including: 
+-&gt; Major demolition (if necessary) 
+-&gt; Site clearing and tree removal
+-&gt; Rough grading 
+-&gt; Utilities
+-&gt; Foundation
+
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Clearing &amp; Demolition</td>
+            <td class="description">Site demolition, tree removal, rough grade</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.100.100</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Demolition</td>
+            <td class="description">Demolition of existing structures and debris</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.100.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Demolition of existing structures</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.100.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Demolition Dumpstesr</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Tree Removal</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Equipment for site clean up and rough grade</td>
+            <td class="description"></td>
+            <td class="quantity">50</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.100.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Labor for site clean up and rough grade</td>
+            <td class="description"></td>
+            <td class="quantity">50</td>
+            <td class="cost">75</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Utilities Installation</td>
+            <td class="description">Temp Power, Sewer/Water, Other utilities where applicable</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.200.100</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Underground Electric Service</td>
+            <td class="description">New Underground Power Install</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Underground power labor</td>
+            <td class="description">Dig trench, install conduit, backfill </td>
+            <td class="quantity">20</td>
+            <td class="cost">75</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Underground power equipment</td>
+            <td class="description">machine to dig power trench and backfill including mobalize and demobalize </td>
+            <td class="quantity">20</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.100.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;conduit</td>
+            <td class="description">4" conduit. meter base supplied by AES</td>
+            <td class="quantity">1</td>
+            <td class="cost">2000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.100.104</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;power connection by electrician</td>
+            <td class="description">power connection including meter base (if not provided by AES), disconnect (if required) and breaker panel. Tag and permit included</td>
+            <td class="quantity">1</td>
+            <td class="cost">3000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Water and Sewer</td>
+            <td class="description"></td>
+            <td class="quantity">1</td>
+            <td class="cost">10000</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Temp Power</td>
+            <td class="description"></td>
+            <td class="quantity">1</td>
+            <td class="cost">1500</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.200.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;misc utilities</td>
+            <td class="description">gas service by citizens, no charge, internet by others, no charge. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Foundation</td>
+            <td class="description">Foundation: Footing, stem walls, slab, and rough grade</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300.100</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Excavation and Backfill</td>
+            <td class="description">Excavate for Foundation and Backfill</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Layout and excavation Labor</td>
+            <td class="description">Layout and Excavation for footings and foundation</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Excavation equipment</td>
+            <td class="description">Machine time for excavation, backfill, and hauling related to foundation</td>
+            <td class="quantity">0</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.100.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Stone for foundation backfill </td>
+            <td class="description">#53 stone for fill where needed </td>
+            <td class="quantity">0</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.100.104</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Spoil disposal from excavation</td>
+            <td class="description">Dispose of spoil from excvation</td>
+            <td class="quantity">0</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300.200</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Footings</td>
+            <td class="description">Place footings as per prints</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;concrete labor for footings</td>
+            <td class="description">concrete workers to form, install rebar, and finish footing concrete as per prints</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.200.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;concrete for footings</td>
+            <td class="description">concrete for footings</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.200.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;rebar, ties, and misc for footings</td>
+            <td class="description">rebar, formworm, and misc for footings</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300.300</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Block stemwall</td>
+            <td class="description">Place block as per prints</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.300.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;concrete block, reinformcement, and bolts</td>
+            <td class="description">concrete block for stemwalls</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.300.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;mason for stemwalls</td>
+            <td class="description">masonry for foundation</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300.400</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Underslab Insulation</td>
+            <td class="description">Place underslab insulation</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.400.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;slab insulation installation</td>
+            <td class="description">slab insulation install</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.400.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;slab insulation materials</td>
+            <td class="description">slab insulation install</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">200.300.500</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Concrete Slab</td>
+            <td class="description">Concrete Slab</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">200.300.500.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Concrete slab subcontract</td>
+            <td class="description">Concrete slab subcontract includes concrete materials</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300</td>
+            <td class="task-name">Rough Structure</td>
+            <td class="description">Rough Structural work including:
+-&gt; Framing
+-&gt; Exterior windows and doors
+-&gt; Siding
+-&gt; Roofing
+-&gt; Exterior Painting
+
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Steel Structure</td>
+            <td class="description">Steel structural components </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;structural steel?</td>
+            <td class="description">????</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Structural Masonry (non-foundation)</td>
+            <td class="description">Masonry (non-foundation) structural</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;above grade masonry?</td>
+            <td class="description">????</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Wood Framing</td>
+            <td class="description">Wood structure and framing</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.300.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;First floor framing materials</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.300.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Framing labor</td>
+            <td class="description">Complete project framing including: </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.300.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Roof framing materials</td>
+            <td class="description">Complete project framing including: </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.400</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Fenestrations</td>
+            <td class="description">Fenestrations. Exterior windows, doors, garage doors, and foundation / egress windows. </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.500</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Siding</td>
+            <td class="description">All types of cladding including: 
+-Exterior trim
+-Wood / vinyl / fibercement cladding
+-Masonry non-structural veneer. </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.500.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exterior metal</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.500.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exterior trim</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.500.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exterior Siding Labor</td>
+            <td class="description">Install: 
+Fascia metal wrap
+Soffit wood
+Fibercement siding and trim. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.600</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Roofing</td>
+            <td class="description">Roofing</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.600.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Roofing labor</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.600.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Roofing materials</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.600.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Gutters</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">300.700</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Exterior Paint</td>
+            <td class="description">Exterior paint</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">300.700.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Exterior paint subcontract</td>
+            <td class="description">Provide all caulking and paint to complete paint job. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">400</td>
+            <td class="task-name">Rough Mechanicals</td>
+            <td class="description">Rough mechanical work including HVAC, Electrical, Plumbing, and Fire blocking
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">400.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Rough HVAC</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">400.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Complete HVAC</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">400.101</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Firecaulking, nailblocks, fireblocking</td>
+            <td class="description">MISC fireblocking, nailguards, fireblocking, etc.
+Subs should provide their own fireblocking, nail guards
+as much as possible. 
+budget for a case of fireblock caulk and a case of nail guards
+and one bag of mineral wooll just in case. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">400.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Rough Plumbing</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">400.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Complete Plumbing</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">400.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Rough Electrical</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">400.300.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Complete Electrical</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">400.300.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Low voltage electrical?</td>
+            <td class="description">garage door openers?
+phone? 
+network?
+security? </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500</td>
+            <td class="task-name">Interior Finishes</td>
+            <td class="description">Finishes including insulation, drywall, trim, cabinets, flooring, tile, and speciality finishes</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Drywall</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;drywall subcontract</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.101</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Insulation</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Interior Trim</td>
+            <td class="description">Interior doors
+Case
+Base
+Custom work?
+Crown? 
+Stairs?
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Interior Doors</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.200.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Case + Base</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.200.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Trim labor</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.200.104</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Stair parts?</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.200.105</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Closet Finishes? Does this go here?</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Interior Painting</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">500.300.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Interior paint subcontract</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.400</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Cabinetry + Counters</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.500</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Flooring</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.600</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Specialty Tile</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.700</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Specialty Finishes</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">500.800</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Hardware</td>
+            <td class="description">Door hardware, bathroom mirrors, shower doors, mailbox, towel bars, drapes and blinds </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600</td>
+            <td class="task-name">Mechanical Finishes</td>
+            <td class="description">All mechanical, electrical, plumbing, HVAC, technology, and speciality finishes. </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Appliances</td>
+            <td class="description">Fridge, stove, dishwasher, washer dryer, microwave/ hood? ??? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Electrical Finishes</td>
+            <td class="description">Lighting, dimmers, ??, outlet plates and covers? if not included by sub? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Plumbing Finishes</td>
+            <td class="description">Finishing plumbing parts, Faucets, drains, water heater, traps, etc? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600.400</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;HVAC Finishes</td>
+            <td class="description">HVAC registers. Other finishes? WHere do exterior vents go? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">600.400.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Minisplit? </td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">600.400.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Outdoor unit and registers</td>
+            <td class="description">?#?Z?Z</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">600.900</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Technology </td>
+            <td class="description">Tech finishes. Network? Security? Speakers? Doorbell? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700</td>
+            <td class="task-name">Landscaping and Exterior Finishes</td>
+            <td class="description">Landscaping and Exterior Finishes including concrete flatwork, fencing, decks, softscaping, draininge, and speciality exterior finishes. </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.100</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Driveway</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.100.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Layout and excavation</td>
+            <td class="description">Operator and labor to layout and dig driveway</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.100.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Machine time for driveway </td>
+            <td class="description">driveway machine time</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.100.103</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;fill stone for driveway</td>
+            <td class="description">fill stone for driveway</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.100.104</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;concrete for driveway</td>
+            <td class="description">fill stone for driveway</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.100.105</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;Form and finish driveway</td>
+            <td class="description">fill stone for driveway</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.101</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;exterior cleaning &amp; rough final grade</td>
+            <td class="description">depending on site and extent of landscaping the site may need to be re-graded after major construction and cleaned prior to driveway / sidewalk contractors coming on site. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.102</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;exterior and rough/final grade equpiment</td>
+            <td class="description">dump truck and skidsteer time to clean site</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.103</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;exterior clean disposal</td>
+            <td class="description">general exterior clean prior to starting landscaping</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.200</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Fence</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.200.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;fence subcontract install</td>
+            <td class="description">fence install subcontract</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.200.102</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;fence materials</td>
+            <td class="description">-posts
+-concrete
+-pickets / cross braces
+-latches
+-other components? </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.300</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Sidewalks / Patios</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">700.300.101</td>
+            <td class="task-name">|ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;sidewalk subcontract</td>
+            <td class="description">layout, prep, and all concrete for sidewalks. 
+-ensure that rough grade is prepped and fall is established prior to sidwalk subcontractor getting on site. </td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.400</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Decks / Exterior Woodwork</td>
+            <td class="description"></td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.500</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Final Grade &amp; Softscaping</td>
+            <td class="description">Final grade, grass, plants, trees</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.600</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Exterior drainage finishes</td>
+            <td class="description">Downspout extensions or burried drainage (not foundation drains)</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">700.700</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Misc exterior finishes</td>
+            <td class="description">??? </td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="non-leaf">
+            <td class="cost-code">900</td>
+            <td class="task-name">General and Holding Costs</td>
+            <td class="description">General additional construction costs: 
+-&gt; Continuing Design Work
+-&gt; Jobsite cleanup
+-&gt; Delivery driving
+-&gt; Utilities
+-&gt; Temp heat
+-&gt; Port-a-let
+-&gt; General Dumpsters and Disposal 
+Test
+</td>
+            <td class="quantity"></td>
+            <td class="cost"></td>
+            <td class="tax"></td>
+            <td class="markup"></td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.101</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;General jobsite cleaning and final clean</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.102</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Dumpsters and disposal for construction</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.103</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Hauling and clean up equipment</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.104</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Delivery driver</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.105</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Port-a-let</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.106</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Utility Payments</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.107</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Security System</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">900.108</td>
+            <td class="task-name">|ꟷꟷꟷ&gt;Builder's Risk Policy</td>
+            <td class="description"></td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">998</td>
+            <td class="task-name">ADMIN - WRITE OFFS</td>
+            <td class="description">Written off materials</td>
+            <td class="quantity">0</td>
+            <td class="cost">0</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+          <tr class="leaf">
+            <td class="cost-code">999</td>
+            <td class="task-name">ADMIN - DO NOT BILL</td>
+            <td class="description"></td>
+            <td class="quantity">50</td>
+            <td class="cost">55</td>
+            <td class="tax">0</td>
+            <td class="markup">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
