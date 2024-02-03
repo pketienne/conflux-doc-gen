@@ -4,5 +4,23 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "34.69.248.150",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "CONFLUX BETA 1",
+				"database": "confluxbeta1",
+				"username": "conflux",
+				"askForPassword": true
+			}
+		]
+	}
 }
+
