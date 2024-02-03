@@ -35,7 +35,10 @@ export const handler = async (event) => {
 			headers: { 'Content-Type': 'application/pdf' },
 			body: pdf.toString('base64'),
 			isBase64Encoded: true,
+			// https://www.google.com/search?q=lambda+nodejs+pdf+response+how+to&oq=lambda+nodejs+pdf+response+how+to&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEINjg4MmowajGoAgCwAgA&sourceid=chrome&ie=UTF-8
 			// https://medium.com/@keshavkumaresan/generating-pdf-documents-within-aws-lambda-with-nodejs-and-puppeteer-46ac7ca299bf
+			// https://oxylabs.io/blog/curl-send-headers
+			// https://stackoverflow.com/questions/45348580/aws-lambda-fails-to-return-pdf-file
 		}
 	} catch (error) {
 		return {
