@@ -1,515 +1,567 @@
 {
-	"document": "invoice",
-	"client": {
-		"address": null,
-		"email": null,
-		"name": "Fountain Square Clay Center",
-		"phone": "CLIENT-PHONE"
-	},
-	"contractor": {
-		"address": "448 W 31st St, Indianapolis, IN 46208",
-		"email": "oliver@mcgrawdesignbuild.com",
-		"name": "McGraw Design & Build",
-		"phone": "(317) 782-5271",
-		"website": "https://mcgrawdesignbuild.com"
-	},
-	"invoice": {
-		"date": "2023-09-27 00:00:00",
-		"id": 149,
-		"notes": "-Roofing\n-Roof Structural\n-Masonry Repairs\n-Demolition\n-Engineering\n-Building Permit",
-		"title": "950 Hosbrook Phase 2 Roof"
-	},
-	"costs": {
-		"materials": [
-			{
-				"idinvoice_expense": 2028,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1595,
-				"invoice_expense_description": "Task: Engineering design and stamp for permits  Description: engineering oversight, load calculations, and stamp ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 4800
-			},
-			{
-				"idinvoice_expense": 2029,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1413,
-				"invoice_expense_description": "Task: New TPO roofing  Description: Top roofing by Bryant roofing second section first payment",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 25679.196
-			},
-			{
-				"idinvoice_expense": 2030,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1568,
-				"invoice_expense_description": "Task: New TPO roofing  Description: TPO roof. still once sectino of roof to go. added $1,500 in decking costs to this project. Remove $400 from the stated invoice that is incorrect. ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 19799.196
-			},
-			{
-				"idinvoice_expense": 2031,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1446,
-				"invoice_expense_description": "Task: New shingle roofing : Roofing shingles. ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 6872.868
-			},
-			{
-				"idinvoice_expense": 2032,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1521,
-				"invoice_expense_description": "Task: New shingle roofing  Description:  pitched roof tear off",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 3600
-			},
-			{
-				"idinvoice_expense": 2033,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1522,
-				"invoice_expense_description": "Task: New shingle roofing  Description: pitched roof shingle install",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1440
-			},
-			{
-				"idinvoice_expense": 2034,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1530,
-				"invoice_expense_description": "Task: Skylights  Description: CHECK # 1125. Includes change order for additional framing work ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 20782.176
-			},
-			{
-				"idinvoice_expense": 2035,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1418,
-				"invoice_expense_description": "Task: dumpsters  Description: dumptruck and trailer for full day day to run extra trash to dump ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 528
-			},
-			{
-				"idinvoice_expense": 2036,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1459,
-				"invoice_expense_description": "Task: dumpsters  Description: - south side landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 32.844
-			},
-			{
-				"idinvoice_expense": 2037,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1563,
-				"invoice_expense_description": "Task: dumpsters  Description: GREENE'S ROLL OFF SERVICE",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1150.92
-			},
-			{
-				"idinvoice_expense": 2038,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1564,
-				"invoice_expense_description": "Task: dumpsters  Description: GREENE'S ROLL OFF SERVICE",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 3528.36
-			},
-			{
-				"idinvoice_expense": 2039,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1565,
-				"invoice_expense_description": "Task: dumpsters  Description: GREENE'S ROLL OFF SERVICE",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 695.64
-			},
-			{
-				"idinvoice_expense": 2040,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1549,
-				"invoice_expense_description": "Task: Replace lintels, price per lintel, number tbd  Description: payment to nick for lintels",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 600
-			},
-			{
-				"idinvoice_expense": 2041,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1577,
-				"invoice_expense_description": "Task: Replace lintels, price per lintel, number tbd  Description: final payment for lintel replacement.",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 5400
-			},
-			{
-				"idinvoice_expense": 2042,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1581,
-				"invoice_expense_description": "Task: Replace lintels, price per lintel",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 6540
-			},
-			{
-				"idinvoice_expense": 2043,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1582,
-				"invoice_expense_description": "Task: Replace lintels, price per lintel, number tbd  Description: lintel replacement, accounting issue",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": -12540
-			},
-			{
-				"idinvoice_expense": 2044,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1470,
-				"invoice_expense_description": "Task: 1 month rental of lift  Description: SKYWORKS - INDIANAPOLIS",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1445.352
-			},
-			{
-				"idinvoice_expense": 2045,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1523,
-				"invoice_expense_description": "Task: 1 month rental of lift  Description: SKYWORKS - INDIANAPOLIS",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": -430.956
-			},
-			{
-				"idinvoice_expense": 2046,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1524,
-				"invoice_expense_description": "Task: 1 month rental of lift  Description: SKYWORKS - INDIANAPOLIS",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 2023.86
-			},
-			{
-				"idinvoice_expense": 2047,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1578,
-				"invoice_expense_description": "Task: Masonry subcontract for block wall  Description: misc major repairs to masonry. tuckpointing, sign removal, block work on rear elevation, repairs on east elevation.",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 3000
-			},
-			{
-				"idinvoice_expense": 2048,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1517,
-				"invoice_expense_description": "Task: Demo labor  Description: more non structural wood demolition",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1200
-			},
-			{
-				"idinvoice_expense": 2049,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1311,
-				"invoice_expense_description": "Task: lift for 1 month  Description: Battery ",
-				"invoice_expense_adjustment": 0,
-				"invoice_expense_price": 191.928
-			},
-			{
-				"idinvoice_expense": 2050,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1468,
-				"invoice_expense_description": "Task: lift for 1 month  Description: SKYWORKS - INDIANAPOLIS",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 2154.792
-			},
-			{
-				"idinvoice_expense": 2051,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1472,
-				"invoice_expense_description": "Task: lift for 1 month  Description: SKYWORKS - INDIANAPOLIS",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1322.208
-			},
-			{
-				"idinvoice_expense": 2052,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1429,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 145.296
-			},
-			{
-				"idinvoice_expense": 2053,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1431,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 181.452
-			},
-			{
-				"idinvoice_expense": 2054,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1432,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 108.168
-			},
-			{
-				"idinvoice_expense": 2055,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1433,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 145.296
-			},
-			{
-				"idinvoice_expense": 2056,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1434,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: landfill",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 225.624
-			},
-			{
-				"idinvoice_expense": 2057,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1554,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: SSL-SCALE TRAILER 2",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 97.104
-			},
-			{
-				"idinvoice_expense": 2058,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1555,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: SSL-SCALE TRAILER 3",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 129.24
-			},
-			{
-				"idinvoice_expense": 2059,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1588,
-				"invoice_expense_description": "Task: Dumpsters for trash  Description: GREENE'S ROLL OFF SERVICE -- dumpster relocation",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 180
-			},
-			{
-				"idinvoice_expense": 2060,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1427,
-				"invoice_expense_description": "Task: Framing materials  Description: nails, saw blades",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 188.544
-			},
-			{
-				"idinvoice_expense": 2061,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1548,
-				"invoice_expense_description": "Task: Framing labor  Description: roof framing labor framing on roof",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 960
-			},
-			{
-				"idinvoice_expense": 2062,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1442,
-				"invoice_expense_description": "Task: roof repair lumber  Description: lumber for roof repair",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1494.96
-			},
-			{
-				"idinvoice_expense": 2063,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1445,
-				"invoice_expense_description": "Task: roof repair lumber  Description: roof repair lumber",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 1005.372
-			},
-			{
-				"idinvoice_expense": 2064,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1545,
-				"invoice_expense_description": "Task: roof repair lumber  Description: lumber for skylight framing repairs and insulation on roof area around skylights",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 405.372
-			},
-			{
-				"idinvoice_expense": 2065,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1484,
-				"invoice_expense_description": "Task: masonry removal and demolition  Description: steel for masonry work ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 63.564
-			},
-			{
-				"idinvoice_expense": 2066,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1473,
-				"invoice_expense_description": "Task: Plumbing Inspection  Description: QUALITY CONTROL PLUMBING, drain line camera ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 612
-			},
-			{
-				"idinvoice_expense": 2067,
-				"invoices_idinvoices": 149,
-				"expenses_idexpenses": 1579,
-				"invoice_expense_description": "Task: Building Permits  Description: Building permit fee ",
-				"invoice_expense_adjustment": 1,
-				"invoice_expense_price": 464.94
-			}
-		],
-		"labor": [
-			{
-				"idinvoice_time": 2350,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2015,
-				"invoice_time_description": "Worker Oliver McGraw Task: Moving materials and jobsite cleanup with skidsteer",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 36.9,
-				"invoice_quantity": 4.46
-			},
-			{
-				"idinvoice_time": 2351,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2016,
-				"invoice_time_description": "Worker Oliver McGraw Task: Jobsite cleanup",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 11.05
-			},
-			{
-				"idinvoice_time": 2352,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2017,
-				"invoice_time_description": "Worker Oliver McGraw Task: Operate machine and help with roof ",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 11.09
-			},
-			{
-				"idinvoice_time": 2353,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2018,
-				"invoice_time_description": "Worker Oliver McGraw Task:  clean up and move trash w/ machines",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 2.87
-			},
-			{
-				"idinvoice_time": 2354,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2102,
-				"invoice_time_description": "Worker Oliver McGraw Task: : picked up lumber for roof framing, delivered, framed roof section with Matt and his helper ",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 7.5
-			},
-			{
-				"idinvoice_time": 2355,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2103,
-				"invoice_time_description": "Worker Oliver McGraw Task: 1696 Description: framed N section of roof with Matt and his crew completed roof framing ",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 10
-			},
-			{
-				"idinvoice_time": 2356,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2115,
-				"invoice_time_description": "Worker Oliver McGraw Task: 1696 Description: check in with roofers and framers, help load trash out, support headers and openings for skylights",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 7.5
-			},
-			{
-				"idinvoice_time": 2357,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2250,
-				"invoice_time_description": "Worker Oliver McGraw Task: 1696 Description: work on roof framing. install wood bracing as per engineering. replace insulation knocked down by roofers. ",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 56.52,
-				"invoice_quantity": 10
-			},
-			{
-				"idinvoice_time": 2358,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2131,
-				"invoice_time_description": "Worker Patrick Etienne Task:  Hosbrook waste to landfill.",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 1
-			},
-			{
-				"idinvoice_time": 2359,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2136,
-				"invoice_time_description": "Worker Patrick Etienne Task: picking up wood for framing",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 2.5
-			},
-			{
-				"idinvoice_time": 2360,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2143,
-				"invoice_time_description": "Worker Patrick Etienne Task: Taking hosbrook waste to landfill.",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 1.5
-			},
-			{
-				"idinvoice_time": 2361,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2146,
-				"invoice_time_description": "Worker Patrick Etienne Task: 1696 Description: - Running lumber to clay center",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 1.5
-			},
-			{
-				"idinvoice_time": 2362,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2150,
-				"invoice_time_description": "Worker Patrick Etienne Task: 1696 Description: - Underlay & Nails to Clay Center",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 0.5
-			},
-			{
-				"idinvoice_time": 2363,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2153,
-				"invoice_time_description": "Worker Patrick Etienne Task: Operator for digging, disposal of materials, and misc (was 40 before declining door infills. 1339 Description: - Dump Truck to Landfill x3\n- Dump Trailer to Landfill x1",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 6.25
-			},
-			{
-				"idinvoice_time": 2364,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2155,
-				"invoice_time_description": "Worker Patrick Etienne Task: 1696 Description: - Getting saw & sawzall blades, cap nails",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 2
-			},
-			{
-				"idinvoice_time": 2365,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2160,
-				"invoice_time_description": "Worker Patrick Etienne Task: 1696 Description: - parts & supplies from menards",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 2
-			},
-			{
-				"idinvoice_time": 2366,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2206,
-				"invoice_time_description": "Worker Patrick Etienne Task: - run to landfill",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 47.1,
-				"invoice_quantity": 1
-			},
-			{
-				"idinvoice_time": 2367,
-				"invoice_idinvoice": 149,
-				"punchclock_idpunchclock": 2118,
-				"invoice_time_description": "Worker Oliver McGraw Task: 1312 Description: prints updates, check on project, misc ",
-				"invoice_time_adjustment": 1,
-				"invoice_unit_price": 36.9,
-				"invoice_quantity": 3.5
-			}
-		]
-	},
-	"totals": {
-		"materials": "106031.39",
-		"labor": "4545.06",
-		"due": "110576.45"
-	}
+  "document": "invoice",
+  "template": "1",
+  "client": {
+    "person": "Dylan + Kat Hostetter",
+    "company": "{client company}",
+    "email": null,
+    "address": null,
+    "website": "{client website}",
+    "phone": "{client phone}"
+  },
+  "contractor": {
+    "person": "Oliver McGraw",
+    "company": "McGraw Design & Build",
+    "email": "oliver@mcgrawdesignbuild.com",
+    "address": "448 W 31st St, Indianapolis, IN 46208",
+    "website": "mcgrawdesignbuild.com",
+    "phone": "(317) 782-5271\u202c"
+  },
+  "project": {
+    "name": "Dylan & Kat Addition",
+    "title": "{project title}",
+    "date": "{project date}",
+    "notes": "Addition for Dylan and Kat",
+    "terms": "{project terms}"
+  },
+  "materials": [
+    {
+      "description": "Task: Equipment for lot clearing  Description: Dump truck for one day. Trailer for full day. Skidsteer for half day. Excavator for full day. All equpiment for lot clearing first day. $400 + $400 + $375 + $400",
+      "cost": "1874.25"
+    },
+    {
+      "description": "Task: Equipment for lot clearing  Description: Porch demo and misc lot clearing and fill in cistern. Dump truck, excavator, skidsteer",
+      "cost": "1428.00"
+    },
+    {
+      "description": "Task: Shoring Materials  Description: Lumber for shoring porch. Pulled from shop, no receipt",
+      "cost": "238.00"
+    },
+    {
+      "description": "Task: Lot clearing disposal  Description: Disposa ",
+      "cost": "68.56"
+    },
+    {
+      "description": "Task: Lot clearing disposal  Description: Disposal \n",
+      "cost": "72.70"
+    },
+    {
+      "description": "Task: Lot clearing disposal  Description: Disposa ",
+      "cost": "87.10"
+    },
+    {
+      "description": "Task: Lot clearing disposal  Description: Disposal of debris ",
+      "cost": "101.50"
+    },
+    {
+      "description": "Task: Equipment Operator for Lot Clearing  Description: Took a load of trash from Dylan's house to south side landfill. Picked up a load of 53's",
+      "cost": "308.27"
+    },
+    {
+      "description": "Task: Concrete steps and Sidewalk Equipment   Description: Used  excavator to install fill dirt into porch",
+      "cost": "196.35"
+    },
+    {
+      "description": "Task: Front Porch Demo Equipment  Description: Plate compactor for installing backfill into front porch. Card was charged for 109.68. Should be a 30.23 refund coming back to card.",
+      "cost": "130.52"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: Dig out footer.",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: Oil for skid steer",
+      "cost": "28.00"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: Skidsteer for concrete pour.",
+      "cost": "261.80"
+    },
+    {
+      "description": "Task: Front Porch Demo Equipment  Description: Jumping jack and vibratory compactor ",
+      "cost": "309.40"
+    },
+    {
+      "description": "Task: Sand  Description: Sand for nicks block work.",
+      "cost": "239.37"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: Delivered sand for nick",
+      "cost": "130.90"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: trucking fill material",
+      "cost": "261.80"
+    },
+    {
+      "description": "Task: Footing and Sitework Equipment   Description: dump truck material removal",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: Footing and Sitework Equipment   Description: skidsteer to move and load material from footer",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: Footing and Sitework Equipment   Description: mobalize equipment",
+      "cost": "428.40"
+    },
+    {
+      "description": "Task: Lot clearing disposal  Description: Trash to dump",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: Lay Brick Block Limestone Cap and Footing  Description: Nick Smith Labor for footing and block. Incl some labor for footing placement for addition",
+      "cost": "1392.30"
+    },
+    {
+      "description": "Task: Footing Dig and Fill Equipment  Description: dig footing and backfill, skidstter and excavator time",
+      "cost": "1047.20"
+    },
+    {
+      "description": "Task: Set Form and Finish Concrete Flatwork  Description: payment to emmaual, no receipt",
+      "cost": "833.00"
+    },
+    {
+      "description": "Task: Driveway Excavation Equipment  Description: Cut driveway cut sidewalk load dirt.",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: Driveway Excavation Equipment  Description: 6 hours of trucking 2 hours of excavator. Trucked in 2's and 53's for driveway, garage floor and sidewalk",
+      "cost": "523.60"
+    },
+    {
+      "description": "Task: #53 Stone  Description: 53's",
+      "cost": "189.69"
+    },
+    {
+      "description": "Task: #53 Stone  Description: #2's",
+      "cost": "198.28"
+    },
+    {
+      "description": "Task: Pea Gravel For Crawlspace   Description: Pea gravel",
+      "cost": "243.93"
+    },
+    {
+      "description": "Task: #53 Stone  Description: 53 stone ",
+      "cost": "181.07"
+    },
+    {
+      "description": "Task: #53 Stone  Description: 53's",
+      "cost": "181.36"
+    },
+    {
+      "description": "Task: Concrete steps and Sidewalk Operator  Description:  stone for sidewalk from Oliver's ",
+      "cost": "205.51"
+    },
+    {
+      "description": "Task: Concrete   Description: concrete truck for garage slab AND PORCH AND SIDEWALK. ",
+      "cost": "1945.60"
+    },
+    {
+      "description": "Task: Concrete   Description: Concrete for footings and front porch. $20 early payment discount ",
+      "cost": "1765.19"
+    },
+    {
+      "description": "Task: Set Form and Finish Concrete Flatwork  Description: garage floor ** AND FRONT STAIRS ** set forms and finish concrete. no receipt",
+      "cost": "2011.10"
+    },
+    {
+      "description": "Task: Demolition  Description: Mask, 6 pack painters tape, 6 suits, box of gloves",
+      "cost": "276.60"
+    },
+    {
+      "description": "Task: Brick  Description: brick purchase ",
+      "cost": "816.19"
+    },
+    {
+      "description": "Task: Materials - First Floor  Description: First floor, some sheathing, joists for second floor ",
+      "cost": "10114.89"
+    },
+    {
+      "description": "Task: Windows  Description: Windows and patio door purchase ",
+      "cost": "11359.17"
+    },
+    {
+      "description": "Task: Equipment Building Clean-Up Operator  Description: Hauled in excavtor. Rough grade yard. drilled holes for gaurdrail. ripped out aluminum and wood fence. installed dirt around porch.",
+      "cost": "616.54"
+    },
+    {
+      "description": "Task: Chimney Demolition  Description: Chimney demolition ",
+      "cost": "595.00"
+    },
+    {
+      "description": "Task: Foundation Lay Block  Description: Block for foundation and footing labor ",
+      "cost": "2618.00"
+    },
+    {
+      "description": "Task: Port-a-pottie  Description: SERVICE SANITATION port a pottie ",
+      "cost": "73.54"
+    },
+    {
+      "description": "Task: Front Porch Demo Equipment  Description: MULLIN RENTAL SERVICE IN return ",
+      "cost": "-84.35"
+    },
+    {
+      "description": "Task: Front Porch Demo Equipment  Description: MULLIN RENTAL SERVICE IN return of compactor that didn't work ",
+      "cost": "-130.52"
+    },
+    {
+      "description": "Task: Garage Floor Equipment   Description: MULLIN RENTAL SERVICE IN plate compactor",
+      "cost": "130.90"
+    },
+    {
+      "description": "Task: Permit Fees  Description: DEPT. BNS - OTC structural permit",
+      "cost": "414.12"
+    },
+    {
+      "description": "Task: Permit Fees  Description: TCB*BNS-ONLINE permit fees",
+      "cost": "143.99"
+    },
+    {
+      "description": "Task: Permit Fees  Description: TCB*CB SERVICE FEE",
+      "cost": "3.61"
+    },
+    {
+      "description": "Task: Permit Fees  Description: TCB*CB SERVICE FEE",
+      "cost": "10.35"
+    },
+    {
+      "description": "Task: #53 Stone  Description: MMM KENTUCKY AVENUE MINE",
+      "cost": "194.79"
+    },
+    {
+      "description": "Task: Demolition  Description: floor protection and dust protection materials ",
+      "cost": "494.89"
+    },
+    {
+      "description": "Task: Rebar and Reinforcing Steel 20'  Description: Menards return jbolts ",
+      "cost": "-95.18"
+    },
+    {
+      "description": "Task: Concrete Blocks  Description: Menards blocks, rebar, delivery, and masonry cement",
+      "cost": "2475.96"
+    },
+    {
+      "description": "Task: Masonary Cement  Description: Menards",
+      "cost": "242.08"
+    },
+    {
+      "description": "Task: Framing Labor  Description: Down payment to Oscar construction for framing labor",
+      "cost": "7140.00"
+    }
+  ],
+  "labors": [
+    {
+      "description": "Worker Oliver McGraw Task: 345 Description: Deliver excavator ",
+      "quantity": 1.26,
+      "cost": "46.71",
+      "total": "58.85"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: 345 Description: Mobalize skidsteer, dump truck, and dump trailer. Clear lot. Demolish fences. Run to landfill for one load of trash. ",
+      "quantity": 9.5,
+      "cost": "56.05",
+      "total": "532.47"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: Two carpenters shore up front porch roof using construction lumber and jacks.395 Description: Shore and demolish front porch. Other misc tasks. Run trash to landfill. Help fill in back yard cistern. ",
+      "quantity": 8,
+      "cost": "56.05",
+      "total": "448.39"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: 594 Description: Layout and dig footings. Place gravel and fill in porch and compact. ",
+      "quantity": 10,
+      "cost": "56.05",
+      "total": "560.49"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: 594 Description: Place footings. Start interior demo. Stop traffic for front porch placement. ",
+      "quantity": 7.57,
+      "cost": "56.05",
+      "total": "424.29"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: 405 Description: Load another load of dirt. Move block around on site for mason. ",
+      "quantity": 1.5,
+      "cost": "56.05",
+      "total": "84.07"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: begin demolition with james. mark out walls for demolition. ",
+      "quantity": 2.73,
+      "cost": "56.05",
+      "total": "153.01"
+    },
+    {
+      "description": "Worker Oliver McGraw Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: interior demolition, checking on mechanicals, clean porch and yard. ",
+      "quantity": 2.75,
+      "cost": "56.05",
+      "total": "154.13"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: 594 Description: dig footing, compact fill in porch ",
+      "quantity": 6,
+      "cost": "35.50",
+      "total": "212.99"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Moved skid steer. Walked through house planned. Bought tools. Moved appliances protected floors hung plastic removed trim, cabinets and drop ceiling ",
+      "quantity": 8.5,
+      "cost": "35.50",
+      "total": "301.73"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Began demolition in kitchen ",
+      "quantity": 2,
+      "cost": "35.50",
+      "total": "71.00"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demo kitchen cabinets, kitchen tile floor and cleared and protected basement",
+      "quantity": 8.5,
+      "cost": "35.50",
+      "total": "301.73"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demo plaster walls in kitchen and dining room ",
+      "quantity": 8.5,
+      "cost": "35.50",
+      "total": "301.73"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Removed plaster from walls and ceilings in kitchen and dining room",
+      "quantity": 10.01,
+      "cost": "35.50",
+      "total": "355.33"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Removed plaster in bedroom and bathroom",
+      "quantity": 9.77,
+      "cost": "35.50",
+      "total": "346.81"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Removed ceiling in bathroom",
+      "quantity": 3.17,
+      "cost": "35.50",
+      "total": "112.53"
+    },
+    {
+      "description": "Worker Tommy Coonan Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Removed floor in kitchen. Removed framing in kitchen. Pulled nails in all rooms. Removed electrical. Removed pex plumbing",
+      "quantity": 8.25,
+      "cost": "35.50",
+      "total": "292.86"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 605 Description: Began Moving equipment. Went to Constances to pick Up Skidsteer. Left early becuse of knee pain.",
+      "quantity": 1.97,
+      "cost": "41.10",
+      "total": "80.97"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 399 Description: Ran excavator to remove front porch and removed cistern in rear.",
+      "quantity": 6.48,
+      "cost": "41.10",
+      "total": "266.34"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 605 Description: Took a load of trash from job site to landfill. Picked up a load of 53's for Dylan's front porch and garage floor pad. ",
+      "quantity": 5.5,
+      "cost": "41.10",
+      "total": "226.06"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 399 Description: Unloaded menards delivery with driver. Picked up dump truck at Dylan's. Drive to shop for sand. Returned sand to Dylan's. ",
+      "quantity": 3.47,
+      "cost": "41.10",
+      "total": "142.63"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 399 Description: Installed fill dirt into porch.",
+      "quantity": 2.15,
+      "cost": "41.10",
+      "total": "88.37"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 402 Description: Dug out foundation with excavator. Excavator hours should match operator hours",
+      "quantity": 8.66,
+      "cost": "41.10",
+      "total": "355.95"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 402 Description: Picked up sand. Stopped clock because went to Jefferson. ",
+      "quantity": 2.52,
+      "cost": "41.10",
+      "total": "103.58"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 593 Description: Finished delivering sand. Picked up dirt ",
+      "quantity": 0.83,
+      "cost": "41.10",
+      "total": "34.12"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 593 Description: Backfilled footer trench. Cut driveway grade. Cut sidewalk step grade. Loaded out 1 load of dirt to Oliver's.",
+      "quantity": 8.97,
+      "cost": "41.10",
+      "total": "368.69"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 422 Description: Trucked and 53's and twos installed twos and 53s on driveway and garage floor. Loaded out one load of dirt to Olivers house",
+      "quantity": 8.57,
+      "cost": "41.10",
+      "total": "352.25"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 578 Description: Hauled in stone. Installed stone",
+      "quantity": 9,
+      "cost": "41.10",
+      "total": "369.92"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 379 Description: Dug out sidewalk and steps. Installed stone. Loaded out excavator. ",
+      "quantity": 4.96,
+      "cost": "41.10",
+      "total": "203.87"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 440 Description: Moved excavator from Constances to Dylans. Unloaded and began tearing out aluminum fence.",
+      "quantity": 1.83,
+      "cost": "41.10",
+      "total": "75.22"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 440 Description: Continued tearing out alumininum fence. tore out wood fence in Caseys back yard. Drilled holes for gaurd rail. Installed dirt around front porch. Rough graded yard.",
+      "quantity": 7,
+      "cost": "41.10",
+      "total": "287.72"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Continue demoing kitchen dining room upstairs.",
+      "quantity": 8.31,
+      "cost": "41.10",
+      "total": "341.56"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 423 Description: Went to Menards for lumber concrete and carriage bolts went to steel house for I-beams. Went to shop for trailer and tools to install guard rail. Installed I-beams poured with Concrete",
+      "quantity": 8.75,
+      "cost": "41.10",
+      "total": "359.65"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: 402 Description: Dug out foundation by back door for Nick",
+      "quantity": 2.3,
+      "cost": "41.10",
+      "total": "94.54"
+    },
+    {
+      "description": "Worker Brandon Jackson Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demoed out plumbing stack and all pipes running through joists. Ran to Ace to get it cut off wheels",
+      "quantity": 3.73,
+      "cost": "41.10",
+      "total": "153.31"
+    },
+    {
+      "description": "Worker Adam Kent-Isaac Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: haul dirt and trash to landfill",
+      "quantity": 5,
+      "cost": "26.16",
+      "total": "130.78"
+    },
+    {
+      "description": "Worker Adam Kent-Isaac Task: 399 Description: haul dirt out of dylan's, run compactor ",
+      "quantity": 9,
+      "cost": "26.16",
+      "total": "235.41"
+    },
+    {
+      "description": "Worker James Kronick Task: 405 Description: Helped with footer, started demo inside ",
+      "quantity": 8.3,
+      "cost": "28.96",
+      "total": "240.36"
+    },
+    {
+      "description": "Worker James Kronick Task: 423 Description: Back fill and compacted, dug driveway, and sidewalk",
+      "quantity": 8.56,
+      "cost": "28.96",
+      "total": "247.89"
+    },
+    {
+      "description": "Worker James Kronick Task: 423 Description: Plate compact",
+      "quantity": 6.67,
+      "cost": "28.96",
+      "total": "193.15"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Kitchen demo",
+      "quantity": 3,
+      "cost": "28.96",
+      "total": "86.88"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Kitchen demo",
+      "quantity": 8.5,
+      "cost": "28.96",
+      "total": "246.15"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Inside demo",
+      "quantity": 6.5,
+      "cost": "28.96",
+      "total": "188.23"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Kitchen demo",
+      "quantity": 2.43,
+      "cost": "28.96",
+      "total": "70.37"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Kitchen demo",
+      "quantity": 4.06,
+      "cost": "28.96",
+      "total": "117.57"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Bathroom demo",
+      "quantity": 9.47,
+      "cost": "28.96",
+      "total": "274.24"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demo",
+      "quantity": 4.17,
+      "cost": "28.96",
+      "total": "120.76"
+    },
+    {
+      "description": "Worker James Kronick Task: 345 Description: Fence",
+      "quantity": 1.77,
+      "cost": "28.96",
+      "total": "51.26"
+    },
+    {
+      "description": "Worker James Kronick Task: 345 Description: Pulled fences, and rough graded lawn",
+      "quantity": 6.36,
+      "cost": "28.96",
+      "total": "184.18"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demo",
+      "quantity": 8.49,
+      "cost": "28.96",
+      "total": "245.86"
+    },
+    {
+      "description": "Worker James Kronick Task: Demolition of existing roof on rear of building. Misc upstairs demolition.371 Description: Demo",
+      "quantity": 6.6,
+      "cost": "28.96",
+      "total": "191.13"
+    },
+    {
+      "description": "Worker James Kronick Task: 345 Description: I beam for guardrail",
+      "quantity": 3,
+      "cost": "28.96",
+      "total": "86.88"
+    }
+  ]
 }
