@@ -11,7 +11,7 @@ export const handler = async (event) => {
 	const bucket = 'conflux-doc-gen'
 	const url_base = `https://${bucket}.s3.us-east-2.amazonaws.com`
 	const template = `templates/${event.document}-${event.template}`
-	let file_name = 'result'
+	var file_name = 'result'
 
 	try {
 		const browser = await puppeteer.launch({
