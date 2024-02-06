@@ -38,10 +38,15 @@ export const handler = async (event) => {
 		await page.evaluate((event) => {
 			let instructions = [
 				{selector: 'span#pke-invoice-number', innerHTML: event.invoice.number},
-				{
-					selector: 'span#pke-invoice-date',
-					innerHTML: event.invoice.date.slice(0,10)
-				},
+				{selector: 'span#pke-invoice-date',	innerHTML: event.invoice.date.slice(0,10)},
+				{selector: 'h2#pke-client-person', innerHTML: event.client.person},
+				{selector: 'span#pke-client-company', innerHTML: event.client.company},
+				{selector: 'span#pke-client-email', innerHTML: event.client.email},
+				{selector: 'span#pke-client-address', innerHTML: event.client.address},
+				{selector: 'h2#pke-contractor-person', innerHTML: event.contractor.person},
+				{selector: 'span#pke-contractor-company', innerHTML: event.contractor.company},
+				{selector: 'span#pke-contractor-email', innerHTML: event.contractor.email},
+				{selector: 'span#pke-contractor-address', innerHTML: event.contractor.address},
 			]
 
 			try {

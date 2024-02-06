@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-    <title>DISEE - Invoice HTML5 Template</title>
+    <title id="pke-invoice-title">Invoice Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 
@@ -49,7 +49,10 @@
                       <div class="invoice-logo">
                         <!-- logo started -->
                         <div class="logo">
-                          <img src="assets/img/logos/logo.png" alt="logo" />
+                          <img
+                            src="assets/img/logos/mdb-logo-full.png"
+                            alt="logo"
+                          />
                         </div>
                         <!-- logo ended -->
                       </div>
@@ -74,11 +77,17 @@
                     <div class="col-sm-6">
                       <div class="invoice-number mb-30">
                         <h4 class="inv-title-1">Invoice To</h4>
-                        <h2 class="name mb-10">Jhon Smith</h2>
+                        <h2 class="name mb-10" id="pke-client-person">
+                          Jhon Smith
+                        </h2>
                         <p class="invo-addr-1">
-                          Theme Vessel <br />
-                          info@themevessel.com <br />
-                          21-12 Green Street, Meherpur, Bangladesh <br />
+                          <span id="pke-client-company">Theme Vessel</span
+                          ><br />
+                          <span id="pke-client-email">info@themevessel.com</span
+                          ><br />
+                          <span id="pke-client-address"
+                            >21-12 Green Street, Meherpur, Banglades</span
+                          ><br />
                         </p>
                       </div>
                     </div>
@@ -86,11 +95,18 @@
                       <div class="invoice-number mb-30">
                         <div class="invoice-number-inner">
                           <h4 class="inv-title-1">Invoice From</h4>
-                          <h2 class="name mb-10">Animas Roky</h2>
+                          <h2 class="name mb-10" id="pke-contractor-person">
+                            Animas Roky
+                          </h2>
                           <p class="invo-addr-1">
-                            Apexo Inc <br />
-                            billing@apexo.com <br />
-                            169 Teroghoria, Bangladesh <br />
+                            <span id="pke-contractor-company">Apexo Inc</span
+                            ><br />
+                            <span id="pke-contractor-email"
+                              >billing@apexo.com</span
+                            ><br />
+                            <span id="pke-contractor-address"
+                              >169 Teroghoria, Bangladesh</span
+                            ><br />
                           </p>
                         </div>
                       </div>

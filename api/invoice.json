@@ -4,8 +4,8 @@
 	"client": {
 		"person": "Dylan + Kat Hostetter",
 		"company": "{client company}",
-		"email": null,
-		"address": null,
+		"email": "{client email}",
+		"address": "{client address}",
 		"website": "{client website}",
 		"phone": "{client phone}"
 	},
