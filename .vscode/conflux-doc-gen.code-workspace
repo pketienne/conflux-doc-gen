@@ -21,6 +21,20 @@
 				"askForPassword": true
 			}
 		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "conflux-doc-gen",
+				"type": "node",
+				"request": "launch",
+				"cwd": "${workspaceFolder}",
+				"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/21.6.0/bin/node",
+				"program": "${workspaceFolder}/nodejs/index.mjs",
+				"outputCapture": "std"
+			}
+		]
 	}
 }
 

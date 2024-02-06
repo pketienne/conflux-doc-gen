@@ -1,13 +1,11 @@
 import puppeteer from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3"
-import { promises as fs } from 'fs'
+import fs from 'fs'
 
 const region = process.env.AWS_REGION
 
 export const handler = async (event) => {
-	if (!region) { var event = await load_sample_json(event) }
-
 	const bucket = 'conflux-doc-gen'
 	const url_base = `https://${bucket}.s3.us-east-2.amazonaws.com`
 	const template = `templates/${event.document}-${event.template}`
@@ -24,49 +22,55 @@ export const handler = async (event) => {
 			headless: chromium.headless,
 			ignoreHTTPSErrors: true,
 		})
+		const page = await browser.newPage()
+		await page.goto(`${url_base}/${template}.html`, {waitUntil: 'networkidle0'})
+		await page.emulateMediaType('screen')
+		var PDFOptions = {printBackground: true, format: 'A4'}
+		if (!region) {PDFOptions.path = 'result.pdf'}
 
-		const page = await browser.newPage();
-
-		await page.goto( `${url_base}/${template}.html`, { waitUntil: 'networkidle0' });
-		await page.emulateMediaType("screen");
-
-		var PDFOptions = { printBackground: true, format: 'A4' }
-		if (!region) { PDFOptions.path = `result.pdf` }
+		page.on('console', async (msg) => {
+			const msgArgs = msg.args();
+			for (let i = 0; i < msgArgs.length; ++i) {
+				console.log(await msgArgs[i].jsonValue());
+			}
+		})
 
 		await page.evaluate((event) => {
-			let dom
-			dom = document.querySelector('span#pke-invoice-number')
-			dom.innerHTML = `#${event.invoice.number}`
-			dom = document.querySelector('span#pke-invoice-date')
-			dom.innerHTML = `${event.invoice.date.slice(0,10)}`
-		}, event)
-
-		const pdf = await page.pdf(PDFOptions);
-		
-		await page.close();
-		await browser.close();
-
-		if(region) {
-			const client = new S3Client({});
-			const command = new PutObjectCommand({
-				Bucket: "conflux-doc-gen",
-				Key: `${file_name}.pdf`,
-				Body: pdf,
-			});
+			let instructions = [
+				{selector: 'span#pke-invoice-number', innerHTML: event.invoice.number},
+				{
+					selector: 'span#pke-invoice-date',
+					innerHTML: event.invoice.date.slice(0,10)
+				},
+			]
 
 			try {
-				const response = await client.send(command);
+				instructions.forEach((i) => {
+					document.querySelector(i.selector).innerHTML = i.innerHTML
+				})
 			} catch (err) {
-				console.error(err);
+				console.error(`An error was thrown: ${err}.`)
+			}
+		}, event)
+
+		const pdf = await page.pdf(PDFOptions)
+		await page.close()
+		await browser.close()
+
+		if (region) {
+			const client = new S3Client({})
+			const command = new PutObjectCommand({
+				Bucket: 'conflux-doc-gen',
+				Key: `${file_name}.pdf`,
+				Body: pdf,
+			})
+			
+			try {
+				const repsonse = await client.send(command)
+			} catch (err) {
+				console.error(err)
 			}
 		}
-
-		return {
-			statusCode: 200,
-			headers: { 'Content-Type': 'application/json' },
-			body: { url: `${url_base}/${file_name}` },
-		}
-
 	} catch (error) {
 		return {
 			statusCode: 500,
@@ -75,14 +79,20 @@ export const handler = async (event) => {
 	}
 }
 
-async function load_sample_json(document_type) {
-	let data = await fs.readFile(
-		`../api/${document_type}.json`, { encoding: 'utf-8' }
-	)
-	let json = JSON.parse(data)
-	return json
-}
+if (!region) {
+	const document_type = 'invoice'
+	const path = `api/${document_type}.json`
 
-if(!region) {
-	handler('invoice')
+	fs.readFile(path, 'utf8', (err, file) => {
+		if (err) {
+			console.error('Error while reading the file:', err)
+			return
+		}
+		try {
+			let event = JSON.parse(file)
+			handler(event)
+		} catch (err) {
+			console.error('Error while parsing JSON data:', err)
+		}
+	})
 }
