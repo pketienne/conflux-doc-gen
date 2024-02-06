@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-    <title id="pke-invoice-title">Invoice Template</title>
+    <title id="mdb-invoice-title">Invoice Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 
@@ -62,11 +62,11 @@
                         <h1 class="color-white inv-header-1">Invoice</h1>
                         <p class="color-white mb-1">
                           Invoice Number
-                          <span id="pke-invoice-number">#45613</span>
+                          <span id="mdb-invoice-number">#45613</span>
                         </p>
                         <p class="color-white mb-0">
                           Invoice Date
-                          <span id="pke-invoice-date">21 Sep 2021</span>
+                          <span id="mdb-invoice-date">21 Sep 2021</span>
                         </p>
                       </div>
                     </div>
@@ -77,15 +77,15 @@
                     <div class="col-sm-6">
                       <div class="invoice-number mb-30">
                         <h4 class="inv-title-1">Invoice To</h4>
-                        <h2 class="name mb-10" id="pke-client-person">
+                        <h2 class="name mb-10" id="mdb-client-person">
                           Jhon Smith
                         </h2>
                         <p class="invo-addr-1">
-                          <span id="pke-client-company">Theme Vessel</span
+                          <span id="mdb-client-company">Theme Vessel</span
                           ><br />
-                          <span id="pke-client-email">info@themevessel.com</span
+                          <span id="mdb-client-email">info@themevessel.com</span
                           ><br />
-                          <span id="pke-client-address"
+                          <span id="mdb-client-address"
                             >21-12 Green Street, Meherpur, Banglades</span
                           ><br />
                         </p>
@@ -95,16 +95,16 @@
                       <div class="invoice-number mb-30">
                         <div class="invoice-number-inner">
                           <h4 class="inv-title-1">Invoice From</h4>
-                          <h2 class="name mb-10" id="pke-contractor-person">
+                          <h2 class="name mb-10" id="mdb-contractor-person">
                             Animas Roky
                           </h2>
                           <p class="invo-addr-1">
-                            <span id="pke-contractor-company">Apexo Inc</span
+                            <span id="mdb-contractor-company">Apexo Inc</span
                             ><br />
-                            <span id="pke-contractor-email"
+                            <span id="mdb-contractor-email"
                               >billing@apexo.com</span
                             ><br />
-                            <span id="pke-contractor-address"
+                            <span id="mdb-contractor-address"
                               >169 Teroghoria, Bangladesh</span
                             ><br />
                           </p>
@@ -113,7 +113,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="invoice-center">
+                <div class="invoice-center" id="mdb-sections">
                   <div class="table-responsive">
                     <table class="table mb-0 table-striped invoice-table">
                       <thead class="bg-active">
@@ -203,7 +203,7 @@
                     <div class="col-lg-6 col-md-8 col-sm-7">
                       <div class="mb-30 dear-client">
                         <h3 class="inv-title-1">Terms & Conditions</h3>
-                        <p>
+                        <p id="mdb-notes">
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been typesetting
                           industry. Lorem Ipsum
@@ -226,19 +226,23 @@
                   <div class="row g-0">
                     <div class="col-lg-9 col-md-11 col-sm-12">
                       <div class="contact-info">
-                        <a href="tel:+55-4XX-634-7071"
-                          ><i class="fa fa-phone"></i> +00 123 647 840</a
-                        >
-                        <a href="tel:info@themevessel.com"
-                          ><i class="fa fa-envelope"></i>
-                          info@themevessel.com</a
-                        >
+                        <a href="tel:+55-4XX-634-7071">
+                          <i class="fa fa-phone"></i>
+                          <span id="mdb-phone">+00 123 647 840</span>
+                        </a>
+                        <a href="tel:info@themevessel.com">
+                          <i class="fa fa-envelope"></i>
+                          <span id="mdb-email">info@themevessel.com</span>
+                        </a>
                         <a
                           href="tel:info@themevessel.com"
                           class="mr-0 d-none-580"
-                          ><i class="fa fa-map-marker"></i> 169 Teroghoria,
-                          Bangladesh</a
                         >
+                          <i class="fa fa-map-marker"></i>
+                          <span id="mdb-address"
+                            >169 Teroghoria, Bangladesh</span
+                          >
+                        </a>
                       </div>
                     </div>
                   </div>
