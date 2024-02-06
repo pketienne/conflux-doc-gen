@@ -11,7 +11,10 @@ export const handler = async (event) => {
 	const bucket = 'conflux-doc-gen'
 	const url_base = `https://${bucket}.s3.us-east-2.amazonaws.com`
 	const template = `templates/${event.document}-${event.template}`
-	var file_name = 'result'
+	const date = `${new Date().toISOString()}`
+	const hexidecimal = (Math.random() * 0xfffff * 10000000000000)
+	const obfuscation = hexidecimal.toString(16).slice(0,16)
+	const file_name = `${date}-${obfuscation}`
 
 	try {
 		const browser = await puppeteer.launch({
@@ -28,13 +31,15 @@ export const handler = async (event) => {
 		await page.emulateMediaType("screen");
 
 		var PDFOptions = { printBackground: true, format: 'A4' }
-		if (!region) { PDFOptions.path = `../${file_name}.pdf` }
+		if (!region) { PDFOptions.path = `result.pdf` }
 
-		await page.evaluate(() => {
-			const location = 'div.table-responsive table tbody tr'
-			let dom = document.querySelectorAll(location)
-			dom.forEach(e => e.remove())
-		})
+		await page.evaluate((event) => {
+			let dom
+			dom = document.querySelector('span#pke-invoice-number')
+			dom.innerHTML = `#${event.invoice.number}`
+			dom = document.querySelector('span#pke-invoice-date')
+			dom.innerHTML = `${event.invoice.date.slice(0,10)}`
+		}, event)
 
 		const pdf = await page.pdf(PDFOptions);
 		
@@ -43,10 +48,6 @@ export const handler = async (event) => {
 
 		if(region) {
 			const client = new S3Client({});
-			const date = `${new Date().toISOString()}`
-			const hexidecimal = (Math.random() * 0xfffff * 10000000000000)
-			const obfuscation = hexidecimal.toString(16).slice(0,16)
-			const file_name = `${date}-${obfuscation}`
 			const command = new PutObjectCommand({
 				Bucket: "conflux-doc-gen",
 				Key: `${file_name}.pdf`,
@@ -75,7 +76,9 @@ export const handler = async (event) => {
 }
 
 async function load_sample_json(document_type) {
-	let data = await fs.readFile(`../api/${document_type}.json`, { encoding: 'utf-8' })
+	let data = await fs.readFile(
+		`../api/${document_type}.json`, { encoding: 'utf-8' }
+	)
 	let json = JSON.parse(data)
 	return json
 }
