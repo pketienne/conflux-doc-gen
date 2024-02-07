@@ -21,7 +21,7 @@ export const handler = async (event) => {
 			executablePath: await chromium.executablePath(),
 			headless: chromium.headless,
 			ignoreHTTPSErrors: true,
-		})ggV
+		})
 		const page = await browser.newPage()
 		await page.goto(`${url_base}/${template}.html`, {waitUntil: 'networkidle0'})
 		// await page.goto(`${url_base}/${template}.html`, {waitUntil: 'domcontentloaded'})

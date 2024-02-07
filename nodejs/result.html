@@ -1,21 +1,39 @@
-<!DOCTYPE html><html lang="zxx"><head>
+<!doctype html>
+<html lang="zxx">
+  <head>
     <title id="mdb-invoice-title">Invoice Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
 
     <!-- External CSS libraries -->
-    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/fonts/font-awesome/css/font-awesome.min.css"
+    />
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+    />
 
     <!-- Custom Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <!-- Invoice 1 start -->
@@ -31,7 +49,10 @@
                       <div class="invoice-logo">
                         <!-- logo started -->
                         <div class="logo">
-                          <img src="assets/img/logos/mdb-logo-full.png" alt="logo">
+                          <img
+                            src="assets/img/logos/mdb-logo-full.png"
+                            alt="logo"
+                          />
                         </div>
                         <!-- logo ended -->
                       </div>
@@ -56,11 +77,16 @@
                     <div class="col-sm-6">
                       <div class="invoice-number mb-30">
                         <h4 class="inv-title-1">Invoice To</h4>
-                        <h2 class="name mb-10" id="mdb-client-person">Dylan + Kat Hostetter</h2>
+                        <h2 class="name mb-10" id="mdb-client-person">
+                          Dylan + Kat Hostetter
+                        </h2>
                         <p class="invo-addr-1">
-                          <span id="mdb-client-company">{client company}</span><br>
-                          <span id="mdb-client-email">{client email}</span><br>
-                          <span id="mdb-client-address">{client address}</span><br>
+                          <span id="mdb-client-company">{client company}</span
+                          ><br />
+                          <span id="mdb-client-email">{client email}</span
+                          ><br />
+                          <span id="mdb-client-address">{client address}</span
+                          ><br />
                         </p>
                       </div>
                     </div>
@@ -68,11 +94,19 @@
                       <div class="invoice-number mb-30">
                         <div class="invoice-number-inner">
                           <h4 class="inv-title-1">Invoice From</h4>
-                          <h2 class="name mb-10" id="mdb-contractor-person">Oliver McGraw</h2>
+                          <h2 class="name mb-10" id="mdb-contractor-person">
+                            Oliver McGraw
+                          </h2>
                           <p class="invo-addr-1">
-                            <span id="mdb-contractor-company">McGraw Design &amp; Build</span><br>
-                            <span id="mdb-contractor-email">oliver@mcgrawdesignbuild.com</span><br>
-                            <span id="mdb-contractor-address">448 W 31st St, Indianapolis, IN 46208</span><br>
+                            <span id="mdb-contractor-company"
+                              >McGraw Design &amp; Build</span
+                            ><br />
+                            <span id="mdb-contractor-email"
+                              >oliver@mcgrawdesignbuild.com</span
+                            ><br />
+                            <span id="mdb-contractor-address"
+                              >448 W 31st St, Indianapolis, IN 46208</span
+                            ><br />
                           </p>
                         </div>
                       </div>
@@ -80,20 +114,35 @@
                   </div>
                 </div>
                 <div class="invoice-center" id="mdb-sections">
-                  
+                  <div class="table-responsive">
+                    <table class="table mb-0 table-striped invoice-table">
+                      <thead class="bg-active">
+                        <tr class="tr">
+                          <th class="pl0">cost</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table mb-0 table-striped invoice-table">
+                      <thead class="bg-active">
+                        <tr class="tr">
+                          <th class="pl0">total</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
                 </div>
                 <div class="invoice-bottom">
                   <div class="row">
                     <div class="col-lg-6 col-md-8 col-sm-7">
                       <div class="mb-30 dear-client">
                         <h3 class="inv-title-1">Terms &amp; Conditions</h3>
-                        <p id="mdb-notes">Initial Addition Invoice:
--Demolition, site clearing, permits, and preparation
--Foundation
--Flatwork
--Front porch masonry
--First floor framing
-</p>
+                        <p id="mdb-notes">
+                          Initial Addition Invoice: -Demolition, site clearing,
+                          permits, and preparation -Foundation -Flatwork -Front
+                          porch masonry -First floor framing
+                        </p>
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-4 col-sm-5">
@@ -118,11 +167,18 @@
                         </a>
                         <a href="tel:info@themevessel.com">
                           <i class="fa fa-envelope"></i>
-                          <span id="mdb-email">oliver@mcgrawdesignbuild.com</span>
+                          <span id="mdb-email"
+                            >oliver@mcgrawdesignbuild.com</span
+                          >
                         </a>
-                        <a href="tel:info@themevessel.com" class="mr-0 d-none-580">
+                        <a
+                          href="tel:info@themevessel.com"
+                          class="mr-0 d-none-580"
+                        >
                           <i class="fa fa-map-marker"></i>
-                          <span id="mdb-address">448 W 31st St, Indianapolis, IN 46208</span>
+                          <span id="mdb-address"
+                            >448 W 31st St, Indianapolis, IN 46208</span
+                          >
                         </a>
                       </div>
                     </div>
@@ -154,6 +210,5 @@
     <script src="assets/js/jspdf.min.js"></script>
     <script src="assets/js/html2canvas.js"></script>
     <script src="assets/js/app.js"></script>
-  
-
-</body></html>
+  </body>
+</html>

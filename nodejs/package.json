@@ -4,6 +4,10 @@
     "@sparticuz/chromium": "^121.0.0",
     "fs": "^0.0.1-security",
     "jsdom": "^24.0.0",
+    "prettier": "^3.2.5",
     "puppeteer-core": "^21.11.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6"
   }
 }
