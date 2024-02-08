@@ -26,10 +26,6 @@ class Document {
 		this.res = {}
 	}
 
-	generate_uris() {
-
-	}
-
 	// Generate template as string from either remote file or local file.
 	async from_template() {
 		const uri = `templates/${this.uri}.html`
@@ -46,10 +42,24 @@ class Document {
 		this.doc = this.dom.window.document
 	}
 
-	genericize() {
-		this.doc.querySelector('div#mdb-sections div.table-responsive').remove()
+	// Remove existing tables.
+	delete(location) {
+		this.doc.querySelector(location).remove()
 	}
 
+	// Replace info sections with data specific to this request.
+	update(loc, value) {
+		this.doc.querySelector(loc).innerHTML = value
+	}
+	
+	// Interate over an array instruction objects.
+	updates(instructions) {
+		instructions.forEach((i) => {
+			this.update(i.location, i.value)
+		})
+	}
+
+	// Write xml representation of doc content to file.
 	async to_file() {
 		const uri = `responses/${this.uri}.html`
 		const xml = this.doc.documentElement.outerHTML
@@ -75,7 +85,7 @@ export const handler = async (event) => {
 	
 	document = new Document(event)
 	await document.from_template()
-	document.genericize()
+	document.delete('div#mdb-sections div.table-responsive')
 	document.to_file()
 
 	return document.res
