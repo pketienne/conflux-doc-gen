@@ -1,55 +1,84 @@
-import { promises as fs } from 'fs'
-import {JSDOM} from 'jsdom'
-import prettier from 'prettier'
+import { promises as fsp } from 'fs'
+import { JSDOM } from 'jsdom'
+// import prettier from 'prettier'
 
+// Value is true iff running within AWS Lambda
+const IS_AWS = process.env.AWS_REGION
 
-const is_aws = process.env.AWS_REGION
-
-
+/**
+ * Create a class representing the structures (js, json, xml, pdf) needed for
+ * converting an http request body to a pdf and associated http location.
+ */
 class Document {
 	static BUCKET_NAME = 'conflux-doc-gen'
 	static AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
 	static S3_URL = `https://${this.BUCKET_NAME}.${this.AWS_DOMAIN}`
 
 	constructor(event) {
-		this.document_type = event.document
-		this.template_num = event.template
+		this.event = event
 		this.xml = null
+		this.dom = null
 		this.res = {}
 	}
 
-	init() {}
+	// Generate template as string from either remote file or local file.
+	async fetch_template() {
+		const type = this.event.document_type
+		const num = this.event.template_number
+		const doc = `${type}-${num}`
+		const uri = `templates/${doc}.html`
+		
+		if(IS_AWS) {
+			const url = `${Document.S3_URL}/${uri}`
+			this.xml = await fetch(url)
+				.then(res => res.text())
+		} else {
+			this.xml = await fsp.readFile(uri, 'utf-8')
+		}
+	}
 
-	fetch_template() {
-		let type = this.type
-		let template = this.template
-		let url = `templates/${type}-${template}.html`
-
+	generate_dom() {
+		this.dom = new JSDOM(this.xml)
 	}
 }
 
-
+// Read json file from path; Return as json.
 class Event {
 	constructor(type) {
-		this.path = `samples/${type}.json`
-
+		this.path = `requests/${type}.json`
+		this.json = null
 	}
-
-	async init(type) {
-		const file = await fs.readFile(`samples/${type}.json`)
-		const json = await JSON.parse(file)
-		return json
+	async to_json(type) {
+		let contents = await fsp.readFile(this.path, 'utf-8')
+		this.json = JSON.parse(contents)
 	}
 }
 
-
+// The AWS Lambda `handler` function (required by Lambda)
 export const handler = async (event) => {
-	let document = new Document(event)
-	document.init()
+	let document;
+	
+	document = new Document(event)
+	await document.fetch_template()
+	document.generate_dom()
+	document.genericize()
+	console.log(document.xml)
+
 	return document.res
 }
 
-if (!is_aws) {
-	let event = new Event.init()
+// If running locally, create an "Event" as a mock http request body.
+async function setup(type) {
+	let request;
+	let event;
+	
+	request = new Event('invoice')
+	await request.to_json()
+	event = request.json
 	handler(event)
+}
+
+// Only run if running locally (not within AWS Lambda)
+if(!IS_AWS) {
+	setup('invoice')
 }
