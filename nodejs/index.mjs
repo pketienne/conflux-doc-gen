@@ -19,6 +19,7 @@ class Document {
 		const type = event.document_type
 		const num = event.template_number
 
+		this.event = event
 		this.uri = `${type}-${num}`
 		this.xml = null
 		this.dom = null
@@ -82,10 +83,27 @@ class Event {
 // The AWS Lambda `handler` function (required by Lambda)
 export const handler = async (event) => {
 	let document;
+	let instructions = [
+		{location: 'span#mdb-invoice-number', value: event.invoice_info.number},
+		{location: 'span#mdb-invoice-date',	value: event.invoice_info.date.slice(0,10)},
+		{location: 'h2#mdb-client-person', value: event.client_info.person},
+		{location: 'span#mdb-client-company', value: event.client_info.company},
+		{location: 'span#mdb-client-email', value: event.client_info.email},
+		{location: 'span#mdb-client-address', value: event.client_info.address},
+		{location: 'h2#mdb-contractor-person', value: event.contractor_info.person},
+		{location: 'span#mdb-contractor-company', value: event.contractor_info.company},
+		{location: 'span#mdb-contractor-email', value: event.contractor_info.email},
+		{location: 'span#mdb-contractor-address', value: event.contractor_info.address},
+		{location: 'p#mdb-notes', value: event.invoice_info.notes},
+		{location: 'span#mdb-phone', value: event.contractor_info.phone},
+		{location: 'span#mdb-email', value: event.contractor_info.email},
+		{location: 'span#mdb-address', value: event.contractor_info.address},
+	]
 	
 	document = new Document(event)
 	await document.from_template()
 	document.delete('div#mdb-sections div.table-responsive')
+	document.updates(instructions)
 	document.to_file()
 
 	return document.res
