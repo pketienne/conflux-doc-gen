@@ -3,7 +3,7 @@ import {JSDOM} from 'jsdom'
 import prettier from 'prettier'
 
 
-const region = process.env.AWS_REGION
+const is_aws = process.env.AWS_REGION
 
 
 class Document {
@@ -29,18 +29,27 @@ class Document {
 }
 
 
+class Event {
+	constructor(type) {
+		this.path = `samples/${type}.json`
+
+	}
+
+	async init(type) {
+		const file = await fs.readFile(`samples/${type}.json`)
+		const json = await JSON.parse(file)
+		return json
+	}
+}
+
+
 export const handler = async (event) => {
 	let document = new Document(event)
 	document.init()
 	return document.res
 }
 
-async function generate_event(type) {
-	const file = await fs.readFile(`samples/${type}.json`)
-	const json = await JSON.parse(file)
-	handler(json)
-}
-
-if (!region) {
-	generate_event('invoice')
+if (!is_aws) {
+	let event = new Event.init()
+	handler(event)
 }

@@ -11,7 +11,7 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"cwd": "${workspaceFolder}/nodejs",
+			"cwd": "${workspaceFolder}",
 			"program": "${workspaceFolder}/nodejs/index.mjs",
 			"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/latest/bin/node",
 		}
