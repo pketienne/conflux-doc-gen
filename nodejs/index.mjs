@@ -14,19 +14,25 @@ class Document {
 	static AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
 	static S3_URL = `https://${this.BUCKET_NAME}.${this.AWS_DOMAIN}`
 
+
 	constructor(event) {
-		this.event = event
+		const type = event.document_type
+		const num = event.template_number
+
+		this.uri = `${type}-${num}`
 		this.xml = null
 		this.dom = null
+		this.doc = null
 		this.res = {}
 	}
 
+	generate_uris() {
+
+	}
+
 	// Generate template as string from either remote file or local file.
-	async fetch_template() {
-		const type = this.event.document_type
-		const num = this.event.template_number
-		const doc = `${type}-${num}`
-		const uri = `templates/${doc}.html`
+	async from_template() {
+		const uri = `templates/${this.uri}.html`
 		
 		if(IS_AWS) {
 			const url = `${Document.S3_URL}/${uri}`
@@ -35,10 +41,19 @@ class Document {
 		} else {
 			this.xml = await fsp.readFile(uri, 'utf-8')
 		}
+
+		this.dom = new JSDOM(this.xml)
+		this.doc = this.dom.window.document
 	}
 
-	generate_dom() {
-		this.dom = new JSDOM(this.xml)
+	genericize() {
+		this.doc.querySelector('div#mdb-sections div.table-responsive').remove()
+	}
+
+	async to_file() {
+		const uri = `responses/${this.uri}.html`
+		const xml = this.doc.documentElement.outerHTML
+		await fsp.writeFile(uri, xml)
 	}
 }
 
@@ -59,10 +74,9 @@ export const handler = async (event) => {
 	let document;
 	
 	document = new Document(event)
-	await document.fetch_template()
-	document.generate_dom()
+	await document.from_template()
 	document.genericize()
-	console.log(document.xml)
+	document.to_file()
 
 	return document.res
 }
