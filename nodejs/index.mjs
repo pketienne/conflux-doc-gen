@@ -65,23 +65,53 @@ export class Document {
 		})
 	}
 
-	//
+	// An easy method for dynamically creating and placing dom elements.
 	create(element, value, location, attributes = {}) {
 		let e = this.doc.createElement(element)
 		if (value) e.innerHTML = value
 		for (const a in attributes) e.setAttribute(a, attributes[a])	
 		this.doc.querySelector(location).append(e)
+		return {
+			parent: e, child: 'c', // Implement a reference to the child element.
+		}
 	}
 
-	//
+	// 
 	add_tables() {
 		let tables = this.event.tables
+		let div = this.create('div', null, '#mdb-sections', {
+			class: 'table-responsive'
+		})
 		for (const t in tables) {
-			this.create('table', null, '#mdb-sections', { id: `mdb-${t}` })
+			let table = this.create('table', null, '#mdb-sections div', {
+				id: `mdb-${t}`, class: 'table mb-0 table-striped invoice-table'
+			})
+			let thead = this.create('thead', null, '#mdb-section div table:last-child')
+			for (const th in tables[t]) {
+				this.create('th', th, '#mdb-sections div table:last-child thead')
+			}
 			tables[t].forEach((item) => {
-				this.create('tr', null, `#mdb-${t}`)
+				this.create('tr', null, `#mdb-${t}`, { class: 'tr' })
 				for (const i in item) {
-					this.create('td', item[i], `#mdb-${t} tr`)
+					let classes;
+					switch (i) {
+						case 'description':
+							classes = 'pl0 text-start'
+							break
+						case 'cost':
+							classes = 'text-end'
+							break
+						case 'total':
+							classes = 'text-end'
+							break
+						case 'price':
+							classes = 'text-center'
+							break
+						case 'quantity':
+							classes = 'text-center'
+							break
+					}
+					this.create('td', item[i], `#mdb-${t} tr:last-child`, {'class': classes})
 				}
 			})
 		}
@@ -93,50 +123,6 @@ export class Document {
 		const xml = this.doc.documentElement.outerHTML
 		const html = await prettier.format(xml, { parser: 'html' })
 		await fsp.writeFile(uri, html)
-	}
-}
-
-
-// Class for generating a "Materials" section
-export class Materials {
-	constructor(doc, json) {
-		this.doc = doc
-		this.json = json
-		this.xml = null
-	}
-
-	to_xml() {
-		let div = doc.createElement('div')
-		let table = doc.createElement('table')
-		let thead = doc.createElement('thead')
-		let tr = doc.createElement('tr')
-		let th1 = doc.createElement('th')
-		let th2 = doc.createElement('th')
-		let tbody = doc.createElement('tbody')
-
-		th1.innerHTML = 'Description'
-		th2.innerHTML = 'Cost'
-
-		this.xml = div
-		this.xml.append(table)
-		table.append(thead)
-		thead.append(tr)
-		tr.append(th1)
-		tr.append(th2)
-		table.append(tbody)
-
-		for (const m in json.materials) {
-			let material = Material(doc, materials)
-			tbody.append()
-		}
-
-		json.materials.forEach((j) => {
-			let material = Material(doc, j)
-			let xml = Material.to_xml()
-			tbody.append(xml)
-		})
-
-		return this.xml
 	}
 }
 
@@ -188,7 +174,7 @@ async function setup(type) {
 	let request;
 	let event;
 	
-	request = new Event('invoice')
+	request = new Event(type)
 	await request.to_json()
 	event = request.json
 	handler(event)
@@ -197,4 +183,5 @@ async function setup(type) {
 // Only run if running locally (not within AWS Lambda)
 if(!IS_AWS) {
 	setup('invoice')
+	// setup('estimate')
 }
