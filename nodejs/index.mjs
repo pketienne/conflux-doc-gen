@@ -1,6 +1,6 @@
 import { promises as fsp } from 'fs'
 import { JSDOM } from 'jsdom'
-// import prettier from 'prettier'
+import prettier from 'prettier'
 
 // Value is true iff running within AWS Lambda
 const IS_AWS = process.env.AWS_REGION
@@ -9,11 +9,10 @@ const IS_AWS = process.env.AWS_REGION
  * Create a class representing the structures (js, json, xml, pdf) needed for
  * converting an http request body to a pdf and associated http location.
  */
-class Document {
+export class Document {
 	static BUCKET_NAME = 'conflux-doc-gen'
 	static AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
 	static S3_URL = `https://${this.BUCKET_NAME}.${this.AWS_DOMAIN}`
-
 
 	constructor(event) {
 		const type = event.document_type
@@ -25,6 +24,12 @@ class Document {
 		this.dom = null
 		this.doc = null
 		this.res = {}
+	}
+
+	static instantiate(constructor, args = []) {
+		let instance = Object.create(constructor.prototype)
+		constructor.apply(instance, args)
+		return instance
 	}
 
 	// Generate template as string from either remote file or local file.
@@ -49,8 +54,8 @@ class Document {
 	}
 
 	// Replace info sections with data specific to this request.
-	update(loc, value) {
-		this.doc.querySelector(loc).innerHTML = value
+	update(location, value) {
+		this.doc.querySelector(location).innerHTML = value
 	}
 	
 	// Interate over an array instruction objects.
@@ -60,16 +65,84 @@ class Document {
 		})
 	}
 
+	//
+	create(element, value, location, attributes = {}) {
+		let e = this.doc.createElement(element)
+		if (value) e.innerHTML = value
+		for (const a in attributes) e.setAttribute(a, attributes[a])	
+		this.doc.querySelector(location).append(e)
+	}
+
+	//
+	add_tables() {
+		let tables = this.event.tables
+		for (const t in tables) {
+			this.create('table', null, '#mdb-sections', { id: `mdb-${t}` })
+			tables[t].forEach((item) => {
+				this.create('tr', null, `#mdb-${t}`)
+				for (const i in item) {
+					this.create('td', item[i], `#mdb-${t} tr`)
+				}
+			})
+		}
+	}
+
 	// Write xml representation of doc content to file.
 	async to_file() {
 		const uri = `responses/${this.uri}.html`
 		const xml = this.doc.documentElement.outerHTML
-		await fsp.writeFile(uri, xml)
+		const html = await prettier.format(xml, { parser: 'html' })
+		await fsp.writeFile(uri, html)
 	}
 }
 
+
+// Class for generating a "Materials" section
+export class Materials {
+	constructor(doc, json) {
+		this.doc = doc
+		this.json = json
+		this.xml = null
+	}
+
+	to_xml() {
+		let div = doc.createElement('div')
+		let table = doc.createElement('table')
+		let thead = doc.createElement('thead')
+		let tr = doc.createElement('tr')
+		let th1 = doc.createElement('th')
+		let th2 = doc.createElement('th')
+		let tbody = doc.createElement('tbody')
+
+		th1.innerHTML = 'Description'
+		th2.innerHTML = 'Cost'
+
+		this.xml = div
+		this.xml.append(table)
+		table.append(thead)
+		thead.append(tr)
+		tr.append(th1)
+		tr.append(th2)
+		table.append(tbody)
+
+		for (const m in json.materials) {
+			let material = Material(doc, materials)
+			tbody.append()
+		}
+
+		json.materials.forEach((j) => {
+			let material = Material(doc, j)
+			let xml = Material.to_xml()
+			tbody.append(xml)
+		})
+
+		return this.xml
+	}
+}
+
+
 // Read json file from path; Return as json.
-class Event {
+export class Event {
 	constructor(type) {
 		this.path = `requests/${type}.json`
 		this.json = null
@@ -99,11 +172,12 @@ export const handler = async (event) => {
 		{location: 'span#mdb-email', value: event.contractor_info.email},
 		{location: 'span#mdb-address', value: event.contractor_info.address},
 	]
-	
+
 	document = new Document(event)
 	await document.from_template()
 	document.delete('div#mdb-sections div.table-responsive')
 	document.updates(instructions)
+	document.add_tables()
 	document.to_file()
 
 	return document.res

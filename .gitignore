@@ -1,4 +1,4 @@
 *.zip
 *.pdf
 node_modules
-responses/*
+responses/*.html
