@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pathlib": "^0.1.2"
+  }
+}

@@ -6,7 +6,6 @@ import puppeteer from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
 import crypto from 'crypto'
 
-
 const REMOTE = process.env.AWS_REGION
 const BUCKET_NAME = 'conflux-doc-gen'
 const AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
@@ -14,66 +13,50 @@ const S3_URL = `https://${BUCKET_NAME}.${AWS_DOMAIN}`
 const ROOT = 'documents'
 
 /**
+ * This script centers around four main dimensions:
  * 
- * Dimensions of the problem space.
+ * - proximity: local || remote
+ * - stage: template || dom || html || pdf
+ * - operation: create, read, update, delete, list
+ * - filesystem:
+ * 		- local (conflux-doc-gen/nodejs)
+ * 		- remote (AWS S3)
  * 
- * - Proximity: local || remote
- * - Stage: template || dom || html || pdf
- * - operation: create || read || update || delete || list
- * - filesystem: local || remote
+ * steps of the procedure:
+ * 	1. read template (local or remote)
+ * 	2. create dom
+ * 	3. delete dom_elements
+ * 	4. update dom_elements
+ * 	5. create html (local or remote)
+ * 	6. read html (local or remote)
+ * 	7. create pdf (local or remote)
  * 
  */
 
 class Document {
 	constructor(event) {
 		this.event = event
-		this.uuid = crypto.randomUUID()
+		this.id = crypto.randomUUID()
 		this.template = null
 		this.dom = null
 		this.html = null
-		this.browser = null
-		this.page = null
-		this.PDFOptions = { printBackground: true, format: 'A4' }
 		this.pdf = null
-		this.res = {}
+		this.res = null
+	}
 
-		const type = event.document_type
-		const num = event.template_number	
-		const type_num = `${type}-${num}`
-
-		this.urls = {
-			read_template: {
-				remote: `https://${S3_URL}/${ROOT}/template/${type_num}.html`, // fetch()
-				local: `${ROOT}/template/${type_num}.html`, // fsp.readFile()
-			},
-			create_html: {
-				remote: `${ROOT}/html/${type_num}.${this.id}.html`, // PutObjectCommand()
-				local: `${ROOT}/html/${type_num}.html`, // fsp.write()
-			},
-			read_html: {
-				remote: `${S3_URL}/${ROOT}/html/${type_num}.${this.id}.html`, // Page.goto()
-				local: `file://${process.cwd()}/${ROOT}/html/${type_num}.html`, // Page.goto()
-			},
-			create_pdf: {
-				remote: `${ROOT}/pdf/${type_num}.${this.uuid}.pdf`, // PutObjectCommand()
-				local: `${ROOT}/pdf/${type_num}.pdf`, // Page.pdf()
-			},
+	uri(model) {
+		let type = this.event.document_type
+		let num = this.event.template_number
+		let path = `${ROOT}/${model}/${type}-${num}`
+		if (REMOTE) path += `.${this.id}`
+		if (model == 'template') {
+			path += '.html'
+		} else {
+			path += `.${model}`
 		}
+		return path
 	}
 
-	async init() {
-		this.browser = await puppeteer.launch({
-			args: chromium.args,
-			defaultViewport: chromium.defaultViewport,
-			executablePath: await chromium.executablePath(),
-			headless: chromium.headless,
-			ignoreHTTPSErrors: true,
-		})
-		this.page = await this.browser.newPage()
-		this.page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
-		await this.page.emulateMediaType('screen')
-	}
-	
 	create_element(element, value, location, attributes = {}) {
 		let doc = this.dom.window.document
 		let e = doc.createElement(element)
@@ -99,27 +82,29 @@ class Document {
 	}
 
 	async read_template() {
-		if (REMOTE) {
-			this.template = await fetch(this.urls.read_template.remote)
+		let uri = this.uri('template')
+		if(REMOTE) {
+			url = `${Document.S3_URL}/${uri}`
+			this.template = await fetch(uri).then(res => res.text())
 		} else {
-			this.template = await fsp.readFile(this.urls.read_template.local)
+			this.template = await fsp.readFile(uri, 'utf-8')
 		}
 	}
 
 	create_dom() {
 		this.dom = new JSDOM(this.template)
 	}
-
+	
 	delete_dom_elements() {
-		let doc = this.dom.window.document
-		doc.querySelector('div#mdb-sections div.table-responsive').remove()
+		let loc = 'div#mdb-sections div.table-responsive'
+		this.dom.window.document.querySelector(loc).remove()
 	}
 
 	update_dom_elements() {
 		let doc = this.dom.window.document
 		let instructions = [
-			// {location: 'span#mdb-invoice-number', value: this.event.invoice_info.number},
-			// {location: 'span#mdb-invoice-date',	value: this.event.invoice_info.date.slice(0,10)},
+			{location: 'span#mdb-invoice-number', value: this.event.invoice_info.number},
+			{location: 'span#mdb-invoice-date',	value: this.event.invoice_info.date.slice(0,10)},
 			{location: 'h2#mdb-client-person', value: this.event.client_info.person},
 			{location: 'span#mdb-client-company', value: this.event.client_info.company},
 			{location: 'span#mdb-client-email', value: this.event.client_info.email},
@@ -129,7 +114,7 @@ class Document {
 			{location: 'span#mdb-contractor-email', value: this.event.contractor_info.email},
 			{location: 'span#mdb-contractor-address', value: this.event.contractor_info.address},
 			{location: 'h3#mdb-notes-title', value: 'Notes:'},
-			// {location: 'p#mdb-notes-content', value: this.event.invoice_info.notes},
+			{location: 'p#mdb-notes-content', value: this.event.invoice_info.notes},
 			{location: 'span#mdb-phone', value: this.event.contractor_info.phone},
 			{location: 'span#mdb-email', value: this.event.contractor_info.email},
 			{location: 'span#mdb-address', value: this.event.contractor_info.address},
@@ -167,74 +152,67 @@ class Document {
 	}
 
 	async create_html() {
+		const uri = this.uri('html')
 		const xml = this.dom.window.document.documentElement.outerHTML
 		const html = await prettier.format(xml, { parser: 'html' })
-		
 		if (REMOTE) {
 			const client = new S3Client({})
 			const command = new PutObjectCommand({
-				Bucket: BUCKET_NAME,
-				Key: this.urls.create_html.remote,
+				Bucket: 'conflux-doc-gen',
+				Key: uri,
 				Body: this.html,
 			})
 			await client.send(command)
 		} else {
-			await fsp.writeFile(this.urls.create_html.local, html)
-		}
-	}
-
-	async read_html() {
-		if (REMOTE) {
-			await this.page.goto(this.urls.read_html.remote, { waitUntil: 'networkidle0' })
-		} else {
-			await this.page.goto(this.urls.read_html.local)
+			await fsp.writeFile(uri, html)
 		}
 	}
 
 	async create_pdf() {
-		if(REMOTE) {
-			this.pdf = await this.page.pdf(PDFOptions)
-			const client = new S3Client({})
-			const command = new PutObjectCommand({
-				Bucket: BUCKET_NAME,
-				Key: this.urls.create_pdf.remote,
-				Body: this.html,
-			})
-			await client.send(command)
-		} else {
-			this.PDFOptions.path = this.urls.create_pdf.local
-			this.pdf = await this.page.pdf(this.PDFOptions)
-		}
-	}
+		let uri = this.uri('html')
+		var PDFOptions = {printBackground: true, format: 'A4'}
 
-	async terminate() {
-		if (this.page) await this.page.close()
-		if (this.browser) await this.browser.close()
+		if (!REMOTE) {PDFOptions.path = uri}
+
+		const browser = await puppeteer.launch({
+			args: chromium.args,
+			defaultViewport: chromium.defaultViewport,
+			executablePath: await chromium.executablePath(),
+			headless: chromium.headless,
+			ignoreHTTPSErrors: true,
+		})
+
+		const page = await browser.newPage()
+		await page.goto(uri, {waitUntil: 'networkidle0'})
+		await page.emulateMediaType('screen')
+		page.on('console', msg => console.log('BROWSER LOG:', msg.text()));
+		const pdf = await page.pdf(PDFOptions)
+		await page.close()
+		await browser.close()
 	}
 }
 
 export const handler = async (event) => {
 	let document = new Document(event)
-	await document.init()
+
 	await document.read_template()
 	document.create_dom()
 	document.delete_dom_elements()
 	document.update_dom_elements()
 	document.create_dom_elements()
-	await document.create_html()
-	await document.read_html()
-	await document.create_pdf()
-	document.terminate()
+	document.create_html()
+	document.create_pdf()
+
 	return document.res
 }
 
 async function setup(type) {
-	let request = await fsp.readFile(`documents/json/${type}.json`, 'utf-8')
+	let request = await fsp.readFile(`${ROOT}/json/${type}.json`, 'utf-8')
 	let json = JSON.parse(request)
 	handler(json)
 }
 
 if(!REMOTE) {
-	// setup('invoice')
-	setup('estimate')
+	setup('invoice')
+	// setup('estimate')
 }
