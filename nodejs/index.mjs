@@ -35,7 +35,11 @@ class Document {
 		this.page = null
 		this.PDFOptions = { printBackground: true, format: 'A4' }
 		this.pdf = null
-		this.res = {}
+		this.res = {
+			statusCode: 200,
+			headers: { 'ContentType': 'application/json' },
+			body: null,
+		}
 
 		const type = event.document_type
 		const num = event.template_number	
@@ -99,9 +103,8 @@ class Document {
 	}
 
 	async read_template() {
-		this.template = await (await fetch(this.urls.read_template.remote)).text()
 		if (REMOTE) {
-			this.template = await fetch(this.urls.read_template.remote)
+			this.template = await (await fetch(this.urls.read_template.remote)).text()
 		} else {
 			this.template = await fsp.readFile(this.urls.read_template.local, 'utf-8')
 		}
@@ -112,9 +115,6 @@ class Document {
 	}
 
 	async delete_dom_elements() {
-		const xml = this.dom.window.document.documentElement.outerHTML
-		const html = await prettier.format(xml, { parser: 'html' })
-		console.log(html)
 		let doc = this.dom.window.document
 		doc.querySelector('div#mdb-sections div.table-responsive').remove()
 	}
@@ -172,7 +172,7 @@ class Document {
 
 	async create_html() {
 		const xml = this.dom.window.document.documentElement.outerHTML
-		const html = await prettier.format(xml, { parser: 'html' })
+		this.html = await prettier.format(xml, { parser: 'html' })
 		
 		if (REMOTE) {
 			const client = new S3Client({})
@@ -180,10 +180,11 @@ class Document {
 				Bucket: BUCKET_NAME,
 				Key: this.urls.create_html.remote,
 				Body: this.html,
+				ContentType: 'text/html',
 			})
 			await client.send(command)
 		} else {
-			await fsp.writeFile(this.urls.create_html.local, html)
+			await fsp.writeFile(this.urls.create_html.local, this.html)
 		}
 	}
 
@@ -197,18 +198,20 @@ class Document {
 
 	async create_pdf() {
 		if(REMOTE) {
-			this.pdf = await this.page.pdf(PDFOptions)
+			this.pdf = await this.page.pdf(this.PDFOptions)
 			const client = new S3Client({})
 			const command = new PutObjectCommand({
 				Bucket: BUCKET_NAME,
 				Key: this.urls.create_pdf.remote,
-				Body: this.html,
+				Body: this.pdf,
+				ContentType: 'application/pdf',
 			})
 			await client.send(command)
 		} else {
 			this.PDFOptions.path = this.urls.create_pdf.local
 			this.pdf = await this.page.pdf(this.PDFOptions)
 		}
+		this.res.body = this.urls.create_pdf.remote
 	}
 
 	async terminate() {
@@ -218,17 +221,17 @@ class Document {
 }
 
 export const handler = async (event) => {
-	let document = new Document(event)
-	await document.init()
-	await document.read_template()
-	document.create_dom()
-	document.delete_dom_elements()
-	document.update_dom_elements()
+	// let document = new Document(event)
+	// await document.init()
+	// await document.read_template()
+	// document.create_dom()
+	// document.delete_dom_elements()
+	// document.update_dom_elements()
 	// document.create_dom_elements()
 	// await document.create_html()
 	// await document.read_html()
 	// await document.create_pdf()
-	document.terminate()
+	// await document.terminate()
 	return document.res
 }
 
