@@ -10,7 +10,7 @@ import crypto from 'crypto'
 const REMOTE = process.env.AWS_REGION
 const BUCKET_NAME = 'conflux-doc-gen'
 const AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
-const S3_URL = `https://${BUCKET_NAME}.${AWS_DOMAIN}`
+const S3_URL = `${BUCKET_NAME}.${AWS_DOMAIN}`
 const ROOT = 'documents'
 
 /**
@@ -47,11 +47,11 @@ class Document {
 				local: `${ROOT}/template/${type_num}.html`, // fsp.readFile()
 			},
 			create_html: {
-				remote: `${ROOT}/html/${type_num}.${this.id}.html`, // PutObjectCommand()
+				remote: `${ROOT}/html/${type_num}.${this.uuid}.html`, // PutObjectCommand()
 				local: `${ROOT}/html/${type_num}.html`, // fsp.write()
 			},
 			read_html: {
-				remote: `${S3_URL}/${ROOT}/html/${type_num}.${this.id}.html`, // Page.goto()
+				remote: `https://${S3_URL}/${ROOT}/html/${type_num}.${this.uuid}.html`, // Page.goto()
 				local: `file://${process.cwd()}/${ROOT}/html/${type_num}.html`, // Page.goto()
 			},
 			create_pdf: {
@@ -99,10 +99,11 @@ class Document {
 	}
 
 	async read_template() {
+		this.template = await (await fetch(this.urls.read_template.remote)).text()
 		if (REMOTE) {
 			this.template = await fetch(this.urls.read_template.remote)
 		} else {
-			this.template = await fsp.readFile(this.urls.read_template.local)
+			this.template = await fsp.readFile(this.urls.read_template.local, 'utf-8')
 		}
 	}
 
@@ -110,7 +111,10 @@ class Document {
 		this.dom = new JSDOM(this.template)
 	}
 
-	delete_dom_elements() {
+	async delete_dom_elements() {
+		const xml = this.dom.window.document.documentElement.outerHTML
+		const html = await prettier.format(xml, { parser: 'html' })
+		console.log(html)
 		let doc = this.dom.window.document
 		doc.querySelector('div#mdb-sections div.table-responsive').remove()
 	}
@@ -220,10 +224,10 @@ export const handler = async (event) => {
 	document.create_dom()
 	document.delete_dom_elements()
 	document.update_dom_elements()
-	document.create_dom_elements()
-	await document.create_html()
-	await document.read_html()
-	await document.create_pdf()
+	// document.create_dom_elements()
+	// await document.create_html()
+	// await document.read_html()
+	// await document.create_pdf()
 	document.terminate()
 	return document.res
 }
@@ -235,6 +239,6 @@ async function setup(type) {
 }
 
 if(!REMOTE) {
-	// setup('invoice')
-	setup('estimate')
+	setup('invoice')
+	// setup('estimate')
 }
