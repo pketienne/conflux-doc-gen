@@ -35,7 +35,12 @@ class Document {
 		this.page = null
 		this.PDFOptions = { printBackground: true, format: 'A4' }
 		this.pdf = null
-		this.res = {}
+		this.res = {
+			statusCode: 200,
+			body: {
+				url: null,
+			}
+		}
 
 		const type = event.document_type
 		const num = event.template_number	
@@ -210,11 +215,18 @@ class Document {
 	async terminate() {
 		if (this.page) await this.page.close()
 		if (this.browser) await this.browser.close()
+		
+		if(REMOTE) {
+			this.res.body.url = `${S3_URL}/${this.urls.create_pdf.remote}`
+		} else {
+			this.res.body.url = this.urls.create_pdf.local
+		}
 	}
 }
 
 export const handler = async (event) => {
 	let document = new Document(event)
+
 	await document.init()
 	await document.read_template()
 	document.create_dom()
@@ -224,7 +236,9 @@ export const handler = async (event) => {
 	await document.create_html()
 	await document.read_html()
 	await document.create_pdf()
-	document.terminate()
+	await document.terminate()
+	
+	console.log(document.res)
 	return document.res
 }
 
@@ -235,6 +249,6 @@ async function setup(type) {
 }
 
 if(!REMOTE) {
-	// setup('invoice')
-	setup('estimate')
+	setup('invoice')
+	// setup('estimate')
 }
