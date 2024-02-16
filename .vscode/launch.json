@@ -14,6 +14,17 @@
 			"cwd": "${workspaceFolder}",
 			"program": "${workspaceFolder}/nodejs/index.mjs",
 			"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/latest/bin/node",
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "this-file",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"cwd": "${workspaceFolder}",
+			"program": "${file}",
+			"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/latest/bin/node",
 		}
 	]
 }
