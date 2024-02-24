@@ -79,6 +79,7 @@ class Document {
 				remote: `${ROOT}/pdf/${type_num}.${this.uuid}.pdf`, // PutObjectCommand()
 				local: `${ROOT}/pdf/${type_num}.pdf`, // Page.pdf()
 			},
+			pdf: `https://${S3_URL}/${ROOT}/pdf/${type_num}.${this.uuid}.pdf`
 		}
 	}
 	
@@ -274,7 +275,7 @@ class Document {
 					ContentType: 'application/pdf',
 				})
 				await client.send(command)
-				this.set_body_prop('url', this.urls.create_pdf.remote)
+				this.set_body_prop('url', this.urls.pdf)
 			} else {
 				this.PDFOptions.path = this.urls.create_pdf.local
 				this.pdf = await this.page.pdf(this.PDFOptions)
