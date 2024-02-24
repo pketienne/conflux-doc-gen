@@ -26,13 +26,25 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "conflux-doc-gen",
-				"type": "node",
-				"request": "launch",
 				"cwd": "${workspaceFolder}",
-				"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/21.6.0/bin/node",
+				"name": "conflux-doc-gen",
+				"outputCapture": "std",
 				"program": "${workspaceFolder}/nodejs/index.mjs",
-				"outputCapture": "std"
+				"request": "launch",
+				"runtimeArgs": ["--preserve-symlinks"],
+				"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/21.6.0/bin/node",
+				"skipFiles": [ "<node_internals>/**" ],
+				"type": "node"
+			},
+			{
+				"cwd": "${workspaceFolder}",
+				"name": "this-file",
+				"request": "launch",
+				"program": "${file}",
+				"runtimeArgs": ["--preserve-symlinks"],
+				"runtimeExecutable": "/home/pke/.local/share/mise/installs/node/latest/bin/node",
+				"skipFiles": [ "<node_internals>/**" ],
+				"type": "node",
 			}
 		]
 	}

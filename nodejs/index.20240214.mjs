@@ -57,13 +57,8 @@ class Document {
 		}
 
 		const type = this.body.document_type
-		console.log(`type: ${type}`)
-		console.log(`document_type: ${this.body['document_type']}`)
-		console.log(`just body: ${body}`)
 		const num = this.body.template_number
-		console.log(`num: ${num}`)
 		const type_num = `${type}-${num}`
-		console.log(`type_num: ${type_num}`)
 
 		this.urls = {
 			read_template: {

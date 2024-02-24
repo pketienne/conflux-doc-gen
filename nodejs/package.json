@@ -6,7 +6,8 @@
     "fs": "^0.0.1-security",
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
-    "puppeteer-core": "^20.3.0"
+    "puppeteer-core": "^20.3.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.6"

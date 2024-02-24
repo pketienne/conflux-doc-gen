@@ -8,7 +8,7 @@ import crypto from 'crypto'
 
 
 const REMOTE = process.env.AWS_REGION
-const BUCKET_NAME = 'mdb-conflux'
+const BUCKET_NAME = 'conflux-doc-gen'
 const AWS_DOMAIN = 's3.us-east-2.amazonaws.com'
 const S3_URL = `${BUCKET_NAME}.${AWS_DOMAIN}`
 const ROOT = 'documents'
@@ -55,7 +55,7 @@ class Document {
 		this.pdf = null
 		this.res = {
 			statusCode: 200,
-			body: JSON.stringify({ status: Document.m.constructor })
+			body: JSON.stringify({ message: Document.m.constructor, url: 'n/a' })
 		}
 
 		const type = this.body.document_type
@@ -64,8 +64,8 @@ class Document {
 
 		this.urls = {
 			read_template: {
-				remote: `https://${S3_URL}/${ROOT}/templates/${type_num}.html`, // fetch()
-				local: `${ROOT}/templates/${type_num}.html`, // fsp.readFile()
+				remote: `https://${S3_URL}/${ROOT}/template/${type_num}.html`, // fetch()
+				local: `${ROOT}/template/${type_num}.html`, // fsp.readFile()
 			},
 			create_html: {
 				remote: `${ROOT}/html/${type_num}.${this.uuid}.html`, // PutObjectCommand()
@@ -80,6 +80,9 @@ class Document {
 				local: `${ROOT}/pdf/${type_num}.pdf`, // Page.pdf()
 			},
 		}
+		let printable = {...this}
+		printable.body = null
+		Logger.log(printable)
 	}
 	
 	async init() {
@@ -98,6 +101,8 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.init(e))
 		}
+		Logger.log(this.browser)
+		Logger.log(this.page)
 	}
 
 	create_element(element, value, location, attributes = {}) {
@@ -122,6 +127,7 @@ class Document {
 				classes = 'text-center'
 				break
 		}
+		// Logger.log(this)
 		return classes
 	}
 
@@ -141,7 +147,7 @@ class Document {
 				this.set_body_prop('message', Document.m.read_template(e))
 			}
 		}
-		Logger.log(this)
+		// Logger.log(this)
 	}
 
 	create_dom() {
@@ -151,7 +157,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.create_dom(e))
 		}
-		Logger.log(this)
+		// Logger.log(this)
 	}
 	
 	delete_dom_elements() {
@@ -163,7 +169,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.delete_dom_elements(e))
 		}
-		Logger.log(this)
+		// Logger.log(this)
 	}
 	
 	update_dom_elements() {
@@ -193,6 +199,7 @@ class Document {
 				this.set_body_prop('message', Document.m.delete_dom_elements(e))
 			}
 		})
+		// Logger.log(this)
 	}
 
 	create_dom_elements() {
@@ -220,6 +227,7 @@ class Document {
 			})
 			this.create_element('br', null, '#mdb-sections div:last-child')
 		}
+		// Logger.log(this)
 	}
 
 	async create_html() {
@@ -247,6 +255,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.create_html(e))
 		}
+		// Logger.log(this)
 	}
 
 	async read_html() {
@@ -260,6 +269,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.read_html(e))
 		}
+		// Logger.log(this)
 	}
 
 	async create_pdf() {
@@ -283,6 +293,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.create_pdf(e))
 		}
+		// Logger.log(this)
 	}
 
 	async terminate() {
@@ -293,6 +304,7 @@ class Document {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.terminate(e))
 		}
+		// Logger.log(this)
 	}
 	
 	set_body_prop(prop, value) {
