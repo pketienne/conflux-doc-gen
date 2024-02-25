@@ -51,7 +51,7 @@ class Document {
 		this.html = null
 		this.browser = null
 		this.page = null
-		this.PDFOptions = { printBackground: true, format: 'A4' }
+		this.PDFOptions = { printBackground: true, format: 'A4', landscape: false }
 		this.pdf = null
 		this.res = {
 			statusCode: 200,
@@ -61,6 +61,8 @@ class Document {
 		const type = this.body.document_type
 		const num = this.body.template_number
 		const type_num = `${type}-${num}`
+		
+		if (this.body.orientation == 'landscape') this.PDFOptions.landscape = true
 
 		this.urls = {
 			read_template: {
@@ -107,7 +109,6 @@ class Document {
 		if (value) e.innerHTML = value
 		for (const a in attributes) e.setAttribute(a, attributes[a])	
 		doc.querySelector(location).append(e)
-		Logger.log(this.dom)
 	}
 
 	generate_classes(innerHTML) {
@@ -266,6 +267,7 @@ class Document {
 	async create_pdf() {
 		try {
 			if(REMOTE) {
+				Logger.log(this.PDFOptions)
 				this.pdf = await this.page.pdf(this.PDFOptions)
 				const client = new S3Client({})
 				const command = new PutObjectCommand({
@@ -344,6 +346,6 @@ async function json(type) {
 }
 
 if(!REMOTE) {
-	let event = await json('invoice')
+	let event = await json('estimate')
 	if (event) handler(event)
 }
