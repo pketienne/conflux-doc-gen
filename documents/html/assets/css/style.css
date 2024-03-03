@@ -148,10 +148,12 @@ h6,
   font-size: 14px;
 }
 
+/* 
 .invoice-content .invoice-table th:first-child,
 .invoice-content .invoice-table td:first-child {
   text-align: left;
 }
+*/
 
 .invoice-content .color-white {
   color: #fff !important;

@@ -1,0 +1,1128 @@
+<html lang="zxx">
+  <head>
+    <title id="mdb-invoice-title">Invoice Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <!-- External CSS libraries -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/fonts/font-awesome/css/font-awesome.min.css"
+    />
+
+    <!-- Favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Invoice 1 start -->
+    <div class="invoice-1 invoice-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="invoice-inner clearfix">
+              <div class="invoice-info clearfix" id="invoice_wrapper">
+                <div class="invoice-headar">
+                  <div class="row g-0">
+                    <div class="col-sm-6">
+                      <div class="invoice-logo">
+                        <!-- logo started -->
+                        <div class="logo">
+                          <img
+                            src="assets/img/logos/mdb-logo-full.png"
+                            alt="logo"
+                          />
+                        </div>
+                        <!-- logo ended -->
+                      </div>
+                    </div>
+                    <div class="col-sm-6 invoice-id">
+                      <div class="info">
+                        <h1 class="color-white inv-header-1">Invoice</h1>
+                        <p class="color-white mb-1">
+                          Invoice Number
+                          <span id="mdb-invoice-number">#45613</span>
+                        </p>
+                        <p class="color-white mb-0">
+                          Invoice Date
+                          <span id="mdb-invoice-date">21 Sep 2021</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="invoice-top">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="invoice-number mb-30">
+                        <h4 class="inv-title-1">Invoice To</h4>
+                        <h2 class="name mb-10" id="mdb-client-person">
+                          Dylan + Kat Hostetter
+                        </h2>
+                        <p class="invo-addr-1">
+                          <span id="mdb-client-company">{client company}</span
+                          ><br />
+                          <span id="mdb-client-email"></span><br />
+                          <span id="mdb-client-address"></span><br />
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="invoice-number mb-30">
+                        <div class="invoice-number-inner">
+                          <h4 class="inv-title-1">Invoice From</h4>
+                          <h2 class="name mb-10" id="mdb-contractor-person">
+                            Oliver McGraw
+                          </h2>
+                          <p class="invo-addr-1">
+                            <span id="mdb-contractor-company"
+                              >McGraw Design &amp; Build</span
+                            ><br />
+                            <span id="mdb-contractor-email"
+                              >oliver@mcgrawdesignbuild.com</span
+                            ><br />
+                            <span id="mdb-contractor-address"
+                              >448 W 31st St, Indianapolis, IN 46208</span
+                            ><br />
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="invoice-center" id="mdb-sections">
+                  <div class="table-responsive">
+                    <table
+                      id="mdb-0"
+                      class="table mb-0 table-striped invoice-table"
+                    >
+                      <thead class="bg-active">
+                        <th class="">description</th>
+                        <th class="text-end">cost</th>
+                      </thead>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Equipment for lot clearing Description: Dump
+                          truck for one day. Trailer for full day. Skidsteer for
+                          half day. Excavator for full day. All equpiment for
+                          lot clearing first day. $400 + $400 + $375 + $400
+                        </td>
+                        <td class="text-end">1874.25</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Equipment for lot clearing Description: Porch
+                          demo and misc lot clearing and fill in cistern. Dump
+                          truck, excavator, skidsteer
+                        </td>
+                        <td class="text-end">1428.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Shoring Materials Description: Lumber for
+                          shoring porch. Pulled from shop, no receipt
+                        </td>
+                        <td class="text-end">238.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lot clearing disposal Description: Disposa
+                        </td>
+                        <td class="text-end">68.56</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lot clearing disposal Description: Disposal
+                        </td>
+                        <td class="text-end">72.70</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lot clearing disposal Description: Disposa
+                        </td>
+                        <td class="text-end">87.10</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lot clearing disposal Description: Disposal of
+                          debris
+                        </td>
+                        <td class="text-end">101.50</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Equipment Operator for Lot Clearing Description:
+                          Took a load of trash from Dylan's house to south side
+                          landfill. Picked up a load of 53's
+                        </td>
+                        <td class="text-end">308.27</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Concrete steps and Sidewalk Equipment
+                          Description: Used excavator to install fill dirt into
+                          porch
+                        </td>
+                        <td class="text-end">196.35</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Front Porch Demo Equipment Description: Plate
+                          compactor for installing backfill into front porch.
+                          Card was charged for 109.68. Should be a 30.23 refund
+                          coming back to card.
+                        </td>
+                        <td class="text-end">130.52</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description: Dig
+                          out footer.
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description: Oil
+                          for skid steer
+                        </td>
+                        <td class="text-end">28.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description:
+                          Skidsteer for concrete pour.
+                        </td>
+                        <td class="text-end">261.80</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Front Porch Demo Equipment Description: Jumping
+                          jack and vibratory compactor
+                        </td>
+                        <td class="text-end">309.40</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Sand Description: Sand for nicks block work.
+                        </td>
+                        <td class="text-end">239.37</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description:
+                          Delivered sand for nick
+                        </td>
+                        <td class="text-end">130.90</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description:
+                          trucking fill material
+                        </td>
+                        <td class="text-end">261.80</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing and Sitework Equipment Description: dump
+                          truck material removal
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing and Sitework Equipment Description:
+                          skidsteer to move and load material from footer
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing and Sitework Equipment Description:
+                          mobalize equipment
+                        </td>
+                        <td class="text-end">428.40</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lot clearing disposal Description: Trash to dump
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Lay Brick Block Limestone Cap and Footing
+                          Description: Nick Smith Labor for footing and block.
+                          Incl some labor for footing placement for addition
+                        </td>
+                        <td class="text-end">1392.30</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Footing Dig and Fill Equipment Description: dig
+                          footing and backfill, skidstter and excavator time
+                        </td>
+                        <td class="text-end">1047.20</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Set Form and Finish Concrete Flatwork
+                          Description: payment to emmaual, no receipt
+                        </td>
+                        <td class="text-end">833.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Driveway Excavation Equipment Description: Cut
+                          driveway cut sidewalk load dirt.
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Driveway Excavation Equipment Description: 6
+                          hours of trucking 2 hours of excavator. Trucked in 2's
+                          and 53's for driveway, garage floor and sidewalk
+                        </td>
+                        <td class="text-end">523.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">Task: #53 Stone Description: 53's</td>
+                        <td class="text-end">189.69</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">Task: #53 Stone Description: #2's</td>
+                        <td class="text-end">198.28</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Pea Gravel For Crawlspace Description: Pea
+                          gravel
+                        </td>
+                        <td class="text-end">243.93</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">Task: #53 Stone Description: 53 stone</td>
+                        <td class="text-end">181.07</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">Task: #53 Stone Description: 53's</td>
+                        <td class="text-end">181.36</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Concrete steps and Sidewalk Operator
+                          Description: stone for sidewalk from Oliver's
+                        </td>
+                        <td class="text-end">205.51</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Concrete Description: concrete truck for garage
+                          slab AND PORCH AND SIDEWALK.
+                        </td>
+                        <td class="text-end">1945.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Concrete Description: Concrete for footings and
+                          front porch. $20 early payment discount
+                        </td>
+                        <td class="text-end">1765.19</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Set Form and Finish Concrete Flatwork
+                          Description: garage floor ** AND FRONT STAIRS ** set
+                          forms and finish concrete. no receipt
+                        </td>
+                        <td class="text-end">2011.10</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Demolition Description: Mask, 6 pack painters
+                          tape, 6 suits, box of gloves
+                        </td>
+                        <td class="text-end">276.60</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Brick Description: brick purchase
+                        </td>
+                        <td class="text-end">816.19</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Materials - First Floor Description: First
+                          floor, some sheathing, joists for second floor
+                        </td>
+                        <td class="text-end">10114.89</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Windows Description: Windows and patio door
+                          purchase
+                        </td>
+                        <td class="text-end">11359.17</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Equipment Building Clean-Up Operator
+                          Description: Hauled in excavtor. Rough grade yard.
+                          drilled holes for gaurdrail. ripped out aluminum and
+                          wood fence. installed dirt around porch.
+                        </td>
+                        <td class="text-end">616.54</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Chimney Demolition Description: Chimney
+                          demolition
+                        </td>
+                        <td class="text-end">595.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Foundation Lay Block Description: Block for
+                          foundation and footing labor
+                        </td>
+                        <td class="text-end">2618.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Port-a-pottie Description: SERVICE SANITATION
+                          port a pottie
+                        </td>
+                        <td class="text-end">73.54</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Front Porch Demo Equipment Description: MULLIN
+                          RENTAL SERVICE IN return
+                        </td>
+                        <td class="text-end">-84.35</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Front Porch Demo Equipment Description: MULLIN
+                          RENTAL SERVICE IN return of compactor that didn't work
+                        </td>
+                        <td class="text-end">-130.52</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Garage Floor Equipment Description: MULLIN
+                          RENTAL SERVICE IN plate compactor
+                        </td>
+                        <td class="text-end">130.90</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Permit Fees Description: DEPT. BNS - OTC
+                          structural permit
+                        </td>
+                        <td class="text-end">414.12</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Permit Fees Description: TCB*BNS-ONLINE permit
+                          fees
+                        </td>
+                        <td class="text-end">143.99</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Permit Fees Description: TCB*CB SERVICE FEE
+                        </td>
+                        <td class="text-end">3.61</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Permit Fees Description: TCB*CB SERVICE FEE
+                        </td>
+                        <td class="text-end">10.35</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: #53 Stone Description: MMM KENTUCKY AVENUE MINE
+                        </td>
+                        <td class="text-end">194.79</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Demolition Description: floor protection and
+                          dust protection materials
+                        </td>
+                        <td class="text-end">494.89</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Rebar and Reinforcing Steel 20' Description:
+                          Menards return jbolts
+                        </td>
+                        <td class="text-end">-95.18</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Concrete Blocks Description: Menards blocks,
+                          rebar, delivery, and masonry cement
+                        </td>
+                        <td class="text-end">2475.96</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Masonary Cement Description: Menards
+                        </td>
+                        <td class="text-end">242.08</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Task: Framing Labor Description: Down payment to Oscar
+                          construction for framing labor
+                        </td>
+                        <td class="text-end">7140.00</td>
+                      </tr>
+                    </table>
+                    <br />
+                    <table
+                      id="mdb-1"
+                      class="table mb-0 table-striped invoice-table"
+                    >
+                      <thead class="bg-active">
+                        <th class="">description</th>
+                        <th class="undefined">quantity</th>
+                        <th class="text-end">cost</th>
+                        <th class="undefined">total</th>
+                      </thead>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: 345 Description: Deliver
+                          excavator
+                        </td>
+                        <td class="undefined">1.26</td>
+                        <td class="text-end">46.71</td>
+                        <td class="undefined">58.85</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: 345 Description: Mobalize
+                          skidsteer, dump truck, and dump trailer. Clear lot.
+                          Demolish fences. Run to landfill for one load of
+                          trash.
+                        </td>
+                        <td class="undefined">9.5</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">532.47</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: Two carpenters shore up
+                          front porch roof using construction lumber and
+                          jacks.395 Description: Shore and demolish front porch.
+                          Other misc tasks. Run trash to landfill. Help fill in
+                          back yard cistern.
+                        </td>
+                        <td class="undefined">8</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">448.39</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: 594 Description: Layout and
+                          dig footings. Place gravel and fill in porch and
+                          compact.
+                        </td>
+                        <td class="undefined">10</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">560.49</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: 594 Description: Place
+                          footings. Start interior demo. Stop traffic for front
+                          porch placement.
+                        </td>
+                        <td class="undefined">7.57</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">424.29</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: 405 Description: Load
+                          another load of dirt. Move block around on site for
+                          mason.
+                        </td>
+                        <td class="undefined">1.5</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">84.07</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: begin demolition with james. mark out
+                          walls for demolition.
+                        </td>
+                        <td class="undefined">2.73</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">153.01</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Oliver McGraw Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: interior demolition, checking on
+                          mechanicals, clean porch and yard.
+                        </td>
+                        <td class="undefined">2.75</td>
+                        <td class="text-end">56.05</td>
+                        <td class="undefined">154.13</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: 594 Description: dig
+                          footing, compact fill in porch
+                        </td>
+                        <td class="undefined">6</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">212.99</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Moved skid steer. Walked through house
+                          planned. Bought tools. Moved appliances protected
+                          floors hung plastic removed trim, cabinets and drop
+                          ceiling
+                        </td>
+                        <td class="undefined">8.5</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">301.73</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Began demolition in kitchen
+                        </td>
+                        <td class="undefined">2</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">71.00</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Demo kitchen cabinets, kitchen tile floor
+                          and cleared and protected basement
+                        </td>
+                        <td class="undefined">8.5</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">301.73</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Demo plaster walls in kitchen and dining
+                          room
+                        </td>
+                        <td class="undefined">8.5</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">301.73</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Removed plaster from walls and ceilings
+                          in kitchen and dining room
+                        </td>
+                        <td class="undefined">10.01</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">355.33</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Removed plaster in bedroom and bathroom
+                        </td>
+                        <td class="undefined">9.77</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">346.81</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Removed ceiling in bathroom
+                        </td>
+                        <td class="undefined">3.17</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">112.53</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Tommy Coonan Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Removed floor in kitchen. Removed framing
+                          in kitchen. Pulled nails in all rooms. Removed
+                          electrical. Removed pex plumbing
+                        </td>
+                        <td class="undefined">8.25</td>
+                        <td class="text-end">35.50</td>
+                        <td class="undefined">292.86</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 605 Description: Began
+                          Moving equipment. Went to Constances to pick Up
+                          Skidsteer. Left early becuse of knee pain.
+                        </td>
+                        <td class="undefined">1.97</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">80.97</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 399 Description: Ran
+                          excavator to remove front porch and removed cistern in
+                          rear.
+                        </td>
+                        <td class="undefined">6.48</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">266.34</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 605 Description: Took a
+                          load of trash from job site to landfill. Picked up a
+                          load of 53's for Dylan's front porch and garage floor
+                          pad.
+                        </td>
+                        <td class="undefined">5.5</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">226.06</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 399 Description: Unloaded
+                          menards delivery with driver. Picked up dump truck at
+                          Dylan's. Drive to shop for sand. Returned sand to
+                          Dylan's.
+                        </td>
+                        <td class="undefined">3.47</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">142.63</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 399 Description:
+                          Installed fill dirt into porch.
+                        </td>
+                        <td class="undefined">2.15</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">88.37</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 402 Description: Dug out
+                          foundation with excavator. Excavator hours should
+                          match operator hours
+                        </td>
+                        <td class="undefined">8.66</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">355.95</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 402 Description: Picked
+                          up sand. Stopped clock because went to Jefferson.
+                        </td>
+                        <td class="undefined">2.52</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">103.58</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 593 Description: Finished
+                          delivering sand. Picked up dirt
+                        </td>
+                        <td class="undefined">0.83</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">34.12</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 593 Description:
+                          Backfilled footer trench. Cut driveway grade. Cut
+                          sidewalk step grade. Loaded out 1 load of dirt to
+                          Oliver's.
+                        </td>
+                        <td class="undefined">8.97</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">368.69</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 422 Description: Trucked
+                          and 53's and twos installed twos and 53s on driveway
+                          and garage floor. Loaded out one load of dirt to
+                          Olivers house
+                        </td>
+                        <td class="undefined">8.57</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">352.25</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 578 Description: Hauled
+                          in stone. Installed stone
+                        </td>
+                        <td class="undefined">9</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">369.92</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 379 Description: Dug out
+                          sidewalk and steps. Installed stone. Loaded out
+                          excavator.
+                        </td>
+                        <td class="undefined">4.96</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">203.87</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 440 Description: Moved
+                          excavator from Constances to Dylans. Unloaded and
+                          began tearing out aluminum fence.
+                        </td>
+                        <td class="undefined">1.83</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">75.22</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 440 Description:
+                          Continued tearing out alumininum fence. tore out wood
+                          fence in Caseys back yard. Drilled holes for gaurd
+                          rail. Installed dirt around front porch. Rough graded
+                          yard.
+                        </td>
+                        <td class="undefined">7</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">287.72</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: Demolition of existing
+                          roof on rear of building. Misc upstairs demolition.371
+                          Description: Continue demoing kitchen dining room
+                          upstairs.
+                        </td>
+                        <td class="undefined">8.31</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">341.56</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 423 Description: Went to
+                          Menards for lumber concrete and carriage bolts went to
+                          steel house for I-beams. Went to shop for trailer and
+                          tools to install guard rail. Installed I-beams poured
+                          with Concrete
+                        </td>
+                        <td class="undefined">8.75</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">359.65</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: 402 Description: Dug out
+                          foundation by back door for Nick
+                        </td>
+                        <td class="undefined">2.3</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">94.54</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Brandon Jackson Task: Demolition of existing
+                          roof on rear of building. Misc upstairs demolition.371
+                          Description: Demoed out plumbing stack and all pipes
+                          running through joists. Ran to Ace to get it cut off
+                          wheels
+                        </td>
+                        <td class="undefined">3.73</td>
+                        <td class="text-end">41.10</td>
+                        <td class="undefined">153.31</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Adam Kent-Isaac Task: Demolition of existing
+                          roof on rear of building. Misc upstairs demolition.371
+                          Description: haul dirt and trash to landfill
+                        </td>
+                        <td class="undefined">5</td>
+                        <td class="text-end">26.16</td>
+                        <td class="undefined">130.78</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker Adam Kent-Isaac Task: 399 Description: haul
+                          dirt out of dylan's, run compactor
+                        </td>
+                        <td class="undefined">9</td>
+                        <td class="text-end">26.16</td>
+                        <td class="undefined">235.41</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 405 Description: Helped
+                          with footer, started demo inside
+                        </td>
+                        <td class="undefined">8.3</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">240.36</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 423 Description: Back fill
+                          and compacted, dug driveway, and sidewalk
+                        </td>
+                        <td class="undefined">8.56</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">247.89</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 423 Description: Plate
+                          compact
+                        </td>
+                        <td class="undefined">6.67</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">193.15</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Kitchen demo
+                        </td>
+                        <td class="undefined">3</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">86.88</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Kitchen demo
+                        </td>
+                        <td class="undefined">8.5</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">246.15</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Inside demo
+                        </td>
+                        <td class="undefined">6.5</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">188.23</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Kitchen demo
+                        </td>
+                        <td class="undefined">2.43</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">70.37</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Kitchen demo
+                        </td>
+                        <td class="undefined">4.06</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">117.57</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Bathroom demo
+                        </td>
+                        <td class="undefined">9.47</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">274.24</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Demo
+                        </td>
+                        <td class="undefined">4.17</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">120.76</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 345 Description: Fence
+                        </td>
+                        <td class="undefined">1.77</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">51.26</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 345 Description: Pulled
+                          fences, and rough graded lawn
+                        </td>
+                        <td class="undefined">6.36</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">184.18</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Demo
+                        </td>
+                        <td class="undefined">8.49</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">245.86</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: Demolition of existing roof
+                          on rear of building. Misc upstairs demolition.371
+                          Description: Demo
+                        </td>
+                        <td class="undefined">6.6</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">191.13</td>
+                      </tr>
+                      <tr class="tr">
+                        <td class="">
+                          Worker James Kronick Task: 345 Description: I beam for
+                          guardrail
+                        </td>
+                        <td class="undefined">3</td>
+                        <td class="text-end">28.96</td>
+                        <td class="undefined">86.88</td>
+                      </tr>
+                    </table>
+                    <br />
+                  </div>
+                </div>
+                <div class="invoice-bottom">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-7">
+                      <div class="mb-30 dear-client">
+                        <h3 class="inv-title-1" id="mdb-notes-title">Notes:</h3>
+                        <p id="mdb-notes-content">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been typesetting
+                          industry. Lorem Ipsum
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-5">
+                      <div class="mb-30 payment-method">
+                        <h3 class="inv-title-1">Payment Method</h3>
+                        <ul class="payment-method-list-1 text-14">
+                          <li><strong>Account No:</strong> 00 123 647 840</li>
+                          <li><strong>Account Name:</strong> Jhon Doe</li>
+                          <li><strong>Branch Name:</strong> xyz</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="invoice-contact clearfix">
+                  <div class="row g-0">
+                    <div class="col-lg-9 col-md-11 col-sm-12">
+                      <div class="contact-info">
+                        <a href="tel:+55-4XX-634-7071">
+                          <i class="fa fa-phone"></i>
+                          <span id="mdb-phone">(317) 782-5271‬</span>
+                        </a>
+                        <a href="tel:info@themevessel.com">
+                          <i class="fa fa-envelope"></i>
+                          <span id="mdb-email"
+                            >oliver@mcgrawdesignbuild.com</span
+                          >
+                        </a>
+                        <a
+                          href="tel:info@themevessel.com"
+                          class="mr-0 d-none-580"
+                        >
+                          <i class="fa fa-map-marker"></i>
+                          <span id="mdb-address"
+                            >448 W 31st St, Indianapolis, IN 46208</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="invoice-btn-section clearfix d-print-none">
+                <!-- <a
+				  href="javascript:window.print()"
+				  class="btn btn-lg btn-print"
+				>
+				  <i class="fa fa-print"></i> Print Invoice
+				</a>
+				<a
+				  id="invoice_download_btn"
+				  class="btn btn-lg btn-download btn-theme"
+				>
+				  <i class="fa fa-download"></i> Download Invoice
+				</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Invoice 1 end -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jspdf.min.js"></script>
+    <script src="assets/js/html2canvas.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
