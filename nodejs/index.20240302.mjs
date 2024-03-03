@@ -51,7 +51,7 @@ class Document {
 		this.html = null
 		this.browser = null
 		this.page = null
-		this.PDFOptions = { printBackground: true, landscape: false }
+		this.PDFOptions = { printBackground: true, format: 'A4' }
 		this.pdf = null
 		this.res = {
 			statusCode: 200,
@@ -61,8 +61,6 @@ class Document {
 		const type = this.body.document_type
 		const num = this.body.template_number
 		const type_num = `${type}-${num}`
-
-		if (this.body.orientation == 'landscape') this.PDFOptions.landscape = true
 
 		this.urls = {
 			read_template: {
@@ -115,9 +113,6 @@ class Document {
 	generate_classes(innerHTML) {
 		let classes;
 		switch (innerHTML) {
-			case 'cost_code':
-				classes = 'text-right';
-				break;
 			case 'description':
 				classes = ''
 				break
@@ -339,7 +334,7 @@ async function json(type) {
 		try {
 			json = JSON.parse(request)
 		} catch (e) {
-			console.err(m.json(e))
+			// console.err(m.json(e))
 		}
 	} catch (e) {
 		// console.err(m.fsp(e))
@@ -349,6 +344,6 @@ async function json(type) {
 }
 
 if(!REMOTE) {
-	let event = await json('estimate')
+	let event = await json('invoice')
 	if (event) handler(event)
 }
