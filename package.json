@@ -1,4 +1,5 @@
 {
+	"type": "module",
   "dependencies": {
     "pathlib": "^0.1.2"
   }
