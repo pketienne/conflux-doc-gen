@@ -109,6 +109,7 @@ class Document {
 		if (value) e.innerHTML = value
 		for (const a in attributes) e.setAttribute(a, attributes[a])	
 		doc.querySelector(location).append(e)
+		Logger.log(this.dom)
 	}
 
 	generate_classes(innerHTML) {
@@ -339,10 +340,10 @@ async function json(type) {
 		try {
 			json = JSON.parse(request)
 		} catch (e) {
-			console.err(m.json(e))
+			console.log(m.json(e))
 		}
 	} catch (e) {
-		// console.err(m.fsp(e))
+		console.log(m.fsp(e))
 	}
 	
 	return json
@@ -352,4 +353,3 @@ if(!REMOTE) {
 	let event = await json('estimate')
 	if (event) handler(event)
 }
-
