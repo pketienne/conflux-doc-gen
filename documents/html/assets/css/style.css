@@ -26,7 +26,7 @@ Version:	1.1.0
 .invoice-content {
   font-family: "Poppins", sans-serif;
   color: #535353;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .invoice-content a {
@@ -75,8 +75,9 @@ h6,
 }
 
 .container {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
+	padding: 0px;
 }
 
 /** BTN LG **/
@@ -148,12 +149,19 @@ h6,
   font-size: 14px;
 }
 
-/* 
+.invoice-content .text-10 {
+  font-size: 10px;
+}
+
 .invoice-content .invoice-table th:first-child,
 .invoice-content .invoice-table td:first-child {
   text-align: left;
 }
-*/
+
+.invoice-content .invoice-table th:first-child.text-right,
+.invoice-content .invoice-table td:first-child.text-right {
+	text-align: right;
+}
 
 .invoice-content .color-white {
   color: #fff !important;
@@ -335,11 +343,11 @@ table th {
 }
 
 .invoice-1 .invoice-logo {
-  padding: 50px;
+  padding: 20px;
 }
 
 .invoice-1 .invoice-logo img {
-  height: 25px;
+  height: 75px;
 }
 
 .invoice-1 .table-section {
@@ -347,11 +355,13 @@ table th {
 }
 
 .invoice-1 .invoice-center {
-  padding: 0 50px 40px;
+  /* padding: 0 50px 40px; */
+  padding: 0px 10px;
 }
 
 .invoice-1 .table > :not(caption) > * > * {
-  padding: 13px 30px;
+  /* padding: 13px 30px; */
+	padding: 5px 5px;
 }
 
 .invoice-1 .table > :not(caption) > * > * {
@@ -374,7 +384,7 @@ table th {
 }
 
 .invoice-1 .table td {
-  font-size: 15px;
+  font-size: 10px;
   color: #555;
 }
 
@@ -2630,4 +2640,8 @@ h6,
   .invoice-8 .invoice-info:after {
     display: none;
   }
+}
+
+#mdb-tasks > thead > tr > th {
+	font-size: 10px;
 }
