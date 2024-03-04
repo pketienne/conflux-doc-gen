@@ -116,6 +116,7 @@ class Document {
 		let classes;
 		switch (innerHTML) {
 			case 'cost_code':
+			case 'Grand Total':
 				classes = 'text-right';
 				break;
 			case 'description':
