@@ -2645,3 +2645,7 @@ h6,
 #mdb-tasks > thead > tr > th {
 	font-size: 10px;
 }
+
+.mdb-branch {
+	background-color: #d0f5d3;
+}

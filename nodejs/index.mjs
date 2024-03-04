@@ -218,7 +218,11 @@ class Document {
 				})
 			}
 			tables[t].forEach((item) => {
-				this.create_element('tr', null, `#mdb-${t}`, { class: 'tr' })
+				let row_classes;
+				if(!item.cost && !item.tax && !item.markup && !item.net && !item.stages && !item.category) {
+					row_classes = 'tr mdb-branch';
+				}
+				this.create_element('tr', null, `#mdb-${t}`, { class: row_classes })
 				for (const i in item) {
 					let classes = this.generate_classes(i)
 					this.create_element('td', item[i], `#mdb-${t} tr:last-child`, {'class': classes})
