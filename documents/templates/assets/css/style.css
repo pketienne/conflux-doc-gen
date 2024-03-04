@@ -157,8 +157,8 @@ h6,
   text-align: left;
 }
 
-/* .invoice-content .invoice-table .text-right { */
-.text-right {
+.invoice-content .invoice-table th:first-child.text-right,
+.invoice-content .invoice-table td:first-child.text-right {
 	text-align: right;
 }
 
@@ -358,7 +358,8 @@ table th {
 }
 
 .invoice-1 .table > :not(caption) > * > * {
-  padding: 13px 30px;
+  /* padding: 13px 30px; */
+	padding: 5px 5px;
 }
 
 .invoice-1 .table > :not(caption) > * > * {
@@ -381,7 +382,7 @@ table th {
 }
 
 .invoice-1 .table td {
-  font-size: 15px;
+  font-size: 10px;
   color: #555;
 }
 
@@ -2637,4 +2638,8 @@ h6,
   .invoice-8 .invoice-info:after {
     display: none;
   }
+}
+
+#mdb-tasks > thead > tr > th {
+	font-size: 10px;
 }
