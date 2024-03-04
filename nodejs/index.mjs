@@ -116,7 +116,7 @@ class Document {
 		let classes;
 		switch (innerHTML) {
 			case 'cost_code':
-			case 'Grand Total':
+			case 'Total':
 				classes = 'text-right';
 				break;
 			case 'description':
@@ -165,7 +165,12 @@ class Document {
 		let doc = this.dom.window.document
 		
 		try {
+			doc.querySelector('#mdb-client-company').remove()
+			doc.querySelector('#mdb-contractor-company').remove()
 			doc.querySelector('div#mdb-sections div.table-responsive').remove()
+			doc.querySelector(
+				'#invoice_wrapper > div.invoice-bottom > div > div.col-lg-6.col-md-4.col-sm-5 > div')
+			.remove()
 		} catch (e) {
 			this.res.statusCode = 501
 			this.set_body_prop('message', Document.m.delete_dom_elements(e))
@@ -176,18 +181,18 @@ class Document {
 	update_dom_elements() {
 		let doc = this.dom.window.document
 		let instructions = [
-			// {location: 'span#mdb-invoice-number', value: this.body.invoice_info.number},
-			// {location: 'span#mdb-invoice-date',	value: this.body.invoice_info.date.slice(0,10)},
+			{location: 'span#mdb-invoice-number', value: this.body.document_info.number},
+			{location: 'span#mdb-invoice-date',	value: this.body.document_info.date.slice(0,10)},
 			{location: 'h2#mdb-client-person', value: this.body.client_info.person},
-			{location: 'span#mdb-client-company', value: this.body.client_info.company},
+			// {location: 'span#mdb-client-company', value: this.body.client_info.company},
 			{location: 'span#mdb-client-email', value: this.body.client_info.email},
 			{location: 'span#mdb-client-address', value: this.body.client_info.address},
-			{location: 'h2#mdb-contractor-person', value: this.body.contractor_info.person},
-			{location: 'span#mdb-contractor-company', value: this.body.contractor_info.company},
+			{location: 'h2#mdb-contractor-person', value: this.body.contractor_info.company},
+			// {location: 'span#mdb-contractor-company', value: this.body.contractor_info.person},
 			{location: 'span#mdb-contractor-email', value: this.body.contractor_info.email},
 			{location: 'span#mdb-contractor-address', value: this.body.contractor_info.address},
 			{location: 'h3#mdb-notes-title', value: 'Notes:'},
-			// {location: 'p#mdb-notes-content', value: this.body.invoice_info.notes},
+			{location: 'p#mdb-notes-content', value: this.body.document_info.notes},
 			{location: 'span#mdb-phone', value: this.body.contractor_info.phone},
 			{location: 'span#mdb-email', value: this.body.contractor_info.email},
 			{location: 'span#mdb-address', value: this.body.contractor_info.address},
@@ -355,6 +360,6 @@ async function json(type) {
 }
 
 if(!REMOTE) {
-	let event = await json('estimate')
+	let event = await json('')
 	if (event) handler(event)
 }
