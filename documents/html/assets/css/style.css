@@ -297,7 +297,8 @@ table th {
 .invoice-1 .invoice-id {
   border-radius: 75px 0 0 75px;
   z-index: 0;
-  background-image: linear-gradient(to bottom, #ff0000, #ff8100);
+  /* background-image: linear-gradient(to bottom, #ff0000, #ff8100); */
+  background-image: linear-gradient(to bottom, #000000, #8f8f8f);
 }
 
 .invoice-1 .payment-method-list-1 {
@@ -338,7 +339,7 @@ table th {
 }
 
 .invoice-1 .inv-title-1 {
-  color: #ff3200;
+  /* color: #ff3200; */
   margin-bottom: 5px;
 }
 
@@ -454,7 +455,8 @@ table th {
   height: 30px;
   border-radius: 15px 0 0 15px;
   z-index: 0;
-  background-image: linear-gradient(to bottom, #ff0000, #ff8100);
+  /* background-image: linear-gradient(to bottom, #ff0000, #ff8100); */
+  background-image: linear-gradient(to bottom, #000000, #818181);
 }
 
 /** MEDIA **/
@@ -2648,4 +2650,28 @@ h6,
 
 #mdb-tasks .mdb-branch {
 	background-color: #d0f5d3;
+}
+
+#mdb-tasks>tbody>tr.branch {
+	background-color: #f0ffed;
+}
+
+#mdb-tasks>thead>tr>th.no-display,
+#mdb-tasks>tbody>tr>td.no-display {
+	display: none;
+}
+
+#mdb-sections > div > table {
+	table-layout: auto;
+	width: 100%;
+}
+
+#mdb-tasks > thead > tr > th.name,
+#mdb-tasks > thead > tr > td.name {
+	width: 250px;
+}
+
+#mdb-tasks > tbody > tr > th.description,
+#mdb-tasks > tbody > tr > td.description{
+	word-break: break-all;
 }

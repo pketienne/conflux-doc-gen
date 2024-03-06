@@ -115,6 +115,9 @@ class Document {
 	generate_classes(innerHTML) {
 		let classes;
 		switch (innerHTML) {
+			case 'type':
+				classes = 'no-display';
+				break;
 			case 'cost_code':
 			case 'Total':
 				classes = 'text-right';
@@ -128,6 +131,8 @@ class Document {
 			case 'price' || 'quantity':
 				classes = 'text-center'
 				break
+			default:
+				classes = '';
 		}
 		return classes
 	}
@@ -218,22 +223,19 @@ class Document {
 			})
 			this.create_element('thead', null, '#mdb-sections div table:last-child', {'class': 'bg-active'})
 			for (const th in tables[t][0]) {
-				let classes = this.generate_classes(th)
+				let classes = `${th} ${this.generate_classes(th)}`;
 				this.create_element('th', th, '#mdb-sections div table:last-child thead', {
 					class: classes
 				})
 			}
 			tables[t].forEach((item) => {
-				let row_classes;
-				if(!item.cost && !item.tax && !item.markup && !item.net && !item.stages && !item.category) {
-					row_classes = 'tr mdb-branch';
-				}
-				this.create_element('tr', null, `#mdb-${t}`, { class: row_classes })
+				this.create_element('tr', null, `#mdb-${t}`, {class: `tr ${item.type}`})
 				for (const i in item) {
-					let classes = this.generate_classes(i)
+					let classes = `${i} ${this.generate_classes(i)}`
 					this.create_element('td', item[i], `#mdb-${t} tr:last-child`, {'class': classes})
 				}
 			})
+
 			this.create_element('br', null, '#mdb-sections div:last-child')
 		}
 	}
@@ -360,6 +362,6 @@ async function json(type) {
 }
 
 if(!REMOTE) {
-	let event = await json('')
+	let event = await json('hosbrook')
 	if (event) handler(event)
 }

@@ -1,7 +1,5 @@
 *.zip
-*.pdf
 node_modules
-responses/*.html
 documents/html/*.html
 documents/pdf/*.pdf
 

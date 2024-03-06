@@ -1,6 +1,6 @@
 <html lang="zxx">
   <head>
-    <title id="mdb-invoice-title">Invoice Template</title>
+    <title id="mdb-invoice-title">Estimate Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 
@@ -35,7 +35,7 @@
     <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Invoice 1 start -->
+    <!-- Estimate 1 start -->
     <div class="invoice-1 invoice-content">
       <div class="container">
         <div class="row">
@@ -58,14 +58,14 @@
                     </div>
                     <div class="col-sm-6 invoice-id">
                       <div class="info">
-                        <h1 class="color-white inv-header-1">Invoice</h1>
+                        <h1 class="color-white inv-header-1">Estimate</h1>
                         <p class="color-white mb-1">
-                          Invoice Number
-                          <span id="mdb-invoice-number">95</span>
+                          Project Number
+                          <span id="mdb-invoice-number">93</span>
                         </p>
                         <p class="color-white mb-0">
-                          Invoice Date
-                          <span id="mdb-invoice-date">2024-03-04</span>
+                          Date
+                          <span id="mdb-invoice-date">2024-03-06</span>
                         </p>
                       </div>
                     </div>
@@ -75,25 +75,21 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="invoice-number mb-30">
-                        <h4 class="inv-title-1">Invoice To</h4>
+                        <h4 class="inv-title-1">Estimate To</h4>
                         <h2 class="name mb-10" id="mdb-client-person">
-                          McGraw Design &amp; Build
+                          Fountain Square Clay Center
                         </h2>
                         <p class="invo-addr-1">
                           <br />
-                          <span id="mdb-client-email"
-                            >oliver@mcgrawdesignbuild.com</span
-                          ><br />
-                          <span id="mdb-client-address"
-                            >448 West 31st Street</span
-                          ><br />
+                          <span id="mdb-client-email"></span><br />
+                          <span id="mdb-client-address"></span><br />
                         </p>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="invoice-number mb-30">
                         <div class="invoice-number-inner">
-                          <h4 class="inv-title-1">Invoice From</h4>
+                          <h4 class="inv-title-1">Estimate From</h4>
                           <h2 class="name mb-10" id="mdb-contractor-person">
                             McGraw Design &amp; Build
                           </h2>
@@ -118,1863 +114,956 @@
                       class="table mb-0 table-striped invoice-table"
                     >
                       <thead class="bg-active">
-                        <th class="text-right">cost_code</th>
-                        <th class="undefined">name</th>
-                        <th class="">description</th>
-                        <th class="undefined">total</th>
-                        <th class="undefined">quantity</th>
-                        <th class="text-end">cost</th>
-                        <th class="undefined">tax</th>
-                        <th class="undefined">markup</th>
-                        <th class="undefined">net</th>
-                        <th class="undefined">stages</th>
-                        <th class="undefined">category</th>
+                        <th class="type no-display">type</th>
+                        <th class="cost_code text-right">cost_code</th>
+                        <th class="name">name</th>
+                        <th class="description">description</th>
+                        <th class="quantity">quantity</th>
+                        <th class="cost text-end">cost</th>
+                        <th class="tax">tax</th>
+                        <th class="markup">markup</th>
+                        <th class="net">net</th>
                       </thead>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">100</td>
-                        <td class="undefined">Preliminary Work</td>
-                        <td class="">
-                          Preliminary work to begin the project including: -&gt;
-                          Exploratory Demolition (if necessary) -&gt; Site
-                          Survey -&gt; Blueprints, Construction Documents, and
-                          Engineering -&gt; Permitting
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">101</td>
+                        <td class="name">Preliminary Work</td>
+                        <td class="description">
+                          Permitting Fees, Architectural Costs, and Ongoing
+                          Design
                         </td>
-                        <td class="undefined">6000</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$11,621.52</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">100.100</td>
-                        <td class="undefined">Exploratory Demolition</td>
-                        <td class=""></td>
-                        <td class="undefined">1500</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.100.101</td>
-                        <td class="undefined">Exploratory Demolition</td>
-                        <td class="">
-                          Subcontractor to drill test holes and remove extra
-                          parts in basement.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">101.101</td>
+                        <td class="name">=&gt; Architecture Fee</td>
+                        <td class="description">
+                          Architect fee for origional submittal and revisied
+                          submittal
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">1000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$4,500.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$5,400.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.100.102</td>
-                        <td class="undefined">Exploratory Demo Dumpster</td>
-                        <td class="">Dumpster for Exploratory Demolition</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">18</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">101.102</td>
+                        <td class="name">=&gt; Permit Fees</td>
+                        <td class="description">State and local permit fees</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,500.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,926.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.101</td>
-                        <td class="undefined">Survey</td>
-                        <td class="">Jobsite survey</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.102</td>
-                        <td class="undefined">Project Continuing Design</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">100.200</td>
-                        <td class="undefined">Blueprints</td>
-                        <td class=""></td>
-                        <td class="undefined">4500</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.200.101</td>
-                        <td class="undefined">Matterport scan</td>
-                        <td class="">Matterport scan of jobsite</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.200.102</td>
-                        <td class="undefined">Drafting</td>
-                        <td class="">Jobsite survey</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">100.200.103</td>
-                        <td class="undefined">Engineering</td>
-                        <td class="">Jobsite survey</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">100.300</td>
-                        <td class="undefined">Permits</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200</td>
-                        <td class="undefined">Site and Foundation</td>
-                        <td class="">
-                          Preparing the jobsite for construction including:
-                          -&gt; Major demolition (if necessary) -&gt; Site
-                          clearing and tree removal -&gt; Rough grading -&gt;
-                          Utilities -&gt; Foundation
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">101.103</td>
+                        <td class="name">=&gt; Continuing Design</td>
+                        <td class="description">
+                          Design revisions to cut budget. Billed at reduced
+                          hourly rate. CHECK RATE! Continuing design work for
+                          phases past rough mechanicals: -Additional work on
+                          storefront window designs, if draft isn't acceptable.
+                          -Kitchen design and selections. -Additional prints
+                          modifications for changes (if any?) -Any additional
+                          design work necessary to build out project past the
+                          phase of "rough mechanicals". Flooring selections.
+                          Trim design.
                         </td>
-                        <td class="undefined">25600</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">60</td>
+                        <td class="cost text-end">$38.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$4,295.52</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.100</td>
-                        <td class="undefined">Clearing &amp; Demolition</td>
-                        <td class="">
-                          Site demolition, tree removal, rough grade
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">200</td>
+                        <td class="name">Site and Foundation</td>
+                        <td class="description">
+                          Foundation work including slab cutting and
+                          replacement, new footings, and all combined remaining
+                          structural masonry work both above and below grade.
                         </td>
-                        <td class="undefined">6500</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$25,950.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.100.100</td>
-                        <td class="undefined">Demolition</td>
-                        <td class="">
-                          Demolition of existing structures and debris
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.101</td>
+                        <td class="name">=&gt; Saw cut for footings</td>
+                        <td class="description">
+                          Including saw cut for plumber Saw cut concrete for
+                          footings, total of 3 mobalizations budgeted if
+                          necessary. Lower cost is possible, as low as $1,300.
+                          As Per Todd Rasner dated Nov 15. HCC Services
+                          3179379111
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$2,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$2,400.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.100.100.101</td>
-                        <td class="undefined">
-                          Demolition of existing structures
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.102</td>
+                        <td class="name">
+                          =&gt; Equipment for footing excavation
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.100.100.102</td>
-                        <td class="undefined">Demolition Dumpstesr</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">18</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.100.101</td>
-                        <td class="undefined">Tree Removal</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.100.102</td>
-                        <td class="undefined">
-                          Equipment for site clean up and rough grade
+                        <td class="description">
+                          Machine time for footing excavation and disposal
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">50</td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">2750</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
+                        <td class="quantity">60</td>
+                        <td class="cost text-end">$55.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$3,960.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.100.103</td>
-                        <td class="undefined">
-                          Labor for site clean up and rough grade
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.103</td>
+                        <td class="name">=&gt; Disposal fees for foundation</td>
+                        <td class="description">
+                          Four loads to the dump with concrete materials
+                          including masonry scrap, etc.
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">50</td>
-                        <td class="text-end">75</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">3750</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                        <td class="quantity">4</td>
+                        <td class="cost text-end">$200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,027.20</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.200</td>
-                        <td class="undefined">Utilities Installation</td>
-                        <td class="">
-                          Temp Power, Sewer/Water, Other utilities where
-                          applicable
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.104</td>
+                        <td class="name">=&gt; In House Labor, foundation</td>
+                        <td class="description">
+                          In house labor, machinery operator for foundation
+                          work, masonry work and cleanup. 30 hours should get us
+                          a couple dump runs with the spoil, and a solid two
+                          days of digging to help with the footings.
                         </td>
-                        <td class="undefined">19100</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">40</td>
+                        <td class="cost text-end">$55.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$4,144.80</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.200.100</td>
-                        <td class="undefined">Underground Electric Service</td>
-                        <td class="">New Underground Power Install</td>
-                        <td class="undefined">7600</td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.100.101</td>
-                        <td class="undefined">Underground power labor</td>
-                        <td class="">Dig trench, install conduit, backfill</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">20</td>
-                        <td class="text-end">75</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.100.102</td>
-                        <td class="undefined">Underground power equipment</td>
-                        <td class="">
-                          machine to dig power trench and backfill including
-                          mobalize and demobalize
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.105</td>
+                        <td class="name">=&gt; Mason -- Block Work</td>
+                        <td class="description">
+                          Nick Smith, block work including: -Current unbilled
+                          labor for erecting scaffolding, repairing block
+                          openings in W wall, and tuckpointing wall $2,500 for
+                          completed work
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined">20</td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1100</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$2,500.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$3,000.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.100.103</td>
-                        <td class="undefined">conduit</td>
-                        <td class="">4" conduit. meter base supplied by AES</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">2000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.100.104</td>
-                        <td class="undefined">
-                          power connection by electrician
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.106</td>
+                        <td class="name">
+                          =&gt; Addiiontal masonry materials needed
                         </td>
-                        <td class="">
-                          power connection including meter base (if not provided
-                          by AES), disconnect (if required) and breaker panel.
-                          Tag and permit included
+                        <td class="description">
+                          Unknown misc masonry materials needed to finish this
+                          portion of the project?
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">3000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">3000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,000.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,284.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.101</td>
-                        <td class="undefined">Water and Sewer</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">10000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">10000</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.102</td>
-                        <td class="undefined">Temp Power</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                        <td class="text-end">1500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1500</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.200.103</td>
-                        <td class="undefined">misc utilities</td>
-                        <td class="">
-                          gas service by citizens, no charge, internet by
-                          others, no charge.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.107</td>
+                        <td class="name">
+                          =&gt; Readymix concrete for footings
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300</td>
-                        <td class="undefined">Foundation</td>
-                        <td class="">
-                          Foundation: Footing, stem walls, slab, and rough grade
+                        <td class="description">
+                          Concrete readymix for the new footings. See attached
+                          spreadsheet for order information
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">5.5</td>
+                        <td class="cost text-end">$200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,412.40</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300.100</td>
-                        <td class="undefined">Excavation and Backfill</td>
-                        <td class="">Excavate for Foundation and Backfill</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.100.101</td>
-                        <td class="undefined">Layout and excavation Labor</td>
-                        <td class="">
-                          Layout and Excavation for footings and foundation
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.108</td>
+                        <td class="name">=&gt; Readymix to patch floors</td>
+                        <td class="description">
+                          4 yards of readymix to patch floor after footings have
+                          been placed. Including pour back floor for plumber See
+                          attached spreadsheet for order information
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                        <td class="quantity">6</td>
+                        <td class="cost text-end">$200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,540.80</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.100.102</td>
-                        <td class="undefined">Excavation equipment</td>
-                        <td class="">
-                          Machine time for excavation, backfill, and hauling
-                          related to foundation
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.109</td>
+                        <td class="name">
+                          =&gt; Rebar and hardware for footings
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.100.103</td>
-                        <td class="undefined">Stone for foundation backfill</td>
-                        <td class="">#53 stone for fill where needed</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.100.104</td>
-                        <td class="undefined">
-                          Spoil disposal from excavation
+                        <td class="description">
+                          See attached spreadsheet for order information. Double
+                          check before order.
+                          https://docs.google.com/spreadsheets/d/1bMoHF8N0NJ3lyGo3-OrWCtxQV9S4Ey7NMxHLiWYh8g4/edit#gid=0
+                          See attached link for menards list for block, rebar,
+                          and fasteners
                         </td>
-                        <td class="">Dispose of spoil from excvation</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">18</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,540.80</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300.200</td>
-                        <td class="undefined">Footings</td>
-                        <td class="">Place footings as per prints</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.111</td>
+                        <td class="name">=&gt; Demo wall</td>
+                        <td class="description"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,500.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,800.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.200.101</td>
-                        <td class="undefined">concrete labor for footings</td>
-                        <td class="">
-                          concrete workers to form, install rebar, and finish
-                          footing concrete as per prints
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">200.112</td>
+                        <td class="name">=&gt; footers and stem walls labor</td>
+                        <td class="description">
+                          1 stem wall, but more floor patch. leaving this the
+                          same Labor and portland for footer labor and stem
+                          wall, labor and top two courses on main wall
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$3,200.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$3,840.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.200.102</td>
-                        <td class="undefined">concrete for footings</td>
-                        <td class="">concrete for footings</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.200.103</td>
-                        <td class="undefined">
-                          rebar, ties, and misc for footings
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">300</td>
+                        <td class="name">Rough Structure</td>
+                        <td class="description">
+                          Structural steel, wood framing, windows and doors,
+                          roofing, soffits
                         </td>
-                        <td class="">rebar, formworm, and misc for footings</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$91,007.88</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300.300</td>
-                        <td class="undefined">Block stemwall</td>
-                        <td class="">Place block as per prints</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.300.101</td>
-                        <td class="undefined">
-                          concrete block, reinformcement, and bolts
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">300.300</td>
+                        <td class="name">=&gt; Wood Framing</td>
+                        <td class="description">
+                          Wood framing including repairing and replacing 2 large
+                          sections of W section roof, framing for new skylights,
+                          framing for second floor, and rough stairs going to
+                          second floor as well as walls as per prints. Including
+                          soffits and roof decking.
                         </td>
-                        <td class="">concrete block for stemwalls</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$63,393.60</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.300.102</td>
-                        <td class="undefined">mason for stemwalls</td>
-                        <td class="">masonry for foundation</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300.400</td>
-                        <td class="undefined">Underslab Insulation</td>
-                        <td class="">Place underslab insulation</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.400.101</td>
-                        <td class="undefined">slab insulation installation</td>
-                        <td class="">slab insulation install</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.400.102</td>
-                        <td class="undefined">slab insulation materials</td>
-                        <td class="">slab insulation install</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">200.300.500</td>
-                        <td class="undefined">Concrete Slab</td>
-                        <td class="">Concrete Slab</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">200.300.500.101</td>
-                        <td class="undefined">Concrete slab subcontract</td>
-                        <td class="">
-                          Concrete slab subcontract includes concrete materials
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.300.101</td>
+                        <td class="name">=&gt; =&gt; Framing subcontract</td>
+                        <td class="description">
+                          Waiting for revised bid. Verbal bid at existing minus
+                          -5,000 for floor system not framed. Demo includes: 1.
+                          Flat roof at skylights 2. Old Sky lights 3. Existing
+                          second floor rooms 4. Connect Flat roof Framing
+                          includes: 1. New flat roof at skylights and connecting
+                          side of building 2. Add all new overhangs. 3. Set new
+                          beams 4. Reframe skylight openings 5. 70 truss repairs
+                          6. 5 rafter tail repairs by skylights 7. new roof
+                          decking with felt 8. Framer proves all fasteners. All
+                          Interior framing $29,000 for roof demo, and main
+                          framing $5,000 for interior finish framing (REMOVED)
+                          $2,000 for extra infill windows and install door
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$31,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$37,200.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300</td>
-                        <td class="undefined">Rough Structure</td>
-                        <td class="">
-                          Rough Structural work including: -&gt; Framing -&gt;
-                          Exterior windows and doors -&gt; Siding -&gt; Roofing
-                          -&gt; Exterior Painting
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.300.103</td>
+                        <td class="name">
+                          =&gt; =&gt; Exterior finishing lumber
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.100</td>
-                        <td class="undefined">Steel Structure</td>
-                        <td class="">Steel structural components</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.100.101</td>
-                        <td class="undefined">structural steel?</td>
-                        <td class="">????</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.200</td>
-                        <td class="undefined">
-                          Structural Masonry (non-foundation)
+                        <td class="description">
+                          Finish plywood to infill door and window openings and
+                          trim. Add to this list for exact materials.
+                          https://www.menards.com/main/building-materials/soffit/lp-reg-smartside-reg-3-8-x-4-x-8-textured-engineered-wood-solid-soffit/27875/p-1444438196057-c-1488981946224.htm
+                          other misc materials? roof company provides fascia
+                          wrap and gutters
                         </td>
-                        <td class="">Masonry (non-foundation) structural</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$3,000.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$3,852.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.200.101</td>
-                        <td class="undefined">above grade masonry?</td>
-                        <td class="">????</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.300</td>
-                        <td class="undefined">Wood Framing</td>
-                        <td class="">Wood structure and framing</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.300.101</td>
-                        <td class="undefined">First floor framing materials</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.300.102</td>
-                        <td class="undefined">Framing labor</td>
-                        <td class="">Complete project framing including:</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.300.103</td>
-                        <td class="undefined">Roof framing materials</td>
-                        <td class="">Complete project framing including:</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.400</td>
-                        <td class="undefined">Fenestrations</td>
-                        <td class="">
-                          Fenestrations. Exterior windows, doors, garage doors,
-                          and foundation / egress windows.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.300.104</td>
+                        <td class="name">=&gt; =&gt; roof framing lumber</td>
+                        <td class="description">
+                          Framing lumber for roof. 3 sections. section 1: 1- NW
+                          section. Replace all rafters and skylight assembally,
+                          deck with 3/4" osb section 2 - W section. small
+                          section replace all rafters section 3 - pitched roof:
+                          sister all rafters. list is 4363. adding budget for
+                          contingency and extra parts due to unknowns
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$5,000.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$6,420.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.500</td>
-                        <td class="undefined">Siding</td>
-                        <td class="">
-                          All types of cladding including: -Exterior trim -Wood
-                          / vinyl / fibercement cladding -Masonry non-structural
-                          veneer.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.300.105</td>
+                        <td class="name">
+                          =&gt; =&gt; |ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;first floor framing lumber
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.500.101</td>
-                        <td class="undefined">Exterior metal</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.500.102</td>
-                        <td class="undefined">Exterior trim</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.500.103</td>
-                        <td class="undefined">Exterior Siding Labor</td>
-                        <td class="">
-                          Install: Fascia metal wrap Soffit wood Fibercement
-                          siding and trim.
+                        <td class="description">
+                          Menards shopping cart price is $5,100 pretax, so we
+                          have a small contingency built in here. Due to nature
+                          of this framing there will be multiple changes to this
+                          order.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$7,000.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$8,988.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.600</td>
-                        <td class="undefined">Roofing</td>
-                        <td class="">Roofing</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.600.101</td>
-                        <td class="undefined">Roofing labor</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.600.102</td>
-                        <td class="undefined">Roofing materials</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.600.103</td>
-                        <td class="undefined">Gutters</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">300.700</td>
-                        <td class="undefined">Exterior Paint</td>
-                        <td class="">Exterior paint</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">300.700.101</td>
-                        <td class="undefined">Exterior paint subcontract</td>
-                        <td class="">
-                          Provide all caulking and paint to complete paint job.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.300.106</td>
+                        <td class="name">
+                          =&gt; =&gt; |ꟷꟷꟷꟷꟷꟷꟷꟷꟷ&gt;wood beams
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">400</td>
-                        <td class="undefined">Rough Mechanicals</td>
-                        <td class="">
-                          Rough mechanical work including HVAC, Electrical,
-                          Plumbing, and Fire blocking
+                        <td class="description">
+                          Recalculate these numbers with the help of a probuild
+                          engineer. THis is a safe budget for our purposes at
+                          this time. 3ply 11 7/8 LVL for N roof section total
+                          90' 3 ply 18" for S roof section total 90' 3 ply 20"
+                          to hold up 2nd floor. including the sectoin that is
+                          unknown until demo. total of 60 for W, 90 for center
+                          60 for east (unknown)
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$5,400.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$6,933.60</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">400.100</td>
-                        <td class="undefined">Rough HVAC</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">400.100.101</td>
-                        <td class="undefined">Complete HVAC</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">400.101</td>
-                        <td class="undefined">
-                          Firecaulking, nailblocks, fireblocking
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">300.400</td>
+                        <td class="name">=&gt; Fenestrations</td>
+                        <td class="description">
+                          All exterior windows and doors as per prints. No
+                          second floor windows, existing to remain. 1 interior
+                          garage door?
                         </td>
-                        <td class="">
-                          MISC fireblocking, nailguards, fireblocking, etc. Subs
-                          should provide their own fireblocking, nail guards as
-                          much as possible. budget for a case of fireblock caulk
-                          and a case of nail guards and one bag of mineral wooll
-                          just in case.
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$11,774.28</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.400.103</td>
+                        <td class="name">=&gt; =&gt; Windows</td>
+                        <td class="description">
+                          Budget for windows selection.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$650.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$834.60</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">400.200</td>
-                        <td class="undefined">Rough Plumbing</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.400.104</td>
+                        <td class="name">=&gt; =&gt; Window install</td>
+                        <td class="description">Window install</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$2,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$2,400.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">400.200.101</td>
-                        <td class="undefined">Complete Plumbing</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">400.300</td>
-                        <td class="undefined">Rough Electrical</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">400.300.101</td>
-                        <td class="undefined">Complete Electrical</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">400.300.102</td>
-                        <td class="undefined">Low voltage electrical?</td>
-                        <td class="">
-                          garage door openers? phone? network? security?
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.400.106</td>
+                        <td class="name">=&gt; =&gt; skylights</td>
+                        <td class="description">
+                          4 skylights, lights and install only, no framing, no
+                          curbs
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$4,262.40</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$5,114.88</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500</td>
-                        <td class="undefined">Interior Finishes</td>
-                        <td class="">
-                          Finishes including insulation, drywall, trim,
-                          cabinets, flooring, tile, and speciality finishes
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.400.108</td>
+                        <td class="name">
+                          =&gt; =&gt; Steel service door w/ panic bar
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.100</td>
-                        <td class="undefined">Drywall</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.100.101</td>
-                        <td class="undefined">drywall subcontract</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.101</td>
-                        <td class="undefined">Insulation</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.200</td>
-                        <td class="undefined">Interior Trim</td>
-                        <td class="">
-                          Interior doors Case Base Custom work? Crown? Stairs?
+                        <td class="description">
+                          MAKE SURE THIS IS A DOUBLE DOOR. Chris requested that
+                          it have a digital lock for access.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,540.80</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.200.101</td>
-                        <td class="undefined">Interior Doors</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.200.102</td>
-                        <td class="undefined">Case + Base</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.200.103</td>
-                        <td class="undefined">Trim labor</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.200.104</td>
-                        <td class="undefined">Stair parts?</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.200.105</td>
-                        <td class="undefined">
-                          Closet Finishes? Does this go here?
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.400.109</td>
+                        <td class="name">
+                          =&gt; =&gt; Install steel service door
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.300</td>
-                        <td class="undefined">Interior Painting</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">500.300.101</td>
-                        <td class="undefined">Interior paint subcontract</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.400</td>
-                        <td class="undefined">Cabinetry + Counters</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.500</td>
-                        <td class="undefined">Flooring</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.600</td>
-                        <td class="undefined">Specialty Tile</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.700</td>
-                        <td class="undefined">Specialty Finishes</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">500.800</td>
-                        <td class="undefined">Hardware</td>
-                        <td class="">
-                          Door hardware, bathroom mirrors, shower doors,
-                          mailbox, towel bars, drapes and blinds
+                        <td class="description">
+                          In house labor install steel service door.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$1,884.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600</td>
-                        <td class="undefined">Mechanical Finishes</td>
-                        <td class="">
-                          All mechanical, electrical, plumbing, HVAC,
-                          technology, and speciality finishes.
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">300.600</td>
+                        <td class="name">=&gt; Roofing Finish</td>
+                        <td class="description">
+                          Finish flat roof and gutters. Finish Shingle roof
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$15,840.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600.100</td>
-                        <td class="undefined">Appliances</td>
-                        <td class="">
-                          Fridge, stove, dishwasher, washer dryer, microwave/
-                          hood? ???
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.600.101</td>
+                        <td class="name">
+                          =&gt; =&gt; Flat roof per Damon Roofing
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600.200</td>
-                        <td class="undefined">Electrical Finishes</td>
-                        <td class="">
-                          Lighting, dimmers, ??, outlet plates and covers? if
-                          not included by sub?
+                        <td class="description">
+                          Pricing per Damon Bryant's last invoice on 9 / 6/
+                          2023. Rebid add $5,700 for additional flat roof area
+                          Holdback 6,500 from last roof for main flat pitch
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$12,200.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$14,640.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600.300</td>
-                        <td class="undefined">Plumbing Finishes</td>
-                        <td class="">
-                          Finishing plumbing parts, Faucets, drains, water
-                          heater, traps, etc?
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">300.600.102</td>
+                        <td class="name">=&gt; =&gt; Shingle roof labor</td>
+                        <td class="description">
+                          14x40x1.4 for pitch is the sqfootage to install. max
+                          65 per square for installation. 8 sq installed small
+                          job premium, call it $1,000
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,200.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600.400</td>
-                        <td class="undefined">HVAC Finishes</td>
-                        <td class="">
-                          HVAC registers. Other finishes? WHere do exterior
-                          vents go?
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">400</td>
+                        <td class="name">Rough Mechanical</td>
+                        <td class="description">
+                          Mechanical, Electrical, Plumbing. Rough and finish
+                          excluding client selected plumbing finish fixtures and
+                          light fixtures.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$99,002.40</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">600.400.101</td>
-                        <td class="undefined">Minisplit?</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">600.400.102</td>
-                        <td class="undefined">Outdoor unit and registers</td>
-                        <td class="">?#?Z?Z</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">600.900</td>
-                        <td class="undefined">Technology</td>
-                        <td class="">
-                          Tech finishes. Network? Security? Speakers? Doorbell?
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">400.101</td>
+                        <td class="name">
+                          =&gt; TARGET BUDGET: Rough Electrical
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700</td>
-                        <td class="undefined">
-                          Landscaping and Exterior Finishes
+                        <td class="description">
+                          10 cans +or -, 11 ceiling receptacles 30 + or - wall
+                          convenience downstairs 1 HVAC units wiring connected
+                          units by others 4 - sconces outdoor wired fixture by
+                          others switching per print 4 cans upstairs 4 inch 12 -
+                          globe fixtures wired , fixture by others
                         </td>
-                        <td class="">
-                          Landscaping and Exterior Finishes including concrete
-                          flatwork, fencing, decks, softscaping, draininge, and
-                          speciality exterior finishes.
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$20,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$24,000.00</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">400.102</td>
+                        <td class="name">=&gt; TARGET BUDGET: Rough HVAC</td>
+                        <td class="description">
+                          Proposal from Quality Control: 1x 5 ton system w/ duct
+                          rough price waiting on final
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$41,550.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$49,860.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.100</td>
-                        <td class="undefined">Driveway</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.100.101</td>
-                        <td class="undefined">Layout and excavation</td>
-                        <td class="">
-                          Operator and labor to layout and dig driveway
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">400.103</td>
+                        <td class="name">=&gt; Rough Plumbing</td>
+                        <td class="description">
+                          Proposal from Quality control dated 2/20/24. Does not
+                          include any finsh fixtures, traps, or appliances.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$17,240.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$20,688.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.100.102</td>
-                        <td class="undefined">Machine time for driveway</td>
-                        <td class="">driveway machine time</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.100.103</td>
-                        <td class="undefined">fill stone for driveway</td>
-                        <td class="">fill stone for driveway</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.100.104</td>
-                        <td class="undefined">concrete for driveway</td>
-                        <td class="">fill stone for driveway</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.100.105</td>
-                        <td class="undefined">Form and finish driveway</td>
-                        <td class="">fill stone for driveway</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.101</td>
-                        <td class="undefined">
-                          exterior cleaning &amp; rough final grade
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">400.105</td>
+                        <td class="name">=&gt; Fireblocking / Firecaulking</td>
+                        <td class="description">
+                          Unknown budget for firecaulking. Cannot bid further,
+                          some unknowns here due to old structure. There may be
+                          inspection issues that have to be remedied before
+                          drywall. This cannot be known in detail at this time.
                         </td>
-                        <td class="">
-                          depending on site and extent of landscaping the site
-                          may need to be re-graded after major construction and
-                          cleaned prior to driveway / sidewalk contractors
-                          coming on site.
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$2,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$2,400.00</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">400.106</td>
+                        <td class="name">
+                          =&gt; |ꟷꟷꟷ&gt;underslab grease trap
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.102</td>
-                        <td class="undefined">
-                          exterior and rough/final grade equpiment
+                        <td class="description">
+                          zurn z1181 solids interceptor
                         </td>
-                        <td class="">
-                          dump truck and skidsteer time to clean site
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,600.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$2,054.40</td>
+                      </tr>
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">500</td>
+                        <td class="name">Interior Finishes</td>
+                        <td class="description">
+                          Finishes: -Open Cell Foam insulation on underside of
+                          shingled roof deck. Coated with fire protection. -1
+                          layer 5/8 drywall on new interior walls. No drywall
+                          included in upstairs other than bathroom. No drywall
+                          hung on undersides of roof. Drywall on ceiling of new
+                          2nd floor structure.
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$35,977.54</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.103</td>
-                        <td class="undefined">exterior clean disposal</td>
-                        <td class="">
-                          general exterior clean prior to starting landscaping
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.101</td>
+                        <td class="name">=&gt; Spray foam insulation</td>
+                        <td class="description">
+                          3.50 sqft with fireproofing, clarify this before
+                          purchase 34x40 main area, pitched roof multiply by 1.3
+                          = 1904 verify these numbers with randy
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">18</td>
+                        <td class="quantity">1904</td>
+                        <td class="cost text-end">$3.50</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$7,996.80</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.200</td>
-                        <td class="undefined">Fence</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.200.101</td>
-                        <td class="undefined">fence subcontract install</td>
-                        <td class="">fence install subcontract</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
-                      </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.200.102</td>
-                        <td class="undefined">fence materials</td>
-                        <td class="">
-                          -posts -concrete -pickets / cross braces -latches
-                          -other components?
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.102</td>
+                        <td class="name">=&gt; drywall</td>
+                        <td class="description">
+                          19x24 small room ceiling 450 19x8 150 24x8 200 24x8
+                          200 stairwell 34x16 one side 550 8x18 ceiling 150
+                          60x10 upper wall 600 lower walls 200' x10 2000 lower
+                          ceilings 50x10 500 hung, finished sanded, rough
+                          estimate. due to difficult layout will need to rebid
+                          after framing
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">16</td>
+                        <td class="quantity">5000</td>
+                        <td class="cost text-end">$2.75</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$16,500.00</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.300</td>
-                        <td class="undefined">Sidewalks / Patios</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.103</td>
+                        <td class="name">=&gt; NO PAINT INCLUDED</td>
+                        <td class="description">no paint included</td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">700.300.101</td>
-                        <td class="undefined">sidewalk subcontract</td>
-                        <td class="">
-                          layout, prep, and all concrete for sidewalks. -ensure
-                          that rough grade is prepped and fall is established
-                          prior to sidwalk subcontractor getting on site.
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.104</td>
+                        <td class="name">=&gt; Flooring</td>
+                        <td class="description">
+                          Flooring CURRENTLY NOT INCLUDED. Only rough floor in
+                          all areas. Possibly polish concrete throughout
+                          building? Floors upstairs?
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">21</td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
                       </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.400</td>
-                        <td class="undefined">Decks / Exterior Woodwork</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.500</td>
-                        <td class="undefined">Final Grade &amp; Softscaping</td>
-                        <td class="">Final grade, grass, plants, trees</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.600</td>
-                        <td class="undefined">Exterior drainage finishes</td>
-                        <td class="">
-                          Downspout extensions or burried drainage (not
-                          foundation drains)
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.105</td>
+                        <td class="name">
+                          =&gt; |ꟷꟷꟷ&gt;|ꟷꟷꟷ&gt;interior doors and casework?
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">700.700</td>
-                        <td class="undefined">Misc exterior finishes</td>
-                        <td class="">???</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                      </tr>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">900</td>
-                        <td class="undefined">General and Holding Costs</td>
-                        <td class="">
-                          General additional construction costs: -&gt;
-                          Continuing Design Work -&gt; Jobsite cleanup -&gt;
-                          Delivery driving -&gt; Utilities -&gt; Temp heat -&gt;
-                          Port-a-let -&gt; General Dumpsters and Disposal Test
+                        <td class="description">
+                          -2x interior doors ($300/each budget -&gt; $600 total)
+                          -case material budget for doors only ($500) -new
+                          windows have drywall returns (no casework) -no
+                          baseboard. installation separate
                         </td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,100.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,412.40</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.101</td>
-                        <td class="undefined">
-                          General jobsite cleaning and final clean
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.106</td>
+                        <td class="name">=&gt; misc trim labor</td>
+                        <td class="description">
+                          Hang and trim interior pocket door Hang and trim 5x
+                          interior doors Install stair tread and skirt in two
+                          locations Trim cap on stairs one week for two
+                          carpenters to do stairs and trim
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                        <td class="quantity">80</td>
+                        <td class="cost text-end">$40.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$6,028.80</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.102</td>
-                        <td class="undefined">
-                          Dumpsters and disposal for construction
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.108</td>
+                        <td class="name">=&gt; bathroom finishes, install</td>
+                        <td class="description">
+                          Formerly 8 hours, declined: towel bars, and ada grab
+                          bars as per prints. one day for a carpenter to install
+                          all bathroom finishes.
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">18</td>
+                        <td class="quantity">8</td>
+                        <td class="cost text-end">$38.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$572.74</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.103</td>
-                        <td class="undefined">
-                          Hauling and clean up equipment
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.109</td>
+                        <td class="name">=&gt; bathroom finishes budgets</td>
+                        <td class="description">
+                          5x 48" ada grab bars ($40 each) 3x double paper
+                          holders ($50 each) no soap dispensers. 3x mirrors
+                          ($150 each)
+                          https://www.amazon.com/Moen-8748-Home-Bathroom-Stainless/dp/B0037XRPX2/ref=sr_1_5?crid=37BQMEH4L78A7&amp;keywords=ada%2Bgrab%2Bbars%2Bfor%2Bbathroom%2B48%2Binch&amp;qid=1703963054&amp;sprefix=ada%2Bgrab%2Bbars%2Bfor%2Bbathroom%2Caps%2C106&amp;sr=8-5&amp;th=1
+                          https://www.amazon.com/Palmer-Fixture-RD0027-02F-Dispenser-Translucent/dp/B00HNHTVYE/ref=sr_1_3?crid=X5RTFSW1KATS&amp;keywords=commercial+double+toilet+paper+dispenser&amp;qid=1703963094&amp;sprefix=commercial+double+to%2Caps%2C107&amp;sr=8-3
                         </td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">17</td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$500.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$642.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.104</td>
-                        <td class="undefined">Delivery driver</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">500.110</td>
+                        <td class="name">=&gt; stair parts</td>
+                        <td class="description">
+                          cap rail trim, handrail, stair parts. list is missing
+                          parts for stairs going to lofted area upstairs but
+                          budget accounts for it.
+                        </td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$2,200.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$2,824.80</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.105</td>
-                        <td class="undefined">Port-a-let</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">19</td>
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">600</td>
+                        <td class="name">Mechanical Finishes</td>
+                        <td class="description">
+                          Plumbing finishes. Kitchen Finishes, unknown?
+                        </td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$8,731.20</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.106</td>
-                        <td class="undefined">Utility Payments</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">19</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">600.104</td>
+                        <td class="name">=&gt; Plumbing finishes and traps</td>
+                        <td class="description">
+                          Grease traps, sinks, faucets, water heaters etc? - 1X
+                          grease trap, solids interceptor separate line item.
+                          -2x pedestal sinkjs -2x toilets -water heater
+                        </td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$5,000.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$6,420.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.107</td>
-                        <td class="undefined">Security System</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">19</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">600.105</td>
+                        <td class="name">=&gt; Lighting</td>
+                        <td class="description">
+                          Allowance for all finish and light fixture purchases
+                          including cans, high bays, and pull down extension
+                          cord reels
+                        </td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$1,500.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$1,926.00</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">900.108</td>
-                        <td class="undefined">Builder's Risk Policy</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">19</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">600.106</td>
+                        <td class="name">
+                          =&gt; Security System / WIFI / Cameras
+                        </td>
+                        <td class="description">
+                          OPTION NOT INCLUDED AT THIS TIME
+                        </td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">998</td>
-                        <td class="undefined">ADMIN - WRITE OFFS</td>
-                        <td class="">Written off materials</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="text-end"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">19</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">600.107</td>
+                        <td class="name">=&gt; Kitchen Appliances?</td>
+                        <td class="description">
+                          OPTION NOT INCLUDED IN CURRENT BID
+                        </td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
                       </tr>
-                      <tr class="undefined">
-                        <td class="text-right">999</td>
-                        <td class="undefined">ADMIN - DO NOT BILL</td>
-                        <td class=""></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">50</td>
-                        <td class="text-end">55</td>
-                        <td class="undefined"></td>
-                        <td class="undefined"></td>
-                        <td class="undefined">2750</td>
-                        <td class="undefined"></td>
-                        <td class="undefined">1</td>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">600.108</td>
+                        <td class="name">=&gt; bath fans</td>
+                        <td class="description">
+                          select 2x bath fans with lights for two bathrooms
+                        </td>
+                        <td class="quantity">2</td>
+                        <td class="cost text-end">$150.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$385.20</td>
+                      </tr>
+                      <tr class="tr branch">
+                        <td class="type no-display">branch</td>
+                        <td class="cost_code text-right">900</td>
+                        <td class="name">GC and General Project Costs</td>
+                        <td class="description">
+                          Dumpster costs, disposal costs, overages, clerical,
+                          and misc general job costs.
+                        </td>
+                        <td class="quantity"></td>
+                        <td class="cost text-end"></td>
+                        <td class="tax"></td>
+                        <td class="markup"></td>
+                        <td class="net">$52,454.04</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">900.101</td>
+                        <td class="name">=&gt; Lull lift to be used by subs</td>
+                        <td class="description">
+                          Two months of machine rental for the telehandler. This
+                          machine to be used to finish demolition of roof by
+                          framers, help with framing, help install steel beams,
+                          and then help finish roofing.
+                        </td>
+                        <td class="quantity">2</td>
+                        <td class="cost text-end">$3,525.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$8,460.00</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">900.102</td>
+                        <td class="name">=&gt; basket lift for sub use</td>
+                        <td class="description">
+                          2 months of man lift rental for use by framing, hvac,
+                          and others.
+                        </td>
+                        <td class="quantity">2</td>
+                        <td class="cost text-end">$2,800.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$6,720.00</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">900.103</td>
+                        <td class="name">=&gt; dumpsters</td>
+                        <td class="description">
+                          Dumpsters. Assume 3 dumpsters to finish demolition and
+                          2 dumpsters during construction plus a few runs to the
+                          dump with the dump truck. Dump truck time billed here
+                          also.
+                        </td>
+                        <td class="quantity">7</td>
+                        <td class="cost text-end">$650.00</td>
+                        <td class="tax">$0.07</td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$5,842.20</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">900.104</td>
+                        <td class="name">
+                          =&gt; |ꟷꟷꟷ&gt;Project Contingency Budget
+                        </td>
+                        <td class="description">
+                          This is the budget for project contingency. 10% of
+                          project budgt of $330,000
+                        </td>
+                        <td class="quantity">1</td>
+                        <td class="cost text-end">$25,000.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.20</td>
+                        <td class="net">$30,000.00</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">900.105</td>
+                        <td class="name">=&gt; Delivery driver</td>
+                        <td class="description">
+                          delivery driver for misc parts, driver for dump truck
+                          for material disposal.
+                        </td>
+                        <td class="quantity">20</td>
+                        <td class="cost text-end">$38.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.88</td>
+                        <td class="net">$1,431.84</td>
+                      </tr>
+                      <tr class="tr leaf">
+                        <td class="type no-display">leaf</td>
+                        <td class="cost_code text-right">999</td>
+                        <td class="name">ADMIN - DO NOT BILL</td>
+                        <td class="description">
+                          Administrative and Oversight. Assuming 200 hours of
+                          administrative work. Continuing design work billed
+                          separately.
+                        </td>
+                        <td class="quantity">200</td>
+                        <td class="cost text-end">$30.00</td>
+                        <td class="tax"></td>
+                        <td class="markup">$0.23</td>
+                        <td class="net">$7,380.00</td>
                       </tr>
                     </table>
                     <br />
@@ -1983,10 +1072,10 @@
                       class="table mb-0 table-striped invoice-table"
                     >
                       <thead class="bg-active">
-                        <th class="text-right">Grand Total</th>
+                        <th class="Total text-right">Total</th>
                       </thead>
-                      <tr class="tr mdb-branch">
-                        <td class="text-right">{Insert Number Here}</td>
+                      <tr class="tr undefined">
+                        <td class="Total text-right">{Insert Number Here}</td>
                       </tr>
                     </table>
                     <br />
@@ -2036,13 +1125,13 @@
 				  href="javascript:window.print()"
 				  class="btn btn-lg btn-print"
 				>
-				  <i class="fa fa-print"></i> Print Invoice
+				  <i class="fa fa-print"></i> Print Estimate
 				</a>
 				<a
 				  id="invoice_download_btn"
 				  class="btn btn-lg btn-download btn-theme"
 				>
-				  <i class="fa fa-download"></i> Download Invoice
+				  <i class="fa fa-download"></i> Download Estimate
 				</a> -->
               </div>
             </div>
@@ -2050,7 +1139,7 @@
         </div>
       </div>
     </div>
-    <!-- Invoice 1 end -->
+    <!-- Estimate 1 end -->
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jspdf.min.js"></script>
