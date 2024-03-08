@@ -249,7 +249,8 @@ table th {
 /** Invoice 1 Start **/
 .invoice-1 {
   padding: 30px 0;
-  background: #fff6f6;
+  /* background: #fff6f6; */
+  background: #f0f0f0;
 }
 
 .invoice-1 .mb-30 {
@@ -2674,4 +2675,19 @@ h6,
 #mdb-tasks > tbody > tr > th.description,
 #mdb-tasks > tbody > tr > td.description{
 	word-break: break-all;
+}
+
+#mdb-tasks > thead > tr > th.cost_code.text-right,
+#mdb-tasks > tbody > tr > td.cost_code.text-right {
+	text-align: right;
+}
+
+#mdb-tasks > thead > tr > th.cost,
+#mdb-tasks > tbody > tr > td.cost {
+	text-align: left;
+}
+
+#mdb-tasks > thead > tr > th.net,
+#mdb-tasks > tbody > tr > td.net {
+	text-align: left;
 }

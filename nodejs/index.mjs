@@ -125,7 +125,7 @@ class Document {
 			case 'description':
 				classes = ''
 				break
-			case 'cost' || 'total':
+			case 'total':
 				classes = 'text-end'
 				break
 			case 'price' || 'quantity':
@@ -362,6 +362,6 @@ async function json(type) {
 }
 
 if(!REMOTE) {
-	let event = await json('hosbrook')
+	let event = await json('estimate')
 	if (event) handler(event)
 }
