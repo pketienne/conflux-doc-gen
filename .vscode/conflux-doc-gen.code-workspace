@@ -23,7 +23,8 @@
 				"username": "conflux",
 				"askForPassword": true
 			}
-		]
+		],
+		"liveServer.settings.multiRootWorkspaceName": "conflux-doc-gen"
 	},
 	"launch": {
 		"version": "0.2.0",
